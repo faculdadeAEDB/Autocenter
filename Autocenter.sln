@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{CDCEA281-579C-40E7-AE21-9A0B44C913F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{46ED9557-04D6-4E70-8DDA-D8636CCD7BAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autocenter.VIEW", "Autocenter.VIEW\Autocenter.VIEW.csproj", "{33D49BAF-A3A9-4B04-A7CF-91EB8E487593}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{46ED9557-04D6-4E70-8DDA-D8636CCD7BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46ED9557-04D6-4E70-8DDA-D8636CCD7BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46ED9557-04D6-4E70-8DDA-D8636CCD7BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D49BAF-A3A9-4B04-A7CF-91EB8E487593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D49BAF-A3A9-4B04-A7CF-91EB8E487593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D49BAF-A3A9-4B04-A7CF-91EB8E487593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D49BAF-A3A9-4B04-A7CF-91EB8E487593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
