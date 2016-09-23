@@ -34,7 +34,7 @@ namespace DataAccess.Repositories
 
         public List<Cliente> Obter()
         {
-            using (DataContext c = new DataContext)
+            using (DataContext c = new DataContext())
             {
                 return c.Clientes
                     .Include(cliente => cliente.Carros)
