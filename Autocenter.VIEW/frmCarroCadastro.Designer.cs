@@ -55,6 +55,7 @@
             this.txtCarroPlaca.Name = "txtCarroPlaca";
             this.txtCarroPlaca.Size = new System.Drawing.Size(60, 20);
             this.txtCarroPlaca.TabIndex = 37;
+            this.txtCarroPlaca.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCarroPlaca_MaskInputRejected);
             // 
             // grbCarroPesquisa
             // 
@@ -137,6 +138,7 @@
             this.btnCarroSalvar.TabIndex = 32;
             this.btnCarroSalvar.Text = "Salvar";
             this.btnCarroSalvar.UseVisualStyleBackColor = true;
+            this.btnCarroSalvar.Click += new System.EventHandler(this.btnCarroSalvar_Click);
             // 
             // lblCarroPlaca
             // 
