@@ -16,5 +16,10 @@ namespace Autocenter.VIEW
         {
             InitializeComponent();
         }
+
+        private void txtOrdemCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

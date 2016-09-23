@@ -52,6 +52,7 @@
             this.txtOrdemCliente.Name = "txtOrdemCliente";
             this.txtOrdemCliente.Size = new System.Drawing.Size(380, 20);
             this.txtOrdemCliente.TabIndex = 31;
+            this.txtOrdemCliente.TextChanged += new System.EventHandler(this.txtOrdemCliente_TextChanged);
             // 
             // lblOrdemCliente
             // 
