@@ -237,6 +237,9 @@
             this.Controls.Add(this.lblCliEndereco);
             this.Controls.Add(this.lblCliCPF);
             this.Controls.Add(this.lblCliNome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmClienteCadastro";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClienteCadastro_Load);

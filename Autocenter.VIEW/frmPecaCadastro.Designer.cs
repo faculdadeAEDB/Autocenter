@@ -228,6 +228,9 @@
             this.Controls.Add(this.lblPecaQtd);
             this.Controls.Add(this.txtPecaNome);
             this.Controls.Add(this.lblPecaNome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPecaCadastro";
             this.Text = "Peças";
             this.grbPecaPesquisa.ResumeLayout(false);

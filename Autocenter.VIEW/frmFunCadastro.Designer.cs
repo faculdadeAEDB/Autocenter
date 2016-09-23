@@ -190,6 +190,9 @@
             this.Controls.Add(this.grbFuncPesquisa);
             this.Controls.Add(this.txtFunNome);
             this.Controls.Add(this.lblFuncNome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmFunCadastro";
             this.Text = "Funcionários";
             this.grbFuncPesquisa.ResumeLayout(false);

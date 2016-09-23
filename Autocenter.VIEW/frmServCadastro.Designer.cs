@@ -186,6 +186,9 @@
             this.Controls.Add(this.lblServValor);
             this.Controls.Add(this.txtServNome);
             this.Controls.Add(this.lblServNome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmServCadastro";
             this.Text = "frmServCadastro";
             this.grbServPesquisa.ResumeLayout(false);
