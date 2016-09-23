@@ -36,7 +36,10 @@ namespace DataAccess.Repositories
         {
             using (DataContext c = new DataContext())
             {
-                return c.Carros.ToList();
+                return c.Carros
+                    .Include(carro => carro.Cliente)
+                    .Include(carro => carro.Modelo)
+                    .ToList();
             }
         }
 
