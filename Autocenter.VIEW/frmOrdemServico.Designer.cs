@@ -33,14 +33,14 @@
             this.txtOrdemOS = new System.Windows.Forms.TextBox();
             this.lblOrdemOS = new System.Windows.Forms.Label();
             this.grvOrdem = new System.Windows.Forms.DataGridView();
-            this.btnOrdemSalvar = new System.Windows.Forms.Button();
-            this.btnOrdemVenda = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnOrdemSalvar = new System.Windows.Forms.Button();
+            this.btnOrdemVenda = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblOrdemOrcamento = new System.Windows.Forms.Label();
             this.chkOrdemOrcamento = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.grvOrdem)).BeginInit();
@@ -94,6 +94,26 @@
             this.grvOrdem.Size = new System.Drawing.Size(698, 211);
             this.grvOrdem.TabIndex = 34;
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Quantidade
+            // 
+            this.Quantidade.HeaderText = "Quantidade";
+            this.Quantidade.Name = "Quantidade";
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Valor
+            // 
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            // 
             // btnOrdemSalvar
             // 
             this.btnOrdemSalvar.Location = new System.Drawing.Point(11, 265);
@@ -132,26 +152,6 @@
             this.textBox1.TabIndex = 38;
             this.textBox1.Text = "R$ 00,00";
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Quantidade
-            // 
-            this.Quantidade.HeaderText = "Quantidade";
-            this.Quantidade.Name = "Quantidade";
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // Valor
-            // 
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
-            // 
             // lblOrdemOrcamento
             // 
             this.lblOrdemOrcamento.AutoSize = true;
@@ -187,6 +187,9 @@
             this.Controls.Add(this.lblOrdemOS);
             this.Controls.Add(this.txtOrdemCliente);
             this.Controls.Add(this.lblOrdemCliente);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmOrdemServico";
             this.Text = "frmOrdemServico";
             ((System.ComponentModel.ISupportInitialize)(this.grvOrdem)).EndInit();
