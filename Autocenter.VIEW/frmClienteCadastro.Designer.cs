@@ -39,7 +39,7 @@
             this.lblCliRG = new System.Windows.Forms.Label();
             this.txtCliTelefone = new System.Windows.Forms.MaskedTextBox();
             this.lblCliTelefone = new System.Windows.Forms.Label();
-            this.txtCliEndereço = new System.Windows.Forms.TextBox();
+            this.txtCliEndereco = new System.Windows.Forms.TextBox();
             this.txtCliNome = new System.Windows.Forms.TextBox();
             this.lblCliEndereco = new System.Windows.Forms.Label();
             this.lblCliCPF = new System.Windows.Forms.Label();
@@ -122,6 +122,7 @@
             this.btnCliSalvar.TabIndex = 33;
             this.btnCliSalvar.Text = "Salvar";
             this.btnCliSalvar.UseVisualStyleBackColor = true;
+            this.btnCliSalvar.Click += new System.EventHandler(this.btnCliSalvar_Click);
             // 
             // lblCliRG
             // 
@@ -152,12 +153,12 @@
             this.lblCliTelefone.TabIndex = 27;
             this.lblCliTelefone.Text = "Telefone:";
             // 
-            // txtCliEndereço
+            // txtCliEndereco
             // 
-            this.txtCliEndereço.Location = new System.Drawing.Point(80, 60);
-            this.txtCliEndereço.Name = "txtCliEndereço";
-            this.txtCliEndereço.Size = new System.Drawing.Size(471, 20);
-            this.txtCliEndereço.TabIndex = 26;
+            this.txtCliEndereco.Location = new System.Drawing.Point(80, 60);
+            this.txtCliEndereco.Name = "txtCliEndereco";
+            this.txtCliEndereco.Size = new System.Drawing.Size(471, 20);
+            this.txtCliEndereco.TabIndex = 26;
             // 
             // txtCliNome
             // 
@@ -232,7 +233,7 @@
             this.Controls.Add(this.lblCliRG);
             this.Controls.Add(this.txtCliTelefone);
             this.Controls.Add(this.lblCliTelefone);
-            this.Controls.Add(this.txtCliEndereço);
+            this.Controls.Add(this.txtCliEndereco);
             this.Controls.Add(this.txtCliNome);
             this.Controls.Add(this.lblCliEndereco);
             this.Controls.Add(this.lblCliCPF);
@@ -264,7 +265,7 @@
         private System.Windows.Forms.Label lblCliRG;
         private System.Windows.Forms.MaskedTextBox txtCliTelefone;
         private System.Windows.Forms.Label lblCliTelefone;
-        private System.Windows.Forms.TextBox txtCliEndereço;
+        private System.Windows.Forms.TextBox txtCliEndereco;
         private System.Windows.Forms.TextBox txtCliNome;
         private System.Windows.Forms.Label lblCliEndereco;
         private System.Windows.Forms.Label lblCliCPF;
