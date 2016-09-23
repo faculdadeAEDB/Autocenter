@@ -4,20 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess.Repositories;
+using Domain.Entities;
 
 namespace Controllers
 {
     public class CarroController
     {
+        CarroRepository carroRepository;
 
         public CarroController()
         {
-            db = new DataContext();
+            carroRepository = new CarroRepository();
         }
 
-        List<Carro> buscar()
+        List<Carro> Obter()
         {
-            return db.Carros.AsParallel();
+            return carroRepository.Obter();
         }
     }
 }

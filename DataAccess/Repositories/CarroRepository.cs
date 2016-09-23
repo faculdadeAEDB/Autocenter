@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace DataAccess.Repositories
 {
-    class CarroRepository : IRepository<Carro>
+    public class CarroRepository : IRepository<Carro>
     {
         public Carro Editar(Carro obj)
         {
@@ -45,7 +45,10 @@ namespace DataAccess.Repositories
 
         public Carro Obter(int id)
         {
-            throw new NotImplementedException();
+            using (DataContext c = new DataContext())
+            {
+                return c.Carros.Where(item => item.CarroId == id).First();
+            }
         }
 
         public Carro Salvar(Carro obj)
