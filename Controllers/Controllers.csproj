@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CDCEA281-579C-40E7-AE21-9A0B44C913F6}</ProjectGuid>
+    <ProjectGuid>{DEB735D4-C142-432C-81E4-D22B7BBAD70B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataAccess</RootNamespace>
-    <AssemblyName>DataAccess</AssemblyName>
+    <RootNamespace>Controllers</RootNamespace>
+    <AssemblyName>Controllers</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -49,26 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataContext.cs" />
-    <Compile Include="Map\CarroMap.cs" />
-    <Compile Include="Map\ClienteMap.cs" />
-    <Compile Include="Map\FuncionarioMap.cs" />
-    <Compile Include="Map\ModeloMap.cs" />
-    <Compile Include="Map\OrdemServicoMap.cs" />
-    <Compile Include="Map\PecaMap.cs" />
-    <Compile Include="Map\ReceitaMap.cs" />
-    <Compile Include="Map\ServicoMap.cs" />
-    <Compile Include="Map\VendaMap.cs" />
-    <Compile Include="Migrations\201609020615457_initial.cs" />
-    <Compile Include="Migrations\201609020615457_initial.Designer.cs">
-      <DependentUpon>201609020615457_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="CarroController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\CarroRepository.cs" />
-    <Compile Include="Repositories\IRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{cdcea281-579c-40e7-ae21-9a0b44c913f6}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{46ed9557-04d6-4e70-8dda-d8636ccd7bad}</Project>
       <Name>Domain</Name>
@@ -78,12 +66,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609020615457_initial.resx">
-      <DependentUpon>201609020615457_initial.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
