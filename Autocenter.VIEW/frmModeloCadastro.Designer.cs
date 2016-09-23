@@ -165,6 +165,9 @@
             this.Controls.Add(this.btnModeloAlterar);
             this.Controls.Add(this.btnModeloSalvar);
             this.Controls.Add(this.grbModeloPesquisa);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmModeloCadastro";
             this.Text = "Modelos";
             this.grbModeloPesquisa.ResumeLayout(false);

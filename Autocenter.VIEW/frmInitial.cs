@@ -16,5 +16,54 @@ namespace Autocenter.VIEW
         {
             InitializeComponent();
         }
+
+        private void btnInitialCarro_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            (new frmCarroCadastro()).ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnInitialCliente_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            (new frmClienteCadastro()).ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnInitialFuncionario_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            (new frmFunCadastro()).ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnInitialModelo_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            (new frmModeloCadastro()).ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnInitialOS_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            (new frmOrdemServico()).ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnInitialPeca_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            (new frmPecaCadastro()).ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnInitialServ_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            (new frmServCadastro()).ShowDialog();
+            this.Visible = true;
+        }
     }
 }

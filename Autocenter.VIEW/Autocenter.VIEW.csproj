@@ -105,6 +105,9 @@
     <EmbeddedResource Include="frmFunCadastro.resx">
       <DependentUpon>frmFunCadastro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInitial.resx">
+      <DependentUpon>frmInitial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmModeloCadastro.resx">
       <DependentUpon>frmModeloCadastro.cs</DependentUpon>
     </EmbeddedResource>

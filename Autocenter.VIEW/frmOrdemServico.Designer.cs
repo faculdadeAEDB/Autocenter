@@ -188,6 +188,9 @@
             this.Controls.Add(this.lblOrdemOS);
             this.Controls.Add(this.txtOrdemCliente);
             this.Controls.Add(this.lblOrdemCliente);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmOrdemServico";
             this.Text = "frmOrdemServico";
             ((System.ComponentModel.ISupportInitialize)(this.grvOrdem)).EndInit();

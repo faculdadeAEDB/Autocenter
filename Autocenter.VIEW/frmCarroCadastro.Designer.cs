@@ -210,6 +210,9 @@
             this.Controls.Add(this.lblCarroCor);
             this.Controls.Add(this.lblCarroModelo);
             this.Controls.Add(this.lblCarroCliente);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCarroCadastro";
             this.Text = "Carros";
             this.grbCarroPesquisa.ResumeLayout(false);
