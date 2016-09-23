@@ -17,9 +17,29 @@ namespace Controllers
             carroRepository = new CarroRepository();
         }
 
-        List<Carro> Obter()
+        public Carro Editar(Carro obj)
+        {
+            return carroRepository.Editar(obj);
+        }
+
+        public Carro Excluir(Carro obj)
+        {
+            return carroRepository.Excluir(obj);
+        }
+
+        public List<Carro> Obter()
         {
             return carroRepository.Obter();
+        }
+
+        public Carro Obter(int id)
+        {
+            return carroRepository.Obter(id);
+        }
+
+        public Carro Salvar(Carro obj)
+        {
+            return carroRepository.Salvar(obj);
         }
     }
 }
