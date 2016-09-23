@@ -12,7 +12,7 @@ namespace DataAccess.Repositories
     {
         public Peca Editar (Peca obj)
         {
-            using (DataContext c = new DataContext)
+            using (DataContext c = new DataContext())
             {
                 c.Pecas.Attach(obj);
                 c.Entry(obj).State = EntityState.Modified;
@@ -34,7 +34,7 @@ namespace DataAccess.Repositories
 
         public List<Peca> Obter()
         {
-            using (DataContext c = new DataContext)
+            using (DataContext c = new DataContext())
             {
                 return c.Pecas
                     .Include(peca => peca.Modelos)
