@@ -70,6 +70,12 @@
     <Compile Include="frmModeloCadastro.Designer.cs">
       <DependentUpon>frmModeloCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOrdemServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrdemServico.Designer.cs">
+      <DependentUpon>frmOrdemServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPecaCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmModeloCadastro.resx">
       <DependentUpon>frmModeloCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrdemServico.resx">
+      <DependentUpon>frmOrdemServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPecaCadastro.resx">
       <DependentUpon>frmPecaCadastro.cs</DependentUpon>
