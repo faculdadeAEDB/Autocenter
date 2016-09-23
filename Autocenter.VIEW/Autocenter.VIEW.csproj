@@ -147,6 +147,10 @@
       <Project>{deb735d4-c142-432c-81e4-d22b7bbad70b}</Project>
       <Name>Controllers</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{46ed9557-04d6-4e70-8dda-d8636ccd7bad}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

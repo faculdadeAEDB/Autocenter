@@ -16,5 +16,10 @@ namespace Autocenter.VIEW
         {
             InitializeComponent();
         }
+
+        private void frmFunCadastro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
