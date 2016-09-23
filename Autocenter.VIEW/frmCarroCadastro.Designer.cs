@@ -109,6 +109,7 @@
             this.cboCarroModelo.Name = "cboCarroModelo";
             this.cboCarroModelo.Size = new System.Drawing.Size(121, 21);
             this.cboCarroModelo.TabIndex = 35;
+            this.cboCarroModelo.SelectedIndexChanged += new System.EventHandler(this.cboCarroModelo_SelectedIndexChanged);
             // 
             // btnCarroExcluir
             // 
@@ -160,6 +161,7 @@
             this.txtCarroCliente.Name = "txtCarroCliente";
             this.txtCarroCliente.Size = new System.Drawing.Size(456, 20);
             this.txtCarroCliente.TabIndex = 29;
+            this.txtCarroCliente.TextChanged += new System.EventHandler(this.txtCarroCliente_TextChanged);
             // 
             // lblCarroCor
             // 

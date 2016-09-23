@@ -16,5 +16,19 @@ namespace Autocenter.VIEW
         {
             InitializeComponent();
         }
+
+        TextBox VarCarroCliente;
+        ComboBox varCarroModelo;
+
+        private void txtCarroCliente_TextChanged(object sender, EventArgs e)
+        {
+            VarCarroCliente = txtCarroCliente;
+            
+        }
+
+        private void cboCarroModelo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            varCarroModelo = cboCarroModelo;
+        }
     }
 }
