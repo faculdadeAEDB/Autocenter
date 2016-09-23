@@ -52,7 +52,12 @@
     <Compile Include="CarroController.cs" />
     <Compile Include="ClienteController.cs" />
     <Compile Include="FuncionarioController.cs" />
+    <Compile Include="ModeloController.cs" />
+    <Compile Include="OrdemServicoController.cs" />
+    <Compile Include="PecaController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicoController.cs" />
+    <Compile Include="VendaController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">

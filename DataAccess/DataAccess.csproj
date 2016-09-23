@@ -69,7 +69,11 @@
     <Compile Include="Repositories\ClienteRepository.cs" />
     <Compile Include="Repositories\FuncionarioRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\ModeloRepository.cs" />
+    <Compile Include="Repositories\OrdemServicoRepository.cs" />
     <Compile Include="Repositories\PecaRepository.cs" />
+    <Compile Include="Repositories\ServicoRepository.cs" />
+    <Compile Include="Repositories\VendaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">
