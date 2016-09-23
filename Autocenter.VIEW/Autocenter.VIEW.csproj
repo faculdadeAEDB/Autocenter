@@ -64,6 +64,12 @@
     <Compile Include="frmFunCadastro.Designer.cs">
       <DependentUpon>frmFunCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInitial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInitial.Designer.cs">
+      <DependentUpon>frmInitial.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmModeloCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
