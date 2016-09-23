@@ -195,6 +195,7 @@
             this.MinimizeBox = false;
             this.Name = "frmFunCadastro";
             this.Text = "Funcionários";
+            this.Load += new System.EventHandler(this.frmFunCadastro_Load);
             this.grbFuncPesquisa.ResumeLayout(false);
             this.grbFuncPesquisa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvFuncPesquisa)).EndInit();
