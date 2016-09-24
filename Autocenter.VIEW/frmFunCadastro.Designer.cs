@@ -101,6 +101,7 @@
             this.btnFuncSalvar.TabIndex = 36;
             this.btnFuncSalvar.Text = "Salvar";
             this.btnFuncSalvar.UseVisualStyleBackColor = true;
+            this.btnFuncSalvar.Click += new System.EventHandler(this.btnFuncSalvar_Click);
             // 
             // grbFuncPesquisa
             // 
