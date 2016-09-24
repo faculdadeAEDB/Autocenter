@@ -40,7 +40,7 @@
             this.lblPecaValor = new System.Windows.Forms.Label();
             this.cboPecaModelo = new System.Windows.Forms.ComboBox();
             this.lblPecaModelo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtQtd = new System.Windows.Forms.TextBox();
             this.lblPecaQtd = new System.Windows.Forms.Label();
             this.txtPecaNome = new System.Windows.Forms.TextBox();
             this.lblPecaNome = new System.Windows.Forms.Label();
@@ -122,6 +122,7 @@
             this.btnPecaSalvar.TabIndex = 45;
             this.btnPecaSalvar.Text = "Salvar";
             this.btnPecaSalvar.UseVisualStyleBackColor = true;
+            this.btnPecaSalvar.Click += new System.EventHandler(this.btnPecaSalvar_Click);
             // 
             // txtPecaValor
             // 
@@ -158,12 +159,12 @@
             this.lblPecaModelo.TabIndex = 41;
             this.lblPecaModelo.Text = "Modelo:";
             // 
-            // textBox1
+            // txtQtd
             // 
-            this.textBox1.Location = new System.Drawing.Point(377, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(46, 20);
-            this.textBox1.TabIndex = 40;
+            this.txtQtd.Location = new System.Drawing.Point(377, 7);
+            this.txtQtd.Name = "txtQtd";
+            this.txtQtd.Size = new System.Drawing.Size(46, 20);
+            this.txtQtd.TabIndex = 40;
             // 
             // lblPecaQtd
             // 
@@ -224,7 +225,7 @@
             this.Controls.Add(this.lblPecaValor);
             this.Controls.Add(this.cboPecaModelo);
             this.Controls.Add(this.lblPecaModelo);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtQtd);
             this.Controls.Add(this.lblPecaQtd);
             this.Controls.Add(this.txtPecaNome);
             this.Controls.Add(this.lblPecaNome);
@@ -255,7 +256,7 @@
         private System.Windows.Forms.Label lblPecaValor;
         private System.Windows.Forms.ComboBox cboPecaModelo;
         private System.Windows.Forms.Label lblPecaModelo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtQtd;
         private System.Windows.Forms.Label lblPecaQtd;
         private System.Windows.Forms.TextBox txtPecaNome;
         private System.Windows.Forms.Label lblPecaNome;

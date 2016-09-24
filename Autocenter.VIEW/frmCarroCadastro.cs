@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Domain.Entities;
+using Controllers;
 
 namespace Autocenter.VIEW
 {
@@ -40,11 +42,21 @@ namespace Autocenter.VIEW
         private void btnCarroSalvar_Click(object sender, EventArgs e)
         {
             //recebendo campos digitas
-            string Cliente = txtCarroCliente.Text;
-            string Modelo = cboCarroModelo.Text;
-            string Placa = txtCarroPlaca.Text;
-            string Cor = txtCarroCor.Text;
+            string CadCliente = txtCarroCliente.Text;
+            string CadModelo = cboCarroModelo.Text;
+            string cadPlaca = txtCarroPlaca.Text;
+            string CadCor = txtCarroCor.Text;
 
+            Carro carro = new Carro();
+            ClienteController controller= new ClienteController();
+            //ModeloController controller = new ModeloController();
+
+            carro.Cliente = controller.Obter(Convert.ToInt32(txtCarroCliente.Text));
+            //carro.Modelo = CadModelo.ob;
+            carro.Placa = cadPlaca;
+            carro.Cor = CadCor;
+
+            //controller.Salvar(Carro);
 
         }
     }
