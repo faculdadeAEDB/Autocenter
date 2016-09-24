@@ -19,9 +19,25 @@ namespace Autocenter.VIEW
             InitializeComponent();
         }
 
+        void atualizandoGrv()
+        {
+            grvCliPesquisa.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            List<Cliente> oClientes = new List<Cliente>();
+            oClientes = controller.Obter();
+            grvCliPesquisa.DataSource = oClientes;
+            grvCliPesquisa.Columns["ClienteId"].DisplayIndex = 0;
+            grvCliPesquisa.Columns["Nome"].DisplayIndex = 1;
+            grvCliPesquisa.Columns["CPF"].DisplayIndex = 2;
+            grvCliPesquisa.Columns["Endereco"].DisplayIndex = 3;
+            grvCliPesquisa.Columns["Telefone"].DisplayIndex = 4;
+            grvCliPesquisa.Columns["Carros"].DisplayIndex = 5;
+            grvCliPesquisa.Columns["OrdemServicos"].DisplayIndex = 6;
+        }
+        ClienteController controller = new ClienteController();
+
         private void frmClienteCadastro_Load(object sender, EventArgs e)
         {
-
+            atualizandoGrv();
         }
 
         private void btnCliSalvar_Click(object sender, EventArgs e)
@@ -37,9 +53,11 @@ namespace Autocenter.VIEW
             cliente.CPF = cpf;
             cliente.Endereco = endereco;
 
-            ClienteController controller = new ClienteController();
+            Cliente novoCliente = controller.Salvar(cliente);
 
-            controller.Salvar(cliente);
+            atualizandoGrv();
+
+
         }
     }
 }

@@ -90,6 +90,7 @@
             // 
             // grvCliPesquisa
             // 
+            this.grvCliPesquisa.AllowUserToOrderColumns = true;
             this.grvCliPesquisa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvCliPesquisa.Location = new System.Drawing.Point(7, 49);
             this.grvCliPesquisa.Name = "grvCliPesquisa";
