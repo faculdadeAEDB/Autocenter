@@ -43,8 +43,8 @@ namespace Autocenter.VIEW
             grvCliPesquisa.Columns["CPF"].DisplayIndex = 2;
             grvCliPesquisa.Columns["Endereco"].DisplayIndex = 3;
             grvCliPesquisa.Columns["Telefone"].DisplayIndex = 4;
-            grvCliPesquisa.Columns["Carros"].DisplayIndex = 5;
-            grvCliPesquisa.Columns["OrdemServicos"].DisplayIndex = 6;
+            grvCliPesquisa.Columns["Carros"].Visible = false;
+            grvCliPesquisa.Columns["OrdemServicos"].Visible = false;
         }
 
         ClienteController controller = new ClienteController();

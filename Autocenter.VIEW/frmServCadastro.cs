@@ -37,6 +37,7 @@ namespace Autocenter.VIEW
             grvServPesquisa.Columns["ServicoId"].DisplayIndex = 0;
             grvServPesquisa.Columns["Descricao"].DisplayIndex = 1;
             grvServPesquisa.Columns["Valor"].DisplayIndex = 2;
+            grvServPesquisa.Columns["OrdemServicos"].Visible = false;
         }
 
 

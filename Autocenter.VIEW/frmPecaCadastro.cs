@@ -41,8 +41,8 @@ namespace Autocenter.VIEW
             grvPecaPesquisa.Columns["Nome"].DisplayIndex = 1;
             grvPecaPesquisa.Columns["Marca"].DisplayIndex = 2;
             grvPecaPesquisa.Columns["Quantidade"].DisplayIndex = 3;
-            grvPecaPesquisa.Columns["Modelos"].DisplayIndex = 4;
-            grvPecaPesquisa.Columns["OrdemServicos"].DisplayIndex = 5;
+            grvPecaPesquisa.Columns["Modelos"].Visible = false;
+            grvPecaPesquisa.Columns["OrdemServicos"].Visible = false;
             List<Modelo> oModelo = controllerModelo.Obter().ToList();
             cboPecaModelo.DataSource = oModelo;
             cboPecaModelo.DisplayMember = "Nome";
@@ -78,6 +78,7 @@ namespace Autocenter.VIEW
                     selectedPeca.Marca = Marca;
                     selectedPeca.Nome = nome;
                     selectedPeca.Quantidade = qtd;
+                    
                     Peca alteraPeca = controller.Editar(selectedPeca);
                     
                 }
@@ -94,6 +95,24 @@ namespace Autocenter.VIEW
             txtPecaQtd.Text = Convert.ToString(selectedPeca.Quantidade);
             //txtPecaValor.Text = selectedPeca.Valor; não tem no banco
             txtPecaMarca.Text = selectedPeca.Marca;
+        }
+
+        private void btnPecaExcluir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente Excluir?", "Cadastro de Peca", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                try
+                {
+                    controller.Excluir(selectedPeca);
+                    atualizandoGrv();
+                    limpandoCampos();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Não possível excluir sem selecionar uma peça");
+                }
+
+            }
         }
     }
 }

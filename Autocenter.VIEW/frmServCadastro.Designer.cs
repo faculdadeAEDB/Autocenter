@@ -72,7 +72,7 @@
             this.grbServPesquisa.Location = new System.Drawing.Point(7, 166);
             this.grbServPesquisa.Name = "grbServPesquisa";
             this.grbServPesquisa.Size = new System.Drawing.Size(546, 235);
-            this.grbServPesquisa.TabIndex = 50;
+            this.grbServPesquisa.TabIndex = 5;
             this.grbServPesquisa.TabStop = false;
             this.grbServPesquisa.Text = "Pesquisa";
             // 
@@ -99,7 +99,7 @@
             this.txtServBusca.Location = new System.Drawing.Point(7, 19);
             this.txtServBusca.Name = "txtServBusca";
             this.txtServBusca.Size = new System.Drawing.Size(164, 20);
-            this.txtServBusca.TabIndex = 0;
+            this.txtServBusca.TabIndex = 1;
             // 
             // grvServPesquisa
             // 
@@ -108,7 +108,7 @@
             this.grvServPesquisa.Name = "grvServPesquisa";
             this.grvServPesquisa.ReadOnly = true;
             this.grvServPesquisa.Size = new System.Drawing.Size(533, 175);
-            this.grvServPesquisa.TabIndex = 3;
+            this.grvServPesquisa.TabIndex = 0;
             this.grvServPesquisa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvServPesquisa_CellDoubleClick);
             // 
             // btnServExcluir
@@ -116,7 +116,7 @@
             this.btnServExcluir.Location = new System.Drawing.Point(89, 122);
             this.btnServExcluir.Name = "btnServExcluir";
             this.btnServExcluir.Size = new System.Drawing.Size(76, 38);
-            this.btnServExcluir.TabIndex = 4;
+            this.btnServExcluir.TabIndex = 3;
             this.btnServExcluir.Text = "Excluir";
             this.btnServExcluir.UseVisualStyleBackColor = true;
             this.btnServExcluir.Click += new System.EventHandler(this.btnServExcluir_Click);
@@ -126,7 +126,7 @@
             this.btnServSalvar.Location = new System.Drawing.Point(7, 122);
             this.btnServSalvar.Name = "btnServSalvar";
             this.btnServSalvar.Size = new System.Drawing.Size(76, 38);
-            this.btnServSalvar.TabIndex = 3;
+            this.btnServSalvar.TabIndex = 4;
             this.btnServSalvar.Text = "Salvar";
             this.btnServSalvar.UseVisualStyleBackColor = true;
             this.btnServSalvar.Click += new System.EventHandler(this.btnServSalvar_Click);
@@ -162,7 +162,7 @@
             this.lblServNome.Location = new System.Drawing.Point(7, 6);
             this.lblServNome.Name = "lblServNome";
             this.lblServNome.Size = new System.Drawing.Size(53, 18);
-            this.lblServNome.TabIndex = 43;
+            this.lblServNome.TabIndex = 5;
             this.lblServNome.Text = "Nome:";
             // 
             // frmServCadastro
@@ -183,7 +183,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmServCadastro";
-            this.Text = "frmServCadastro";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.frmServCadastro_Load);
             this.grbServPesquisa.ResumeLayout(false);
             this.grbServPesquisa.PerformLayout();

@@ -47,7 +47,7 @@ namespace Autocenter.VIEW
             grvFuncPesquisa.Columns["Nome"].DisplayIndex = 1;
             grvFuncPesquisa.Columns["CPF"].DisplayIndex = 2;
             grvFuncPesquisa.Columns["Funcao"].DisplayIndex = 3;
-            grvFuncPesquisa.Columns["OrdemServicos"].DisplayIndex = 4;
+            grvFuncPesquisa.Columns["OrdemServicos"].Visible = false;
         }
 
         private void frmFunCadastro_Load(object sender, EventArgs e)

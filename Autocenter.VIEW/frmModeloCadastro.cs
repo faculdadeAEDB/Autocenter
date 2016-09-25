@@ -41,8 +41,8 @@ namespace Autocenter.VIEW
             grvModeloPesquisa.Columns["ModeloId"].DisplayIndex = 0;
             grvModeloPesquisa.Columns["Nome"].DisplayIndex = 1;
             grvModeloPesquisa.Columns["Ano"].DisplayIndex = 2;
-            grvModeloPesquisa.Columns["Carros"].DisplayIndex = 3;
-            grvModeloPesquisa.Columns["Pecas"].DisplayIndex = 4;
+            grvModeloPesquisa.Columns["Carros"].Visible = false;
+            grvModeloPesquisa.Columns["Pecas"].Visible = false;
         }
 
         private void btnModeloSalvar_Click(object sender, EventArgs e)

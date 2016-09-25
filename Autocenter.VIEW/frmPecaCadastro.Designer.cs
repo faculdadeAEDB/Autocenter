@@ -109,6 +109,7 @@
             this.btnPecaExcluir.TabIndex = 7;
             this.btnPecaExcluir.Text = "Excluir";
             this.btnPecaExcluir.UseVisualStyleBackColor = true;
+            this.btnPecaExcluir.Click += new System.EventHandler(this.btnPecaExcluir_Click);
             // 
             // btnPecaAlterar
             // 
