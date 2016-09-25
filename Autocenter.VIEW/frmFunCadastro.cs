@@ -21,7 +21,7 @@ namespace Autocenter.VIEW
         {
             InitializeComponent();
         } 
-        Funcionario selectedFuncionario= new Funcionario();
+        Funcionario selectedFuncionario = null;
 
         private void frmClienteCadastro_Load(object sender, EventArgs e)
         {

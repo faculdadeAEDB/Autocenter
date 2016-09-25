@@ -26,6 +26,7 @@ namespace DataAccess.Repositories
         {
             using (DataContext c = new DataContext())
             {
+                c.Modelos.Attach(obj);
                 Modelo modeloExcluida = c.Modelos.Remove(obj);
                 c.SaveChanges();
                 return modeloExcluida;

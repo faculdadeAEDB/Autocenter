@@ -19,7 +19,8 @@ namespace Autocenter.VIEW
             InitializeComponent();
         }
 
-        Cliente selectedCliente = new Cliente();
+        Cliente selectedCliente = null;
+       
 
         void limpandoCampos()
         {

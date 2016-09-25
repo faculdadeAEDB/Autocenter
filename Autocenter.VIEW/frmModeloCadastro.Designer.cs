@@ -33,7 +33,6 @@
             this.lblModeloMarca = new System.Windows.Forms.Label();
             this.txtModeloMarca = new System.Windows.Forms.TextBox();
             this.btnModeloExcluir = new System.Windows.Forms.Button();
-            this.btnModeloAlterar = new System.Windows.Forms.Button();
             this.btnModeloSalvar = new System.Windows.Forms.Button();
             this.grbModeloPesquisa = new System.Windows.Forms.GroupBox();
             this.btnModeloRelatorio = new System.Windows.Forms.Button();
@@ -81,21 +80,13 @@
             // 
             // btnModeloExcluir
             // 
-            this.btnModeloExcluir.Location = new System.Drawing.Point(170, 34);
+            this.btnModeloExcluir.Location = new System.Drawing.Point(97, 34);
             this.btnModeloExcluir.Name = "btnModeloExcluir";
             this.btnModeloExcluir.Size = new System.Drawing.Size(79, 40);
             this.btnModeloExcluir.TabIndex = 40;
             this.btnModeloExcluir.Text = "Excluir";
             this.btnModeloExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnModeloAlterar
-            // 
-            this.btnModeloAlterar.Location = new System.Drawing.Point(89, 34);
-            this.btnModeloAlterar.Name = "btnModeloAlterar";
-            this.btnModeloAlterar.Size = new System.Drawing.Size(79, 40);
-            this.btnModeloAlterar.TabIndex = 39;
-            this.btnModeloAlterar.Text = "Alterar";
-            this.btnModeloAlterar.UseVisualStyleBackColor = true;
+            this.btnModeloExcluir.Click += new System.EventHandler(this.btnModeloExcluir_Click);
             // 
             // btnModeloSalvar
             // 
@@ -105,6 +96,7 @@
             this.btnModeloSalvar.TabIndex = 38;
             this.btnModeloSalvar.Text = "Salvar";
             this.btnModeloSalvar.UseVisualStyleBackColor = true;
+            this.btnModeloSalvar.Click += new System.EventHandler(this.btnModeloSalvar_Click);
             // 
             // grbModeloPesquisa
             // 
@@ -152,6 +144,7 @@
             this.grvModeloPesquisa.ReadOnly = true;
             this.grvModeloPesquisa.Size = new System.Drawing.Size(533, 175);
             this.grvModeloPesquisa.TabIndex = 0;
+            this.grvModeloPesquisa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvModeloPesquisa_CellDoubleClick);
             // 
             // frmModeloCadastro
             // 
@@ -163,7 +156,6 @@
             this.Controls.Add(this.lblModeloMarca);
             this.Controls.Add(this.txtModeloMarca);
             this.Controls.Add(this.btnModeloExcluir);
-            this.Controls.Add(this.btnModeloAlterar);
             this.Controls.Add(this.btnModeloSalvar);
             this.Controls.Add(this.grbModeloPesquisa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -187,7 +179,6 @@
         private System.Windows.Forms.Label lblModeloMarca;
         private System.Windows.Forms.TextBox txtModeloMarca;
         private System.Windows.Forms.Button btnModeloExcluir;
-        private System.Windows.Forms.Button btnModeloAlterar;
         private System.Windows.Forms.Button btnModeloSalvar;
         private System.Windows.Forms.GroupBox grbModeloPesquisa;
         private System.Windows.Forms.Button btnModeloRelatorio;
