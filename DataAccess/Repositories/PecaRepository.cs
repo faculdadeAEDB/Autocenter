@@ -47,7 +47,7 @@ namespace DataAccess.Repositories
         {
             using (DataContext c = new DataContext())
             {
-                return c.Pecas.Where(item => item.PecaId == id).First();
+                return c.Pecas.Find(id);
             }
         }
 

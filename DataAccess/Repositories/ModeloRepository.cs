@@ -47,7 +47,7 @@ namespace DataAccess.Repositories
         {
             using (DataContext c = new DataContext())
             {
-                return c.Modelos.Where(item => item.ModeloId == id).First();
+                return c.Modelos.Find(id);
             }
         }
 
