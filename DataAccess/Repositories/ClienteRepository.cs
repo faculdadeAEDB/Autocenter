@@ -45,7 +45,12 @@ namespace DataAccess.Repositories
 
         public Cliente Obter(int id)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            using (DataContext c = new DataContext())
+            {
+                Cliente clienteSelecionado = c.Clientes.Find(id);
+                return clienteSelecionado;
+            }
         }
 
         public Cliente Salvar (Cliente obj)

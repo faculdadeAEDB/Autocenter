@@ -149,6 +149,7 @@
             this.grvModeloPesquisa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvModeloPesquisa.Location = new System.Drawing.Point(7, 49);
             this.grvModeloPesquisa.Name = "grvModeloPesquisa";
+            this.grvModeloPesquisa.ReadOnly = true;
             this.grvModeloPesquisa.Size = new System.Drawing.Size(533, 175);
             this.grvModeloPesquisa.TabIndex = 0;
             // 
@@ -170,6 +171,7 @@
             this.MinimizeBox = false;
             this.Name = "frmModeloCadastro";
             this.Text = "Modelos";
+            this.Load += new System.EventHandler(this.frmModeloCadastro_Load);
             this.grbModeloPesquisa.ResumeLayout(false);
             this.grbModeloPesquisa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvModeloPesquisa)).EndInit();

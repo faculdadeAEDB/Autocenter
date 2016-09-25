@@ -122,7 +122,7 @@
             this.btnPecaSalvar.TabIndex = 45;
             this.btnPecaSalvar.Text = "Salvar";
             this.btnPecaSalvar.UseVisualStyleBackColor = true;
-            this.btnPecaSalvar.Click += new System.EventHandler(this.btnPecaSalvar_Click);
+            //this.btnPecaSalvar.Click += new System.EventHandler(this.btnPecaSalvar_Click);
             // 
             // txtPecaValor
             // 

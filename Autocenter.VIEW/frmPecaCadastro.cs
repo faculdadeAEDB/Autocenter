@@ -32,17 +32,17 @@ namespace Autocenter.VIEW
             peca.Marca = Marca;
 
 
-            peca.Quantidade = Convert.ToInt32(qtd);
+          /*  peca.Quantidade = Convert.ToInt32(qtd);
             peca.Modelos = Modelo;
             
             peca.Valor = Valor;
 
             ModeloController controller = new ModeloController();
             peca.Modelos = controller.Obter(Convert.ToInt32(cboPecaModelo.Text));
+            */
+            PecaController controller = new PecaController();
 
-            ClienteController controller = new ClienteController();
-
-            controller.Salvar(Peca);
+            controller.Salvar(peca);
         }
     }
 }

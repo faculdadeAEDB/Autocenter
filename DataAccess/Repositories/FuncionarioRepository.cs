@@ -46,7 +46,8 @@ namespace DataAccess.Repositories
         {
             using (DataContext c = new DataContext())
             {
-                return c.Funcionarios.Where(item => item.FuncionarioId == id).First();
+                Funcionario funcionarioSelecionado = c.Funcionarios.Find(id);
+                return funcionarioSelecionado;
             }
         }
 

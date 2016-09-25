@@ -19,6 +19,18 @@ namespace Autocenter.VIEW
             InitializeComponent();
         }
 
+        Cliente selectedCliente = new Cliente();
+
+        void limpandoCampos()
+        {
+            selectedCliente = null;
+            txtCliBusca.Clear();
+            txtCliCPF.Clear();
+            txtCliEndereco.Clear();
+            txtCliNome.Clear();
+            txtCliTelefone.Clear();
+        }
+
         void atualizandoGrv()
         {
             grvCliPesquisa.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -33,6 +45,7 @@ namespace Autocenter.VIEW
             grvCliPesquisa.Columns["Carros"].DisplayIndex = 5;
             grvCliPesquisa.Columns["OrdemServicos"].DisplayIndex = 6;
         }
+
         ClienteController controller = new ClienteController();
 
         private void frmClienteCadastro_Load(object sender, EventArgs e)
@@ -42,22 +55,44 @@ namespace Autocenter.VIEW
 
         private void btnCliSalvar_Click(object sender, EventArgs e)
         {
+            
             string nome = txtCliNome.Text;
             string telefone = txtCliTelefone.Text;
             string cpf = txtCliCPF.Text;
             string endereco = txtCliEndereco.Text;
-
             Cliente cliente = new Cliente();
             cliente.Nome = nome;
             cliente.Telefone = telefone;
             cliente.CPF = cpf;
             cliente.Endereco = endereco;
 
-            Cliente novoCliente = controller.Salvar(cliente);
+            if (selectedCliente == null){
+                Cliente novoCliente = controller.Salvar(cliente);
+            }
+            else
+            {
+                if (MessageBox.Show("Deseja realmente Alterar?", "Cadastro de Funcionario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    selectedCliente.Nome = nome;
+                    selectedCliente.Telefone = telefone;
+                    selectedCliente.CPF = cpf;
+                    selectedCliente.Endereco = endereco;
+                    Cliente alteraCliente = controller.Editar(selectedCliente);
+                }
+            }
 
             atualizandoGrv();
+            limpandoCampos();
+        }
 
+        private void grvCliPesquisa_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedCliente = controller.Obter(Convert.ToInt32(grvCliPesquisa.Rows[e.RowIndex].Cells[0].Value.ToString()));
 
+            txtCliNome.Text = selectedCliente.Nome;
+            txtCliCPF.Text = selectedCliente.CPF;
+            txtCliEndereco.Text = selectedCliente.Endereco;
+            txtCliTelefone.Text = selectedCliente.Telefone;
         }
     }
 }

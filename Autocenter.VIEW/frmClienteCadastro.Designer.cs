@@ -33,10 +33,8 @@
             this.btnCliBusca = new System.Windows.Forms.Button();
             this.txtCliBusca = new System.Windows.Forms.TextBox();
             this.grvCliPesquisa = new System.Windows.Forms.DataGridView();
-            this.btnCliExcluir = new System.Windows.Forms.Button();
             this.btnCliAlterar = new System.Windows.Forms.Button();
             this.btnCliSalvar = new System.Windows.Forms.Button();
-            this.lblCliRG = new System.Windows.Forms.Label();
             this.txtCliTelefone = new System.Windows.Forms.MaskedTextBox();
             this.lblCliTelefone = new System.Windows.Forms.Label();
             this.txtCliEndereco = new System.Windows.Forms.TextBox();
@@ -45,7 +43,6 @@
             this.lblCliCPF = new System.Windows.Forms.Label();
             this.lblCliNome = new System.Windows.Forms.Label();
             this.txtCliCPF = new System.Windows.Forms.MaskedTextBox();
-            this.txtCliRG = new System.Windows.Forms.MaskedTextBox();
             this.grbCliPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvCliPesquisa)).BeginInit();
             this.SuspendLayout();
@@ -90,21 +87,16 @@
             // 
             // grvCliPesquisa
             // 
-            this.grvCliPesquisa.AllowUserToOrderColumns = true;
+            this.grvCliPesquisa.AllowUserToAddRows = false;
+            this.grvCliPesquisa.AllowUserToDeleteRows = false;
             this.grvCliPesquisa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvCliPesquisa.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.grvCliPesquisa.Location = new System.Drawing.Point(7, 49);
             this.grvCliPesquisa.Name = "grvCliPesquisa";
+            this.grvCliPesquisa.ReadOnly = true;
             this.grvCliPesquisa.Size = new System.Drawing.Size(533, 178);
             this.grvCliPesquisa.TabIndex = 0;
-            // 
-            // btnCliExcluir
-            // 
-            this.btnCliExcluir.Location = new System.Drawing.Point(169, 86);
-            this.btnCliExcluir.Name = "btnCliExcluir";
-            this.btnCliExcluir.Size = new System.Drawing.Size(79, 40);
-            this.btnCliExcluir.TabIndex = 35;
-            this.btnCliExcluir.Text = "Excluir";
-            this.btnCliExcluir.UseVisualStyleBackColor = true;
+            this.grvCliPesquisa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvCliPesquisa_CellDoubleClick);
             // 
             // btnCliAlterar
             // 
@@ -124,18 +116,6 @@
             this.btnCliSalvar.Text = "Salvar";
             this.btnCliSalvar.UseVisualStyleBackColor = true;
             this.btnCliSalvar.Click += new System.EventHandler(this.btnCliSalvar_Click);
-            // 
-            // lblCliRG
-            // 
-            this.lblCliRG.AutoSize = true;
-            this.lblCliRG.Enabled = false;
-            this.lblCliRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliRG.Location = new System.Drawing.Point(299, 33);
-            this.lblCliRG.Name = "lblCliRG";
-            this.lblCliRG.Size = new System.Drawing.Size(39, 18);
-            this.lblCliRG.TabIndex = 29;
-            this.lblCliRG.Text = "R.G:";
-            this.lblCliRG.Visible = false;
             // 
             // txtCliTelefone
             // 
@@ -181,14 +161,12 @@
             // lblCliCPF
             // 
             this.lblCliCPF.AutoSize = true;
-            this.lblCliCPF.Enabled = false;
             this.lblCliCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCliCPF.Location = new System.Drawing.Point(158, 34);
             this.lblCliCPF.Name = "lblCliCPF";
             this.lblCliCPF.Size = new System.Drawing.Size(42, 18);
             this.lblCliCPF.TabIndex = 22;
             this.lblCliCPF.Text = "CPF:";
-            this.lblCliCPF.Visible = false;
             // 
             // lblCliNome
             // 
@@ -202,36 +180,21 @@
             // 
             // txtCliCPF
             // 
-            this.txtCliCPF.Enabled = false;
             this.txtCliCPF.Location = new System.Drawing.Point(197, 33);
             this.txtCliCPF.Mask = "999.999.999-99";
             this.txtCliCPF.Name = "txtCliCPF";
             this.txtCliCPF.Size = new System.Drawing.Size(85, 20);
             this.txtCliCPF.TabIndex = 37;
-            this.txtCliCPF.Visible = false;
-            // 
-            // txtCliRG
-            // 
-            this.txtCliRG.Enabled = false;
-            this.txtCliRG.Location = new System.Drawing.Point(338, 33);
-            this.txtCliRG.Mask = "99.999.999-9";
-            this.txtCliRG.Name = "txtCliRG";
-            this.txtCliRG.Size = new System.Drawing.Size(75, 20);
-            this.txtCliRG.TabIndex = 38;
-            this.txtCliRG.Visible = false;
             // 
             // frmClienteCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 371);
-            this.Controls.Add(this.txtCliRG);
             this.Controls.Add(this.txtCliCPF);
             this.Controls.Add(this.grbCliPesquisa);
-            this.Controls.Add(this.btnCliExcluir);
             this.Controls.Add(this.btnCliAlterar);
             this.Controls.Add(this.btnCliSalvar);
-            this.Controls.Add(this.lblCliRG);
             this.Controls.Add(this.txtCliTelefone);
             this.Controls.Add(this.lblCliTelefone);
             this.Controls.Add(this.txtCliEndereco);
@@ -260,10 +223,8 @@
         private System.Windows.Forms.Button btnCliBusca;
         private System.Windows.Forms.TextBox txtCliBusca;
         private System.Windows.Forms.DataGridView grvCliPesquisa;
-        private System.Windows.Forms.Button btnCliExcluir;
         private System.Windows.Forms.Button btnCliAlterar;
         private System.Windows.Forms.Button btnCliSalvar;
-        private System.Windows.Forms.Label lblCliRG;
         private System.Windows.Forms.MaskedTextBox txtCliTelefone;
         private System.Windows.Forms.Label lblCliTelefone;
         private System.Windows.Forms.TextBox txtCliEndereco;
@@ -272,6 +233,5 @@
         private System.Windows.Forms.Label lblCliCPF;
         private System.Windows.Forms.Label lblCliNome;
         private System.Windows.Forms.MaskedTextBox txtCliCPF;
-        private System.Windows.Forms.MaskedTextBox txtCliRG;
     }
 }
