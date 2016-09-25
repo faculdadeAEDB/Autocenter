@@ -36,7 +36,6 @@
             this.txtServBusca = new System.Windows.Forms.TextBox();
             this.grvServPesquisa = new System.Windows.Forms.DataGridView();
             this.btnServExcluir = new System.Windows.Forms.Button();
-            this.btnServAlterar = new System.Windows.Forms.Button();
             this.btnServSalvar = new System.Windows.Forms.Button();
             this.txtServValor = new System.Windows.Forms.TextBox();
             this.lblServValor = new System.Windows.Forms.Label();
@@ -107,26 +106,20 @@
             this.grvServPesquisa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvServPesquisa.Location = new System.Drawing.Point(7, 49);
             this.grvServPesquisa.Name = "grvServPesquisa";
+            this.grvServPesquisa.ReadOnly = true;
             this.grvServPesquisa.Size = new System.Drawing.Size(533, 175);
             this.grvServPesquisa.TabIndex = 0;
+            this.grvServPesquisa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvServPesquisa_CellDoubleClick);
             // 
             // btnServExcluir
             // 
-            this.btnServExcluir.Location = new System.Drawing.Point(169, 122);
+            this.btnServExcluir.Location = new System.Drawing.Point(89, 122);
             this.btnServExcluir.Name = "btnServExcluir";
             this.btnServExcluir.Size = new System.Drawing.Size(76, 38);
             this.btnServExcluir.TabIndex = 49;
             this.btnServExcluir.Text = "Excluir";
             this.btnServExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnServAlterar
-            // 
-            this.btnServAlterar.Location = new System.Drawing.Point(88, 122);
-            this.btnServAlterar.Name = "btnServAlterar";
-            this.btnServAlterar.Size = new System.Drawing.Size(76, 38);
-            this.btnServAlterar.TabIndex = 48;
-            this.btnServAlterar.Text = "Alterar";
-            this.btnServAlterar.UseVisualStyleBackColor = true;
+            this.btnServExcluir.Click += new System.EventHandler(this.btnServExcluir_Click);
             // 
             // btnServSalvar
             // 
@@ -136,6 +129,7 @@
             this.btnServSalvar.TabIndex = 47;
             this.btnServSalvar.Text = "Salvar";
             this.btnServSalvar.UseVisualStyleBackColor = true;
+            this.btnServSalvar.Click += new System.EventHandler(this.btnServSalvar_Click);
             // 
             // txtServValor
             // 
@@ -180,7 +174,6 @@
             this.Controls.Add(this.lblServDescricao);
             this.Controls.Add(this.grbServPesquisa);
             this.Controls.Add(this.btnServExcluir);
-            this.Controls.Add(this.btnServAlterar);
             this.Controls.Add(this.btnServSalvar);
             this.Controls.Add(this.txtServValor);
             this.Controls.Add(this.lblServValor);
@@ -191,6 +184,7 @@
             this.MinimizeBox = false;
             this.Name = "frmServCadastro";
             this.Text = "frmServCadastro";
+            this.Load += new System.EventHandler(this.frmServCadastro_Load);
             this.grbServPesquisa.ResumeLayout(false);
             this.grbServPesquisa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvServPesquisa)).EndInit();
@@ -209,7 +203,6 @@
         private System.Windows.Forms.TextBox txtServBusca;
         private System.Windows.Forms.DataGridView grvServPesquisa;
         private System.Windows.Forms.Button btnServExcluir;
-        private System.Windows.Forms.Button btnServAlterar;
         private System.Windows.Forms.Button btnServSalvar;
         private System.Windows.Forms.TextBox txtServValor;
         private System.Windows.Forms.Label lblServValor;

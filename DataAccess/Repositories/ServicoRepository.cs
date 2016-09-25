@@ -26,6 +26,7 @@ namespace DataAccess.Repositories
         {
             using (DataContext c = new DataContext())
             {
+                c.Servicos.Attach(obj);
                 Servico servicoExcluido = c.Servicos.Remove(obj);
                 c.SaveChanges();
                 return servicoExcluido;
