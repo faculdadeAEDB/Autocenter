@@ -48,8 +48,7 @@ namespace DataAccess.Repositories
             //throw new NotImplementedException();
             using (DataContext c = new DataContext())
             {
-                Cliente clienteSelecionado = c.Clientes.Find(id);
-                return clienteSelecionado;
+                return c.Clientes.Find(id);
             }
         }
 

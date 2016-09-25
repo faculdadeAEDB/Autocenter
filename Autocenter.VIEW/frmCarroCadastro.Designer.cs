@@ -40,10 +40,10 @@
             this.btnCarroSalvar = new System.Windows.Forms.Button();
             this.lblCarroPlaca = new System.Windows.Forms.Label();
             this.txtCarroCor = new System.Windows.Forms.TextBox();
-            this.txtCarroCliente = new System.Windows.Forms.TextBox();
             this.lblCarroCor = new System.Windows.Forms.Label();
             this.lblCarroModelo = new System.Windows.Forms.Label();
             this.lblCarroCliente = new System.Windows.Forms.Label();
+            this.cboCarroCliente = new System.Windows.Forms.ComboBox();
             this.grbCarroPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvCarroPesquisa)).BeginInit();
             this.SuspendLayout();
@@ -54,8 +54,7 @@
             this.txtCarroPlaca.Mask = "9999-9999";
             this.txtCarroPlaca.Name = "txtCarroPlaca";
             this.txtCarroPlaca.Size = new System.Drawing.Size(60, 20);
-            this.txtCarroPlaca.TabIndex = 2;
-            this.txtCarroPlaca.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCarroPlaca_MaskInputRejected);
+            this.txtCarroPlaca.TabIndex = 37;
             // 
             // grbCarroPesquisa
             // 
@@ -66,7 +65,7 @@
             this.grbCarroPesquisa.Location = new System.Drawing.Point(5, 110);
             this.grbCarroPesquisa.Name = "grbCarroPesquisa";
             this.grbCarroPesquisa.Size = new System.Drawing.Size(550, 236);
-            this.grbCarroPesquisa.TabIndex = 7;
+            this.grbCarroPesquisa.TabIndex = 36;
             this.grbCarroPesquisa.TabStop = false;
             this.grbCarroPesquisa.Text = "Pesquisa";
             // 
@@ -75,7 +74,7 @@
             this.btnCarroRelatorio.Location = new System.Drawing.Point(434, 16);
             this.btnCarroRelatorio.Name = "btnCarroRelatorio";
             this.btnCarroRelatorio.Size = new System.Drawing.Size(106, 23);
-            this.btnCarroRelatorio.TabIndex = 2;
+            this.btnCarroRelatorio.TabIndex = 22;
             this.btnCarroRelatorio.Text = "Emitir Relatorio";
             this.btnCarroRelatorio.UseVisualStyleBackColor = true;
             // 
@@ -84,7 +83,7 @@
             this.btnCarroBusca.Location = new System.Drawing.Point(177, 17);
             this.btnCarroBusca.Name = "btnCarroBusca";
             this.btnCarroBusca.Size = new System.Drawing.Size(75, 23);
-            this.btnCarroBusca.TabIndex = 0;
+            this.btnCarroBusca.TabIndex = 21;
             this.btnCarroBusca.Text = "Busca";
             this.btnCarroBusca.UseVisualStyleBackColor = true;
             // 
@@ -93,7 +92,7 @@
             this.txtCarroBusca.Location = new System.Drawing.Point(7, 19);
             this.txtCarroBusca.Name = "txtCarroBusca";
             this.txtCarroBusca.Size = new System.Drawing.Size(164, 20);
-            this.txtCarroBusca.TabIndex = 0;
+            this.txtCarroBusca.TabIndex = 6;
             // 
             // grvCarroPesquisa
             // 
@@ -101,7 +100,7 @@
             this.grvCarroPesquisa.Location = new System.Drawing.Point(7, 49);
             this.grvCarroPesquisa.Name = "grvCarroPesquisa";
             this.grvCarroPesquisa.Size = new System.Drawing.Size(533, 175);
-            this.grvCarroPesquisa.TabIndex = 3;
+            this.grvCarroPesquisa.TabIndex = 0;
             // 
             // cboCarroModelo
             // 
@@ -109,15 +108,14 @@
             this.cboCarroModelo.Location = new System.Drawing.Point(76, 42);
             this.cboCarroModelo.Name = "cboCarroModelo";
             this.cboCarroModelo.Size = new System.Drawing.Size(121, 21);
-            this.cboCarroModelo.TabIndex = 1;
-            this.cboCarroModelo.SelectedIndexChanged += new System.EventHandler(this.cboCarroModelo_SelectedIndexChanged);
+            this.cboCarroModelo.TabIndex = 35;
             // 
             // btnCarroExcluir
             // 
             this.btnCarroExcluir.Location = new System.Drawing.Point(174, 69);
             this.btnCarroExcluir.Name = "btnCarroExcluir";
             this.btnCarroExcluir.Size = new System.Drawing.Size(81, 35);
-            this.btnCarroExcluir.TabIndex = 6;
+            this.btnCarroExcluir.TabIndex = 34;
             this.btnCarroExcluir.Text = "Excluir";
             this.btnCarroExcluir.UseVisualStyleBackColor = true;
             // 
@@ -126,7 +124,7 @@
             this.btnCarroAlterar.Location = new System.Drawing.Point(93, 69);
             this.btnCarroAlterar.Name = "btnCarroAlterar";
             this.btnCarroAlterar.Size = new System.Drawing.Size(81, 35);
-            this.btnCarroAlterar.TabIndex = 5;
+            this.btnCarroAlterar.TabIndex = 33;
             this.btnCarroAlterar.Text = "Alterar";
             this.btnCarroAlterar.UseVisualStyleBackColor = true;
             // 
@@ -135,7 +133,7 @@
             this.btnCarroSalvar.Location = new System.Drawing.Point(12, 69);
             this.btnCarroSalvar.Name = "btnCarroSalvar";
             this.btnCarroSalvar.Size = new System.Drawing.Size(81, 35);
-            this.btnCarroSalvar.TabIndex = 4;
+            this.btnCarroSalvar.TabIndex = 32;
             this.btnCarroSalvar.Text = "Salvar";
             this.btnCarroSalvar.UseVisualStyleBackColor = true;
             this.btnCarroSalvar.Click += new System.EventHandler(this.btnCarroSalvar_Click);
@@ -155,15 +153,7 @@
             this.txtCarroCor.Location = new System.Drawing.Point(371, 42);
             this.txtCarroCor.Name = "txtCarroCor";
             this.txtCarroCor.Size = new System.Drawing.Size(88, 20);
-            this.txtCarroCor.TabIndex = 3;
-            // 
-            // txtCarroCliente
-            // 
-            this.txtCarroCliente.Location = new System.Drawing.Point(76, 12);
-            this.txtCarroCliente.Name = "txtCarroCliente";
-            this.txtCarroCliente.Size = new System.Drawing.Size(456, 20);
-            this.txtCarroCliente.TabIndex = 0;
-            this.txtCarroCliente.TextChanged += new System.EventHandler(this.txtCarroCliente_TextChanged);
+            this.txtCarroCor.TabIndex = 30;
             // 
             // lblCarroCor
             // 
@@ -195,11 +185,21 @@
             this.lblCarroCliente.TabIndex = 26;
             this.lblCarroCliente.Text = "Cliente:";
             // 
+            // cboCarroCliente
+            // 
+            this.cboCarroCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cboCarroCliente.FormattingEnabled = true;
+            this.cboCarroCliente.Location = new System.Drawing.Point(76, 14);
+            this.cboCarroCliente.Name = "cboCarroCliente";
+            this.cboCarroCliente.Size = new System.Drawing.Size(469, 21);
+            this.cboCarroCliente.TabIndex = 38;
+            // 
             // frmCarroCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 352);
+            this.Controls.Add(this.cboCarroCliente);
             this.Controls.Add(this.txtCarroPlaca);
             this.Controls.Add(this.grbCarroPesquisa);
             this.Controls.Add(this.cboCarroModelo);
@@ -208,7 +208,6 @@
             this.Controls.Add(this.btnCarroSalvar);
             this.Controls.Add(this.lblCarroPlaca);
             this.Controls.Add(this.txtCarroCor);
-            this.Controls.Add(this.txtCarroCliente);
             this.Controls.Add(this.lblCarroCor);
             this.Controls.Add(this.lblCarroModelo);
             this.Controls.Add(this.lblCarroCliente);
@@ -217,6 +216,7 @@
             this.MinimizeBox = false;
             this.Name = "frmCarroCadastro";
             this.Text = "Carros";
+            this.Load += new System.EventHandler(this.frmCarroCadastro_Load);
             this.grbCarroPesquisa.ResumeLayout(false);
             this.grbCarroPesquisa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvCarroPesquisa)).EndInit();
@@ -239,9 +239,9 @@
         private System.Windows.Forms.Button btnCarroSalvar;
         private System.Windows.Forms.Label lblCarroPlaca;
         private System.Windows.Forms.TextBox txtCarroCor;
-        private System.Windows.Forms.TextBox txtCarroCliente;
         private System.Windows.Forms.Label lblCarroCor;
         private System.Windows.Forms.Label lblCarroModelo;
         private System.Windows.Forms.Label lblCarroCliente;
+        private System.Windows.Forms.ComboBox cboCarroCliente;
     }
 }

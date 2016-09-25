@@ -46,8 +46,7 @@ namespace DataAccess.Repositories
         {
             using (DataContext c = new DataContext())
             {
-                Funcionario funcionarioSelecionado = c.Funcionarios.Find(id);
-                return funcionarioSelecionado;
+                return c.Funcionarios.Find(id);
             }
         }
 
