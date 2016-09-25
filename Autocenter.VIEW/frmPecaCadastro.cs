@@ -18,31 +18,81 @@ namespace Autocenter.VIEW
         {
             InitializeComponent();
         }
+        Peca selectedPeca = null;
+        PecaController controller = new PecaController();
+        ModeloController controllerModelo = new ModeloController();
 
-        private void btnPecaSalvar_Click(object sender, EventArgs e)
+        void limpandoCampos()
+        {
+            txtPecaBusca.Clear();
+            txtPecaMarca.Clear();
+            txtPecaNome.Clear();
+            txtPecaQtd.Clear();
+            txtPecaValor.Clear();
+            cboPecaModelo.ResetText();
+        }
+        void atualizandoGrv()
+        {
+            grvPecaPesquisa.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            List<Peca> oPeca = new List<Peca>();
+            oPeca = controller.Obter();
+            grvPecaPesquisa.DataSource = oPeca;
+            grvPecaPesquisa.Columns["PecaId"].DisplayIndex = 0;
+            grvPecaPesquisa.Columns["Nome"].DisplayIndex = 1;
+            grvPecaPesquisa.Columns["Marca"].DisplayIndex = 2;
+            grvPecaPesquisa.Columns["Quantidade"].DisplayIndex = 3;
+            grvPecaPesquisa.Columns["Modelos"].DisplayIndex = 4;
+            grvPecaPesquisa.Columns["OrdemServicos"].DisplayIndex = 5;
+            List<Modelo> oModelo = controllerModelo.Obter().ToList();
+            cboPecaModelo.DataSource = oModelo;
+            cboPecaModelo.DisplayMember = "Nome";
+        }
+
+        private void frmPecaCadastro_Load(object sender, EventArgs e)
+        {
+            atualizandoGrv();
+        }
+
+        private void btnPecaSalvar_Click_1(object sender, EventArgs e)
         {
             string nome = txtPecaNome.Text;
-            string Modelo = cboPecaModelo.Text;
-            string Valor = txtPecaValor.Text;
+            Modelo cboModelo = (Modelo)cboPecaModelo.SelectedItem;
+            //string Valor = txtPecaValor.Text; não tem no banco
             string Marca = txtPecaMarca.Text;
-            string qtd = txtQtd.Text;
-
+            int qtd = Convert.ToInt32(txtPecaQtd.Text);
             Peca peca = new Peca();
             peca.Nome = nome;
             peca.Marca = Marca;
-
-
-          /*  peca.Quantidade = Convert.ToInt32(qtd);
-            peca.Modelos = Modelo;
             
-            peca.Valor = Valor;
+            peca.Quantidade = qtd;
+            if (selectedPeca == null)
+            {
+                Peca novoPeca = controller.Salvar(peca);
+                peca.Modelos.Add(cboModelo);
+            }
+            else
+            {
+                if (MessageBox.Show("Deseja realmente Alterar?", "Cadastro de Funcionario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    selectedPeca.Marca = Marca;
+                    selectedPeca.Nome = nome;
+                    selectedPeca.Quantidade = qtd;
+                    Peca alteraPeca = controller.Editar(selectedPeca);
+                    
+                }
+            }
+            atualizandoGrv();
+            limpandoCampos();
+        }
 
-            ModeloController controller = new ModeloController();
-            peca.Modelos = controller.Obter(Convert.ToInt32(cboPecaModelo.Text));
-            */
-            PecaController controller = new PecaController();
+        private void grvPecaPesquisa_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedPeca = controller.Obter(Convert.ToInt32(grvPecaPesquisa.Rows[e.RowIndex].Cells[0].Value.ToString()));
 
-            controller.Salvar(peca);
+            txtPecaNome.Text = selectedPeca.Nome;
+            txtPecaQtd.Text = Convert.ToString(selectedPeca.Quantidade);
+            //txtPecaValor.Text = selectedPeca.Valor; não tem no banco
+            txtPecaMarca.Text = selectedPeca.Marca;
         }
     }
 }

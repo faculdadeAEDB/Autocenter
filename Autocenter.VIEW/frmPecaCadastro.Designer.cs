@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grbPecaPesquisa = new System.Windows.Forms.GroupBox();
             this.btnPecaRelatorio = new System.Windows.Forms.Button();
             this.btnPecaBusca = new System.Windows.Forms.Button();
@@ -40,14 +41,16 @@
             this.lblPecaValor = new System.Windows.Forms.Label();
             this.cboPecaModelo = new System.Windows.Forms.ComboBox();
             this.lblPecaModelo = new System.Windows.Forms.Label();
-            this.txtQtd = new System.Windows.Forms.TextBox();
+            this.txtPecaQtd = new System.Windows.Forms.TextBox();
             this.lblPecaQtd = new System.Windows.Forms.Label();
             this.txtPecaNome = new System.Windows.Forms.TextBox();
             this.lblPecaNome = new System.Windows.Forms.Label();
             this.txtPecaMarca = new System.Windows.Forms.TextBox();
             this.lblPecaMarca = new System.Windows.Forms.Label();
+            this.modeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grbPecaPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvPecaPesquisa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modeloBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grbPecaPesquisa
@@ -93,8 +96,10 @@
             this.grvPecaPesquisa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvPecaPesquisa.Location = new System.Drawing.Point(7, 49);
             this.grvPecaPesquisa.Name = "grvPecaPesquisa";
+            this.grvPecaPesquisa.ReadOnly = true;
             this.grvPecaPesquisa.Size = new System.Drawing.Size(533, 175);
             this.grvPecaPesquisa.TabIndex = 0;
+            this.grvPecaPesquisa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvPecaPesquisa_CellDoubleClick);
             // 
             // btnPecaExcluir
             // 
@@ -122,7 +127,7 @@
             this.btnPecaSalvar.TabIndex = 45;
             this.btnPecaSalvar.Text = "Salvar";
             this.btnPecaSalvar.UseVisualStyleBackColor = true;
-            //this.btnPecaSalvar.Click += new System.EventHandler(this.btnPecaSalvar_Click);
+            this.btnPecaSalvar.Click += new System.EventHandler(this.btnPecaSalvar_Click_1);
             // 
             // txtPecaValor
             // 
@@ -159,12 +164,12 @@
             this.lblPecaModelo.TabIndex = 41;
             this.lblPecaModelo.Text = "Modelo:";
             // 
-            // txtQtd
+            // txtPecaQtd
             // 
-            this.txtQtd.Location = new System.Drawing.Point(377, 7);
-            this.txtQtd.Name = "txtQtd";
-            this.txtQtd.Size = new System.Drawing.Size(46, 20);
-            this.txtQtd.TabIndex = 40;
+            this.txtPecaQtd.Location = new System.Drawing.Point(377, 7);
+            this.txtPecaQtd.Name = "txtPecaQtd";
+            this.txtPecaQtd.Size = new System.Drawing.Size(46, 20);
+            this.txtPecaQtd.TabIndex = 40;
             // 
             // lblPecaQtd
             // 
@@ -210,6 +215,10 @@
             this.lblPecaMarca.TabIndex = 49;
             this.lblPecaMarca.Text = "Marca:";
             // 
+            // modeloBindingSource
+            // 
+            this.modeloBindingSource.DataSource = typeof(Domain.Entities.Modelo);
+            // 
             // frmPecaCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,7 +234,7 @@
             this.Controls.Add(this.lblPecaValor);
             this.Controls.Add(this.cboPecaModelo);
             this.Controls.Add(this.lblPecaModelo);
-            this.Controls.Add(this.txtQtd);
+            this.Controls.Add(this.txtPecaQtd);
             this.Controls.Add(this.lblPecaQtd);
             this.Controls.Add(this.txtPecaNome);
             this.Controls.Add(this.lblPecaNome);
@@ -234,9 +243,11 @@
             this.MinimizeBox = false;
             this.Name = "frmPecaCadastro";
             this.Text = "Peças";
+            this.Load += new System.EventHandler(this.frmPecaCadastro_Load);
             this.grbPecaPesquisa.ResumeLayout(false);
             this.grbPecaPesquisa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvPecaPesquisa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modeloBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,11 +267,12 @@
         private System.Windows.Forms.Label lblPecaValor;
         private System.Windows.Forms.ComboBox cboPecaModelo;
         private System.Windows.Forms.Label lblPecaModelo;
-        private System.Windows.Forms.TextBox txtQtd;
+        private System.Windows.Forms.TextBox txtPecaQtd;
         private System.Windows.Forms.Label lblPecaQtd;
         private System.Windows.Forms.TextBox txtPecaNome;
         private System.Windows.Forms.Label lblPecaNome;
         private System.Windows.Forms.TextBox txtPecaMarca;
         private System.Windows.Forms.Label lblPecaMarca;
+        private System.Windows.Forms.BindingSource modeloBindingSource;
     }
 }
