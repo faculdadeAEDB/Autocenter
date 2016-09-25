@@ -49,7 +49,7 @@
             this.txtFuncFuncao.Location = new System.Drawing.Point(69, 36);
             this.txtFuncFuncao.Name = "txtFuncFuncao";
             this.txtFuncFuncao.Size = new System.Drawing.Size(106, 20);
-            this.txtFuncFuncao.TabIndex = 42;
+            this.txtFuncFuncao.TabIndex = 1;
             // 
             // lblFuncFuncao
             // 
@@ -76,7 +76,7 @@
             this.btnFuncSalvar.Location = new System.Drawing.Point(474, 35);
             this.btnFuncSalvar.Name = "btnFuncSalvar";
             this.btnFuncSalvar.Size = new System.Drawing.Size(79, 40);
-            this.btnFuncSalvar.TabIndex = 36;
+            this.btnFuncSalvar.TabIndex = 3;
             this.btnFuncSalvar.Text = "Salvar";
             this.btnFuncSalvar.UseVisualStyleBackColor = true;
             this.btnFuncSalvar.Click += new System.EventHandler(this.btnFuncSalvar_Click);
@@ -99,7 +99,7 @@
             this.btnFuncRelatorio.Location = new System.Drawing.Point(434, 16);
             this.btnFuncRelatorio.Name = "btnFuncRelatorio";
             this.btnFuncRelatorio.Size = new System.Drawing.Size(106, 23);
-            this.btnFuncRelatorio.TabIndex = 22;
+            this.btnFuncRelatorio.TabIndex = 2;
             this.btnFuncRelatorio.Text = "Emitir Relatorio";
             this.btnFuncRelatorio.UseVisualStyleBackColor = true;
             // 
@@ -108,7 +108,7 @@
             this.btnFuncBusca.Location = new System.Drawing.Point(177, 17);
             this.btnFuncBusca.Name = "btnFuncBusca";
             this.btnFuncBusca.Size = new System.Drawing.Size(75, 23);
-            this.btnFuncBusca.TabIndex = 21;
+            this.btnFuncBusca.TabIndex = 1;
             this.btnFuncBusca.Text = "Busca";
             this.btnFuncBusca.UseVisualStyleBackColor = true;
             // 
@@ -117,7 +117,7 @@
             this.txtFuncBusca.Location = new System.Drawing.Point(7, 19);
             this.txtFuncBusca.Name = "txtFuncBusca";
             this.txtFuncBusca.Size = new System.Drawing.Size(164, 20);
-            this.txtFuncBusca.TabIndex = 6;
+            this.txtFuncBusca.TabIndex = 0;
             // 
             // grvFuncPesquisa
             // 
@@ -126,7 +126,7 @@
             this.grvFuncPesquisa.Name = "grvFuncPesquisa";
             this.grvFuncPesquisa.ReadOnly = true;
             this.grvFuncPesquisa.Size = new System.Drawing.Size(533, 175);
-            this.grvFuncPesquisa.TabIndex = 0;
+            this.grvFuncPesquisa.TabIndex = 3;
             this.grvFuncPesquisa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvFuncPesquisa_CellDoubleClick);
             // 
             // txtFuncNome
@@ -134,7 +134,7 @@
             this.txtFuncNome.Location = new System.Drawing.Point(56, 6);
             this.txtFuncNome.Name = "txtFuncNome";
             this.txtFuncNome.Size = new System.Drawing.Size(497, 20);
-            this.txtFuncNome.TabIndex = 34;
+            this.txtFuncNome.TabIndex = 0;
             // 
             // lblFuncNome
             // 
@@ -152,7 +152,7 @@
             this.txtFuncCPF.Mask = "999.999.999-99";
             this.txtFuncCPF.Name = "txtFuncCPF";
             this.txtFuncCPF.Size = new System.Drawing.Size(85, 20);
-            this.txtFuncCPF.TabIndex = 43;
+            this.txtFuncCPF.TabIndex = 2;
             // 
             // frmFunCadastro
             // 

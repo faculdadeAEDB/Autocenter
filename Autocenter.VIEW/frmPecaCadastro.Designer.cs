@@ -71,7 +71,7 @@
             this.btnPecaRelatorio.Location = new System.Drawing.Point(434, 16);
             this.btnPecaRelatorio.Name = "btnPecaRelatorio";
             this.btnPecaRelatorio.Size = new System.Drawing.Size(106, 23);
-            this.btnPecaRelatorio.TabIndex = 22;
+            this.btnPecaRelatorio.TabIndex = 2;
             this.btnPecaRelatorio.Text = "Emitir Relatorio";
             this.btnPecaRelatorio.UseVisualStyleBackColor = true;
             // 
@@ -80,7 +80,7 @@
             this.btnPecaBusca.Location = new System.Drawing.Point(177, 17);
             this.btnPecaBusca.Name = "btnPecaBusca";
             this.btnPecaBusca.Size = new System.Drawing.Size(75, 23);
-            this.btnPecaBusca.TabIndex = 21;
+            this.btnPecaBusca.TabIndex = 1;
             this.btnPecaBusca.Text = "Busca";
             this.btnPecaBusca.UseVisualStyleBackColor = true;
             // 
@@ -89,7 +89,7 @@
             this.txtPecaBusca.Location = new System.Drawing.Point(7, 19);
             this.txtPecaBusca.Name = "txtPecaBusca";
             this.txtPecaBusca.Size = new System.Drawing.Size(164, 20);
-            this.txtPecaBusca.TabIndex = 6;
+            this.txtPecaBusca.TabIndex = 0;
             // 
             // grvPecaPesquisa
             // 
@@ -98,7 +98,7 @@
             this.grvPecaPesquisa.Name = "grvPecaPesquisa";
             this.grvPecaPesquisa.ReadOnly = true;
             this.grvPecaPesquisa.Size = new System.Drawing.Size(533, 175);
-            this.grvPecaPesquisa.TabIndex = 0;
+            this.grvPecaPesquisa.TabIndex = 3;
             this.grvPecaPesquisa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvPecaPesquisa_CellDoubleClick);
             // 
             // btnPecaExcluir
@@ -106,7 +106,7 @@
             this.btnPecaExcluir.Location = new System.Drawing.Point(170, 64);
             this.btnPecaExcluir.Name = "btnPecaExcluir";
             this.btnPecaExcluir.Size = new System.Drawing.Size(79, 40);
-            this.btnPecaExcluir.TabIndex = 47;
+            this.btnPecaExcluir.TabIndex = 7;
             this.btnPecaExcluir.Text = "Excluir";
             this.btnPecaExcluir.UseVisualStyleBackColor = true;
             // 
@@ -115,7 +115,7 @@
             this.btnPecaAlterar.Location = new System.Drawing.Point(89, 64);
             this.btnPecaAlterar.Name = "btnPecaAlterar";
             this.btnPecaAlterar.Size = new System.Drawing.Size(79, 40);
-            this.btnPecaAlterar.TabIndex = 46;
+            this.btnPecaAlterar.TabIndex = 6;
             this.btnPecaAlterar.Text = "Alterar";
             this.btnPecaAlterar.UseVisualStyleBackColor = true;
             // 
@@ -124,7 +124,7 @@
             this.btnPecaSalvar.Location = new System.Drawing.Point(8, 64);
             this.btnPecaSalvar.Name = "btnPecaSalvar";
             this.btnPecaSalvar.Size = new System.Drawing.Size(79, 40);
-            this.btnPecaSalvar.TabIndex = 45;
+            this.btnPecaSalvar.TabIndex = 5;
             this.btnPecaSalvar.Text = "Salvar";
             this.btnPecaSalvar.UseVisualStyleBackColor = true;
             this.btnPecaSalvar.Click += new System.EventHandler(this.btnPecaSalvar_Click_1);
@@ -134,7 +134,7 @@
             this.txtPecaValor.Location = new System.Drawing.Point(236, 35);
             this.txtPecaValor.Name = "txtPecaValor";
             this.txtPecaValor.Size = new System.Drawing.Size(58, 20);
-            this.txtPecaValor.TabIndex = 44;
+            this.txtPecaValor.TabIndex = 3;
             // 
             // lblPecaValor
             // 
@@ -152,7 +152,7 @@
             this.cboPecaModelo.Location = new System.Drawing.Point(64, 35);
             this.cboPecaModelo.Name = "cboPecaModelo";
             this.cboPecaModelo.Size = new System.Drawing.Size(121, 21);
-            this.cboPecaModelo.TabIndex = 42;
+            this.cboPecaModelo.TabIndex = 2;
             // 
             // lblPecaModelo
             // 
@@ -169,7 +169,7 @@
             this.txtPecaQtd.Location = new System.Drawing.Point(377, 7);
             this.txtPecaQtd.Name = "txtPecaQtd";
             this.txtPecaQtd.Size = new System.Drawing.Size(46, 20);
-            this.txtPecaQtd.TabIndex = 40;
+            this.txtPecaQtd.TabIndex = 1;
             // 
             // lblPecaQtd
             // 
@@ -186,7 +186,7 @@
             this.txtPecaNome.Location = new System.Drawing.Point(64, 7);
             this.txtPecaNome.Name = "txtPecaNome";
             this.txtPecaNome.Size = new System.Drawing.Size(271, 20);
-            this.txtPecaNome.TabIndex = 38;
+            this.txtPecaNome.TabIndex = 0;
             // 
             // lblPecaNome
             // 
@@ -203,7 +203,7 @@
             this.txtPecaMarca.Location = new System.Drawing.Point(356, 36);
             this.txtPecaMarca.Name = "txtPecaMarca";
             this.txtPecaMarca.Size = new System.Drawing.Size(195, 20);
-            this.txtPecaMarca.TabIndex = 50;
+            this.txtPecaMarca.TabIndex = 4;
             // 
             // lblPecaMarca
             // 

@@ -51,7 +51,7 @@
             this.txtOrdemCliente.Location = new System.Drawing.Point(75, 12);
             this.txtOrdemCliente.Name = "txtOrdemCliente";
             this.txtOrdemCliente.Size = new System.Drawing.Size(380, 20);
-            this.txtOrdemCliente.TabIndex = 31;
+            this.txtOrdemCliente.TabIndex = 0;
             this.txtOrdemCliente.TextChanged += new System.EventHandler(this.txtOrdemCliente_TextChanged);
             // 
             // lblOrdemCliente
@@ -69,7 +69,7 @@
             this.txtOrdemOS.Location = new System.Drawing.Point(496, 12);
             this.txtOrdemOS.Name = "txtOrdemOS";
             this.txtOrdemOS.Size = new System.Drawing.Size(88, 20);
-            this.txtOrdemOS.TabIndex = 33;
+            this.txtOrdemOS.TabIndex = 1;
             // 
             // lblOrdemOS
             // 
@@ -93,7 +93,7 @@
             this.grvOrdem.Location = new System.Drawing.Point(11, 48);
             this.grvOrdem.Name = "grvOrdem";
             this.grvOrdem.Size = new System.Drawing.Size(698, 211);
-            this.grvOrdem.TabIndex = 34;
+            this.grvOrdem.TabIndex = 3;
             // 
             // ID
             // 
@@ -120,7 +120,7 @@
             this.btnOrdemSalvar.Location = new System.Drawing.Point(11, 265);
             this.btnOrdemSalvar.Name = "btnOrdemSalvar";
             this.btnOrdemSalvar.Size = new System.Drawing.Size(115, 37);
-            this.btnOrdemSalvar.TabIndex = 35;
+            this.btnOrdemSalvar.TabIndex = 4;
             this.btnOrdemSalvar.Text = "Salvar";
             this.btnOrdemSalvar.UseVisualStyleBackColor = true;
             // 
@@ -129,7 +129,7 @@
             this.btnOrdemVenda.Location = new System.Drawing.Point(590, 265);
             this.btnOrdemVenda.Name = "btnOrdemVenda";
             this.btnOrdemVenda.Size = new System.Drawing.Size(115, 37);
-            this.btnOrdemVenda.TabIndex = 36;
+            this.btnOrdemVenda.TabIndex = 6;
             this.btnOrdemVenda.Text = "Finalizar Venda";
             this.btnOrdemVenda.UseVisualStyleBackColor = true;
             // 
@@ -150,7 +150,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 37);
-            this.textBox1.TabIndex = 38;
+            this.textBox1.TabIndex = 5;
             this.textBox1.Text = "R$ 00,00";
             // 
             // lblOrdemOrcamento
@@ -160,7 +160,7 @@
             this.lblOrdemOrcamento.Location = new System.Drawing.Point(600, 11);
             this.lblOrdemOrcamento.Name = "lblOrdemOrcamento";
             this.lblOrdemOrcamento.Size = new System.Drawing.Size(92, 20);
-            this.lblOrdemOrcamento.TabIndex = 39;
+            this.lblOrdemOrcamento.TabIndex = 4;
             this.lblOrdemOrcamento.Text = "Orçamento:";
             // 
             // chkOrdemOrcamento
@@ -169,7 +169,7 @@
             this.chkOrdemOrcamento.Location = new System.Drawing.Point(694, 15);
             this.chkOrdemOrcamento.Name = "chkOrdemOrcamento";
             this.chkOrdemOrcamento.Size = new System.Drawing.Size(15, 14);
-            this.chkOrdemOrcamento.TabIndex = 40;
+            this.chkOrdemOrcamento.TabIndex = 2;
             this.chkOrdemOrcamento.UseVisualStyleBackColor = true;
             // 
             // frmOrdemServico

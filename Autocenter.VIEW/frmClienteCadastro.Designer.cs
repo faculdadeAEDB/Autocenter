@@ -56,7 +56,7 @@
             this.grbCliPesquisa.Location = new System.Drawing.Point(5, 132);
             this.grbCliPesquisa.Name = "grbCliPesquisa";
             this.grbCliPesquisa.Size = new System.Drawing.Size(546, 233);
-            this.grbCliPesquisa.TabIndex = 36;
+            this.grbCliPesquisa.TabIndex = 6;
             this.grbCliPesquisa.TabStop = false;
             this.grbCliPesquisa.Text = "Pesquisa";
             // 
@@ -65,7 +65,7 @@
             this.btnCliRelatorio.Location = new System.Drawing.Point(434, 16);
             this.btnCliRelatorio.Name = "btnCliRelatorio";
             this.btnCliRelatorio.Size = new System.Drawing.Size(106, 23);
-            this.btnCliRelatorio.TabIndex = 22;
+            this.btnCliRelatorio.TabIndex = 2;
             this.btnCliRelatorio.Text = "Emitir Relatorio";
             this.btnCliRelatorio.UseVisualStyleBackColor = true;
             // 
@@ -74,7 +74,7 @@
             this.btnCliBusca.Location = new System.Drawing.Point(177, 17);
             this.btnCliBusca.Name = "btnCliBusca";
             this.btnCliBusca.Size = new System.Drawing.Size(75, 23);
-            this.btnCliBusca.TabIndex = 21;
+            this.btnCliBusca.TabIndex = 1;
             this.btnCliBusca.Text = "Busca";
             this.btnCliBusca.UseVisualStyleBackColor = true;
             // 
@@ -83,7 +83,7 @@
             this.txtCliBusca.Location = new System.Drawing.Point(7, 19);
             this.txtCliBusca.Name = "txtCliBusca";
             this.txtCliBusca.Size = new System.Drawing.Size(164, 20);
-            this.txtCliBusca.TabIndex = 6;
+            this.txtCliBusca.TabIndex = 0;
             // 
             // grvCliPesquisa
             // 
@@ -95,7 +95,7 @@
             this.grvCliPesquisa.Name = "grvCliPesquisa";
             this.grvCliPesquisa.ReadOnly = true;
             this.grvCliPesquisa.Size = new System.Drawing.Size(533, 178);
-            this.grvCliPesquisa.TabIndex = 0;
+            this.grvCliPesquisa.TabIndex = 3;
             this.grvCliPesquisa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvCliPesquisa_CellDoubleClick);
             // 
             // btnCliAlterar
@@ -103,7 +103,7 @@
             this.btnCliAlterar.Location = new System.Drawing.Point(88, 86);
             this.btnCliAlterar.Name = "btnCliAlterar";
             this.btnCliAlterar.Size = new System.Drawing.Size(79, 40);
-            this.btnCliAlterar.TabIndex = 34;
+            this.btnCliAlterar.TabIndex = 5;
             this.btnCliAlterar.Text = "Alterar";
             this.btnCliAlterar.UseVisualStyleBackColor = true;
             // 
@@ -112,7 +112,7 @@
             this.btnCliSalvar.Location = new System.Drawing.Point(7, 86);
             this.btnCliSalvar.Name = "btnCliSalvar";
             this.btnCliSalvar.Size = new System.Drawing.Size(79, 40);
-            this.btnCliSalvar.TabIndex = 33;
+            this.btnCliSalvar.TabIndex = 4;
             this.btnCliSalvar.Text = "Salvar";
             this.btnCliSalvar.UseVisualStyleBackColor = true;
             this.btnCliSalvar.Click += new System.EventHandler(this.btnCliSalvar_Click);
@@ -122,7 +122,7 @@
             this.txtCliTelefone.Location = new System.Drawing.Point(70, 34);
             this.txtCliTelefone.Name = "txtCliTelefone";
             this.txtCliTelefone.Size = new System.Drawing.Size(82, 20);
-            this.txtCliTelefone.TabIndex = 28;
+            this.txtCliTelefone.TabIndex = 1;
             // 
             // lblCliTelefone
             // 
@@ -131,7 +131,7 @@
             this.lblCliTelefone.Location = new System.Drawing.Point(4, 34);
             this.lblCliTelefone.Name = "lblCliTelefone";
             this.lblCliTelefone.Size = new System.Drawing.Size(69, 18);
-            this.lblCliTelefone.TabIndex = 27;
+            this.lblCliTelefone.TabIndex = 2;
             this.lblCliTelefone.Text = "Telefone:";
             // 
             // txtCliEndereco
@@ -139,14 +139,14 @@
             this.txtCliEndereco.Location = new System.Drawing.Point(80, 60);
             this.txtCliEndereco.Name = "txtCliEndereco";
             this.txtCliEndereco.Size = new System.Drawing.Size(471, 20);
-            this.txtCliEndereco.TabIndex = 26;
+            this.txtCliEndereco.TabIndex = 3;
             // 
             // txtCliNome
             // 
             this.txtCliNome.Location = new System.Drawing.Point(57, 7);
             this.txtCliNome.Name = "txtCliNome";
             this.txtCliNome.Size = new System.Drawing.Size(494, 20);
-            this.txtCliNome.TabIndex = 24;
+            this.txtCliNome.TabIndex = 0;
             // 
             // lblCliEndereco
             // 
@@ -155,7 +155,7 @@
             this.lblCliEndereco.Location = new System.Drawing.Point(4, 59);
             this.lblCliEndereco.Name = "lblCliEndereco";
             this.lblCliEndereco.Size = new System.Drawing.Size(76, 18);
-            this.lblCliEndereco.TabIndex = 23;
+            this.lblCliEndereco.TabIndex = 6;
             this.lblCliEndereco.Text = "Endereço:";
             // 
             // lblCliCPF
@@ -165,7 +165,7 @@
             this.lblCliCPF.Location = new System.Drawing.Point(158, 34);
             this.lblCliCPF.Name = "lblCliCPF";
             this.lblCliCPF.Size = new System.Drawing.Size(42, 18);
-            this.lblCliCPF.TabIndex = 22;
+            this.lblCliCPF.TabIndex = 4;
             this.lblCliCPF.Text = "CPF:";
             // 
             // lblCliNome
@@ -175,7 +175,7 @@
             this.lblCliNome.Location = new System.Drawing.Point(4, 4);
             this.lblCliNome.Name = "lblCliNome";
             this.lblCliNome.Size = new System.Drawing.Size(53, 18);
-            this.lblCliNome.TabIndex = 21;
+            this.lblCliNome.TabIndex = 0;
             this.lblCliNome.Text = "Nome:";
             // 
             // txtCliCPF
@@ -184,7 +184,7 @@
             this.txtCliCPF.Mask = "999.999.999-99";
             this.txtCliCPF.Name = "txtCliCPF";
             this.txtCliCPF.Size = new System.Drawing.Size(85, 20);
-            this.txtCliCPF.TabIndex = 37;
+            this.txtCliCPF.TabIndex = 2;
             // 
             // frmClienteCadastro
             // 

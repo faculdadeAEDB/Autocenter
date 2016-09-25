@@ -60,7 +60,7 @@
             this.btnInitialServ.Location = new System.Drawing.Point(646, 19);
             this.btnInitialServ.Name = "btnInitialServ";
             this.btnInitialServ.Size = new System.Drawing.Size(100, 50);
-            this.btnInitialServ.TabIndex = 5;
+            this.btnInitialServ.TabIndex = 6;
             this.btnInitialServ.Text = "Serviço";
             this.btnInitialServ.UseVisualStyleBackColor = true;
             this.btnInitialServ.Click += new System.EventHandler(this.btnInitialServ_Click);
@@ -70,7 +70,7 @@
             this.btnInitialFuncionario.Location = new System.Drawing.Point(219, 20);
             this.btnInitialFuncionario.Name = "btnInitialFuncionario";
             this.btnInitialFuncionario.Size = new System.Drawing.Size(100, 50);
-            this.btnInitialFuncionario.TabIndex = 6;
+            this.btnInitialFuncionario.TabIndex = 2;
             this.btnInitialFuncionario.Text = "Funcionário";
             this.btnInitialFuncionario.UseVisualStyleBackColor = true;
             this.btnInitialFuncionario.Click += new System.EventHandler(this.btnInitialFuncionario_Click);
@@ -80,7 +80,7 @@
             this.btnInitialPeca.Location = new System.Drawing.Point(540, 20);
             this.btnInitialPeca.Name = "btnInitialPeca";
             this.btnInitialPeca.Size = new System.Drawing.Size(100, 50);
-            this.btnInitialPeca.TabIndex = 4;
+            this.btnInitialPeca.TabIndex = 5;
             this.btnInitialPeca.Text = "Peca";
             this.btnInitialPeca.UseVisualStyleBackColor = true;
             this.btnInitialPeca.Click += new System.EventHandler(this.btnInitialPeca_Click);
@@ -100,7 +100,7 @@
             this.btnInitialModelo.Location = new System.Drawing.Point(325, 20);
             this.btnInitialModelo.Name = "btnInitialModelo";
             this.btnInitialModelo.Size = new System.Drawing.Size(100, 50);
-            this.btnInitialModelo.TabIndex = 2;
+            this.btnInitialModelo.TabIndex = 3;
             this.btnInitialModelo.Text = "Modelo";
             this.btnInitialModelo.UseVisualStyleBackColor = true;
             this.btnInitialModelo.Click += new System.EventHandler(this.btnInitialModelo_Click);
@@ -110,7 +110,7 @@
             this.btnInitialOS.Location = new System.Drawing.Point(434, 20);
             this.btnInitialOS.Name = "btnInitialOS";
             this.btnInitialOS.Size = new System.Drawing.Size(100, 50);
-            this.btnInitialOS.TabIndex = 3;
+            this.btnInitialOS.TabIndex = 4;
             this.btnInitialOS.Text = "O.S";
             this.btnInitialOS.UseVisualStyleBackColor = true;
             this.btnInitialOS.Click += new System.EventHandler(this.btnInitialOS_Click);
