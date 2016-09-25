@@ -59,7 +59,7 @@
             this.txtModeloAno.Location = new System.Drawing.Point(274, 7);
             this.txtModeloAno.Name = "txtModeloAno";
             this.txtModeloAno.Size = new System.Drawing.Size(164, 21);
-            this.txtModeloAno.TabIndex = 42;
+            this.txtModeloAno.TabIndex = 1;
             // 
             // lblModeloMarca
             // 
@@ -76,14 +76,14 @@
             this.txtModeloMarca.Location = new System.Drawing.Point(65, 8);
             this.txtModeloMarca.Name = "txtModeloMarca";
             this.txtModeloMarca.Size = new System.Drawing.Size(164, 20);
-            this.txtModeloMarca.TabIndex = 36;
+            this.txtModeloMarca.TabIndex = 0;
             // 
             // btnModeloExcluir
             // 
             this.btnModeloExcluir.Location = new System.Drawing.Point(97, 34);
             this.btnModeloExcluir.Name = "btnModeloExcluir";
             this.btnModeloExcluir.Size = new System.Drawing.Size(79, 40);
-            this.btnModeloExcluir.TabIndex = 40;
+            this.btnModeloExcluir.TabIndex = 3;
             this.btnModeloExcluir.Text = "Excluir";
             this.btnModeloExcluir.UseVisualStyleBackColor = true;
             this.btnModeloExcluir.Click += new System.EventHandler(this.btnModeloExcluir_Click);
@@ -93,7 +93,7 @@
             this.btnModeloSalvar.Location = new System.Drawing.Point(8, 34);
             this.btnModeloSalvar.Name = "btnModeloSalvar";
             this.btnModeloSalvar.Size = new System.Drawing.Size(79, 40);
-            this.btnModeloSalvar.TabIndex = 38;
+            this.btnModeloSalvar.TabIndex = 2;
             this.btnModeloSalvar.Text = "Salvar";
             this.btnModeloSalvar.UseVisualStyleBackColor = true;
             this.btnModeloSalvar.Click += new System.EventHandler(this.btnModeloSalvar_Click);
@@ -116,7 +116,7 @@
             this.btnModeloRelatorio.Location = new System.Drawing.Point(434, 16);
             this.btnModeloRelatorio.Name = "btnModeloRelatorio";
             this.btnModeloRelatorio.Size = new System.Drawing.Size(106, 23);
-            this.btnModeloRelatorio.TabIndex = 22;
+            this.btnModeloRelatorio.TabIndex = 2;
             this.btnModeloRelatorio.Text = "Emitir Relatorio";
             this.btnModeloRelatorio.UseVisualStyleBackColor = true;
             // 
@@ -125,7 +125,7 @@
             this.btnModeloBusca.Location = new System.Drawing.Point(177, 17);
             this.btnModeloBusca.Name = "btnModeloBusca";
             this.btnModeloBusca.Size = new System.Drawing.Size(75, 23);
-            this.btnModeloBusca.TabIndex = 21;
+            this.btnModeloBusca.TabIndex = 1;
             this.btnModeloBusca.Text = "Busca";
             this.btnModeloBusca.UseVisualStyleBackColor = true;
             // 
@@ -134,7 +134,7 @@
             this.txtModeloBusca.Location = new System.Drawing.Point(7, 19);
             this.txtModeloBusca.Name = "txtModeloBusca";
             this.txtModeloBusca.Size = new System.Drawing.Size(164, 20);
-            this.txtModeloBusca.TabIndex = 6;
+            this.txtModeloBusca.TabIndex = 0;
             // 
             // grvModeloPesquisa
             // 
@@ -143,7 +143,7 @@
             this.grvModeloPesquisa.Name = "grvModeloPesquisa";
             this.grvModeloPesquisa.ReadOnly = true;
             this.grvModeloPesquisa.Size = new System.Drawing.Size(533, 175);
-            this.grvModeloPesquisa.TabIndex = 0;
+            this.grvModeloPesquisa.TabIndex = 3;
             this.grvModeloPesquisa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvModeloPesquisa_CellDoubleClick);
             // 
             // frmModeloCadastro

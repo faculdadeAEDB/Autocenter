@@ -83,12 +83,18 @@ namespace Autocenter.VIEW
         {
             if (MessageBox.Show("Deseja realmente Excluir?", "Cadastro de Modelo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                controller.Excluir(selectedModelo);
-                atualizandoGrv();
-                limpandoCampos();
+              try
+                {
+                    controller.Excluir(selectedModelo);
+                    atualizandoGrv();
+                    limpandoCampos();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Não possível excluir sem selecionar um modelo");
+                }
+                
             }
-            
-
         }
     }
 }
