@@ -57,6 +57,7 @@ namespace Autocenter.VIEW
         {
             string nome = txtPecaNome.Text;
             Modelo cboModelo = (Modelo)cboPecaModelo.SelectedItem;
+            Modelo modeloAssociado = controllerModelo.Obter(cboModelo.ModeloId);
             //string Valor = txtPecaValor.Text; não tem no banco
             string Marca = txtPecaMarca.Text;
             int qtd = Convert.ToInt32(txtPecaQtd.Text);
@@ -68,7 +69,7 @@ namespace Autocenter.VIEW
             if (selectedPeca == null)
             {
                 Peca novoPeca = controller.Salvar(peca);
-                peca.Modelos.Add(cboModelo);
+                peca.Modelos.Add(modeloAssociado);
             }
             else
             {
