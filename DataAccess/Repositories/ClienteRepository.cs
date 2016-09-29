@@ -52,6 +52,15 @@ namespace DataAccess.Repositories
             }
         }
 
+        public Cliente ObterNome(string nome)
+        {
+            //throw new NotImplementedException();
+            using (DataContext c = new DataContext())
+            {
+                return c.Clientes.Where(item => item.Nome == nome).First();
+            }
+        }
+
         public Cliente Salvar (Cliente obj)
         {
             using (DataContext c = new DataContext())

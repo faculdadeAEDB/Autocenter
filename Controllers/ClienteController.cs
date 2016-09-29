@@ -31,6 +31,11 @@ namespace Controllers
             return clienteRepository.Obter(id);
         }
 
+        public Cliente ObterNome(string nome)
+        {
+            return clienteRepository.ObterNome(nome);
+        }
+
         public Cliente Salvar(Cliente obj)
         {
             return clienteRepository.Salvar(obj);

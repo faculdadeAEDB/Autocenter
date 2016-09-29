@@ -52,7 +52,7 @@
             this.txtOrdemCliente.Name = "txtOrdemCliente";
             this.txtOrdemCliente.Size = new System.Drawing.Size(380, 20);
             this.txtOrdemCliente.TabIndex = 0;
-            this.txtOrdemCliente.TextChanged += new System.EventHandler(this.txtOrdemCliente_TextChanged);
+            this.txtOrdemCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOrdemCliente_KeyDown);
             // 
             // lblOrdemCliente
             // 
@@ -70,6 +70,7 @@
             this.txtOrdemOS.Name = "txtOrdemOS";
             this.txtOrdemOS.Size = new System.Drawing.Size(88, 20);
             this.txtOrdemOS.TabIndex = 1;
+            this.txtOrdemOS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOrdemOS_KeyDown);
             // 
             // lblOrdemOS
             // 
@@ -94,6 +95,8 @@
             this.grvOrdem.Name = "grvOrdem";
             this.grvOrdem.Size = new System.Drawing.Size(698, 211);
             this.grvOrdem.TabIndex = 3;
+            this.grvOrdem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvOrdem_CellClick);
+            this.grvOrdem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grvOrdem_KeyDown);
             // 
             // ID
             // 
@@ -193,6 +196,7 @@
             this.MinimizeBox = false;
             this.Name = "frmOrdemServico";
             this.Text = "frmOrdemServico";
+            this.Load += new System.EventHandler(this.frmOrdemServico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grvOrdem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
