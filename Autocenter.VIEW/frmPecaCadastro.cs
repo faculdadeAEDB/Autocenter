@@ -64,7 +64,6 @@ namespace Autocenter.VIEW
             Peca peca = new Peca();
             peca.Nome = nome;
             peca.Marca = Marca;
-            
             peca.Quantidade = qtd;
             if (selectedPeca == null)
             {

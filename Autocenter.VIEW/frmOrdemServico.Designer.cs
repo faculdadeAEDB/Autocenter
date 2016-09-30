@@ -28,31 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtOrdemCliente = new System.Windows.Forms.TextBox();
             this.lblOrdemCliente = new System.Windows.Forms.Label();
             this.txtOrdemOS = new System.Windows.Forms.TextBox();
             this.lblOrdemOS = new System.Windows.Forms.Label();
             this.grvOrdem = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnOrdemSalvar = new System.Windows.Forms.Button();
             this.btnOrdemVenda = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblOrdemValor = new System.Windows.Forms.Label();
+            this.txtOrdemValor = new System.Windows.Forms.TextBox();
             this.lblOrdemOrcamento = new System.Windows.Forms.Label();
             this.chkOrdemOrcamento = new System.Windows.Forms.CheckBox();
+            this.lblOrdemFunc = new System.Windows.Forms.Label();
+            this.cboOrdemCliente = new System.Windows.Forms.ComboBox();
+            this.cboOrdemFunc = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grvOrdem)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtOrdemCliente
-            // 
-            this.txtOrdemCliente.Location = new System.Drawing.Point(75, 12);
-            this.txtOrdemCliente.Name = "txtOrdemCliente";
-            this.txtOrdemCliente.Size = new System.Drawing.Size(380, 20);
-            this.txtOrdemCliente.TabIndex = 0;
-            this.txtOrdemCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOrdemCliente_KeyDown);
             // 
             // lblOrdemCliente
             // 
@@ -84,39 +74,18 @@
             // 
             // grvOrdem
             // 
+            this.grvOrdem.AllowDrop = true;
+            this.grvOrdem.AllowUserToAddRows = false;
             this.grvOrdem.AllowUserToOrderColumns = true;
             this.grvOrdem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvOrdem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Quantidade,
-            this.Nome,
-            this.Valor});
-            this.grvOrdem.Location = new System.Drawing.Point(11, 48);
+            this.grvOrdem.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.grvOrdem.Location = new System.Drawing.Point(11, 74);
+            this.grvOrdem.MultiSelect = false;
             this.grvOrdem.Name = "grvOrdem";
-            this.grvOrdem.Size = new System.Drawing.Size(698, 211);
+            this.grvOrdem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.grvOrdem.Size = new System.Drawing.Size(698, 185);
             this.grvOrdem.TabIndex = 3;
-            this.grvOrdem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvOrdem_CellClick);
-            this.grvOrdem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grvOrdem_KeyDown);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Quantidade
-            // 
-            this.Quantidade.HeaderText = "Quantidade";
-            this.Quantidade.Name = "Quantidade";
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // Valor
-            // 
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
+            this.grvOrdem.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvOrdem_CellValueChanged);
             // 
             // btnOrdemSalvar
             // 
@@ -126,6 +95,7 @@
             this.btnOrdemSalvar.TabIndex = 4;
             this.btnOrdemSalvar.Text = "Salvar";
             this.btnOrdemSalvar.UseVisualStyleBackColor = true;
+            this.btnOrdemSalvar.Click += new System.EventHandler(this.btnOrdemSalvar_Click);
             // 
             // btnOrdemVenda
             // 
@@ -136,25 +106,25 @@
             this.btnOrdemVenda.Text = "Finalizar Venda";
             this.btnOrdemVenda.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblOrdemValor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(389, 275);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 20);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Valor Total:";
+            this.lblOrdemValor.AutoSize = true;
+            this.lblOrdemValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrdemValor.Location = new System.Drawing.Point(389, 275);
+            this.lblOrdemValor.Name = "lblOrdemValor";
+            this.lblOrdemValor.Size = new System.Drawing.Size(89, 20);
+            this.lblOrdemValor.TabIndex = 37;
+            this.lblOrdemValor.Text = "Valor Total:";
             // 
-            // textBox1
+            // txtOrdemValor
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textBox1.Location = new System.Drawing.Point(484, 265);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 37);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "R$ 00,00";
+            this.txtOrdemValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txtOrdemValor.Location = new System.Drawing.Point(484, 265);
+            this.txtOrdemValor.Multiline = true;
+            this.txtOrdemValor.Name = "txtOrdemValor";
+            this.txtOrdemValor.ReadOnly = true;
+            this.txtOrdemValor.Size = new System.Drawing.Size(100, 37);
+            this.txtOrdemValor.TabIndex = 5;
             // 
             // lblOrdemOrcamento
             // 
@@ -175,21 +145,49 @@
             this.chkOrdemOrcamento.TabIndex = 2;
             this.chkOrdemOrcamento.UseVisualStyleBackColor = true;
             // 
+            // lblOrdemFunc
+            // 
+            this.lblOrdemFunc.AutoSize = true;
+            this.lblOrdemFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrdemFunc.Location = new System.Drawing.Point(7, 41);
+            this.lblOrdemFunc.Name = "lblOrdemFunc";
+            this.lblOrdemFunc.Size = new System.Drawing.Size(96, 20);
+            this.lblOrdemFunc.TabIndex = 39;
+            this.lblOrdemFunc.Text = "Funcionario:";
+            // 
+            // cboOrdemCliente
+            // 
+            this.cboOrdemCliente.FormattingEnabled = true;
+            this.cboOrdemCliente.Location = new System.Drawing.Point(75, 11);
+            this.cboOrdemCliente.Name = "cboOrdemCliente";
+            this.cboOrdemCliente.Size = new System.Drawing.Size(381, 21);
+            this.cboOrdemCliente.TabIndex = 40;
+            // 
+            // cboOrdemFunc
+            // 
+            this.cboOrdemFunc.FormattingEnabled = true;
+            this.cboOrdemFunc.Location = new System.Drawing.Point(109, 41);
+            this.cboOrdemFunc.Name = "cboOrdemFunc";
+            this.cboOrdemFunc.Size = new System.Drawing.Size(381, 21);
+            this.cboOrdemFunc.TabIndex = 41;
+            // 
             // frmOrdemServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 314);
+            this.Controls.Add(this.cboOrdemFunc);
+            this.Controls.Add(this.cboOrdemCliente);
+            this.Controls.Add(this.lblOrdemFunc);
             this.Controls.Add(this.chkOrdemOrcamento);
             this.Controls.Add(this.lblOrdemOrcamento);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtOrdemValor);
+            this.Controls.Add(this.lblOrdemValor);
             this.Controls.Add(this.btnOrdemVenda);
             this.Controls.Add(this.btnOrdemSalvar);
             this.Controls.Add(this.grvOrdem);
             this.Controls.Add(this.txtOrdemOS);
             this.Controls.Add(this.lblOrdemOS);
-            this.Controls.Add(this.txtOrdemCliente);
             this.Controls.Add(this.lblOrdemCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -204,21 +202,18 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtOrdemCliente;
         private System.Windows.Forms.Label lblOrdemCliente;
         private System.Windows.Forms.TextBox txtOrdemOS;
         private System.Windows.Forms.Label lblOrdemOS;
         private System.Windows.Forms.DataGridView grvOrdem;
         private System.Windows.Forms.Button btnOrdemSalvar;
         private System.Windows.Forms.Button btnOrdemVenda;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.Label lblOrdemValor;
+        private System.Windows.Forms.TextBox txtOrdemValor;
         private System.Windows.Forms.Label lblOrdemOrcamento;
         private System.Windows.Forms.CheckBox chkOrdemOrcamento;
+        private System.Windows.Forms.Label lblOrdemFunc;
+        private System.Windows.Forms.ComboBox cboOrdemCliente;
+        private System.Windows.Forms.ComboBox cboOrdemFunc;
     }
 }

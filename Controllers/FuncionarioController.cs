@@ -36,6 +36,10 @@ namespace Controllers
         {
             return funcionarioRepository.Obter(id);
         }
+        public Funcionario ObterNome(string nome)
+        {
+            return funcionarioRepository.ObterNome(nome);
+        }
 
         public Funcionario Salvar(Funcionario obj)
         {

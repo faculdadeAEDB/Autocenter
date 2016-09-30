@@ -50,6 +50,15 @@ namespace DataAccess.Repositories
             }
         }
 
+        public Funcionario ObterNome(string nome)
+        {
+            //throw new NotImplementedException();
+            using (DataContext c = new DataContext())
+            {
+                return c.Funcionarios.Where(item => item.Nome == nome).First();
+            }
+        }
+
         public Funcionario Salvar(Funcionario obj)
         {
             using (DataContext c = new DataContext())

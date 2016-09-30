@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.grbPecaPesquisa = new System.Windows.Forms.GroupBox();
             this.btnPecaRelatorio = new System.Windows.Forms.Button();
             this.btnPecaBusca = new System.Windows.Forms.Button();
@@ -47,10 +46,8 @@
             this.lblPecaNome = new System.Windows.Forms.Label();
             this.txtPecaMarca = new System.Windows.Forms.TextBox();
             this.lblPecaMarca = new System.Windows.Forms.Label();
-            this.modeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grbPecaPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvPecaPesquisa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modeloBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grbPecaPesquisa
@@ -216,10 +213,6 @@
             this.lblPecaMarca.TabIndex = 49;
             this.lblPecaMarca.Text = "Marca:";
             // 
-            // modeloBindingSource
-            // 
-            this.modeloBindingSource.DataSource = typeof(Domain.Entities.Modelo);
-            // 
             // frmPecaCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,7 +241,6 @@
             this.grbPecaPesquisa.ResumeLayout(false);
             this.grbPecaPesquisa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvPecaPesquisa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modeloBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,6 +266,5 @@
         private System.Windows.Forms.Label lblPecaNome;
         private System.Windows.Forms.TextBox txtPecaMarca;
         private System.Windows.Forms.Label lblPecaMarca;
-        private System.Windows.Forms.BindingSource modeloBindingSource;
     }
 }
