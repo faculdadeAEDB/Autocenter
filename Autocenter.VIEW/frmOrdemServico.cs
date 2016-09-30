@@ -228,5 +228,10 @@ namespace Autocenter.VIEW
             txtOrdemOS.Text = "";
             txtOrdemValor.Text = "";
         }
+
+        private void btnOrdemLimpar_Click(object sender, EventArgs e)
+        {
+            limpartudo();
+        }
     }
 }

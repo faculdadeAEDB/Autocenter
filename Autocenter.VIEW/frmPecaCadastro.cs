@@ -29,7 +29,7 @@ namespace Autocenter.VIEW
             txtPecaNome.Clear();
             txtPecaQtd.Clear();
             txtPecaValor.Clear();
-            cboPecaModelo.ResetText();
+            cboPecaModelo.Text = "";
         }
         void atualizandoGrv()
         {
@@ -46,6 +46,7 @@ namespace Autocenter.VIEW
             List<Modelo> oModelo = controllerModelo.Obter().ToList();
             cboPecaModelo.DataSource = oModelo;
             cboPecaModelo.DisplayMember = "Nome";
+            cboPecaModelo.Text = "";
         }
 
         private void frmPecaCadastro_Load(object sender, EventArgs e)
@@ -112,6 +113,11 @@ namespace Autocenter.VIEW
                 }
 
             }
+        }
+
+        private void btnPecaLimpar_Click(object sender, EventArgs e)
+        {
+            limpandoCampos();
         }
     }
 }

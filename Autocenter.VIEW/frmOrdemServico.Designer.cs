@@ -41,6 +41,7 @@
             this.lblOrdemFunc = new System.Windows.Forms.Label();
             this.cboOrdemCliente = new System.Windows.Forms.ComboBox();
             this.cboOrdemFunc = new System.Windows.Forms.ComboBox();
+            this.btnOrdemLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grvOrdem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,11 +172,22 @@
             this.cboOrdemFunc.Size = new System.Drawing.Size(381, 21);
             this.cboOrdemFunc.TabIndex = 41;
             // 
+            // btnOrdemLimpar
+            // 
+            this.btnOrdemLimpar.Location = new System.Drawing.Point(132, 265);
+            this.btnOrdemLimpar.Name = "btnOrdemLimpar";
+            this.btnOrdemLimpar.Size = new System.Drawing.Size(115, 37);
+            this.btnOrdemLimpar.TabIndex = 42;
+            this.btnOrdemLimpar.Text = "Limpar";
+            this.btnOrdemLimpar.UseVisualStyleBackColor = true;
+            this.btnOrdemLimpar.Click += new System.EventHandler(this.btnOrdemLimpar_Click);
+            // 
             // frmOrdemServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 314);
+            this.Controls.Add(this.btnOrdemLimpar);
             this.Controls.Add(this.cboOrdemFunc);
             this.Controls.Add(this.cboOrdemCliente);
             this.Controls.Add(this.lblOrdemFunc);
@@ -215,5 +227,6 @@
         private System.Windows.Forms.Label lblOrdemFunc;
         private System.Windows.Forms.ComboBox cboOrdemCliente;
         private System.Windows.Forms.ComboBox cboOrdemFunc;
+        private System.Windows.Forms.Button btnOrdemLimpar;
     }
 }

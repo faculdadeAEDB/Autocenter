@@ -34,7 +34,6 @@
             this.txtPecaBusca = new System.Windows.Forms.TextBox();
             this.grvPecaPesquisa = new System.Windows.Forms.DataGridView();
             this.btnPecaExcluir = new System.Windows.Forms.Button();
-            this.btnPecaAlterar = new System.Windows.Forms.Button();
             this.btnPecaSalvar = new System.Windows.Forms.Button();
             this.txtPecaValor = new System.Windows.Forms.TextBox();
             this.lblPecaValor = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.lblPecaNome = new System.Windows.Forms.Label();
             this.txtPecaMarca = new System.Windows.Forms.TextBox();
             this.lblPecaMarca = new System.Windows.Forms.Label();
+            this.btnPecaLimpar = new System.Windows.Forms.Button();
             this.grbPecaPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvPecaPesquisa)).BeginInit();
             this.SuspendLayout();
@@ -100,22 +100,13 @@
             // 
             // btnPecaExcluir
             // 
-            this.btnPecaExcluir.Location = new System.Drawing.Point(170, 64);
+            this.btnPecaExcluir.Location = new System.Drawing.Point(93, 64);
             this.btnPecaExcluir.Name = "btnPecaExcluir";
             this.btnPecaExcluir.Size = new System.Drawing.Size(79, 40);
             this.btnPecaExcluir.TabIndex = 7;
             this.btnPecaExcluir.Text = "Excluir";
             this.btnPecaExcluir.UseVisualStyleBackColor = true;
             this.btnPecaExcluir.Click += new System.EventHandler(this.btnPecaExcluir_Click);
-            // 
-            // btnPecaAlterar
-            // 
-            this.btnPecaAlterar.Location = new System.Drawing.Point(89, 64);
-            this.btnPecaAlterar.Name = "btnPecaAlterar";
-            this.btnPecaAlterar.Size = new System.Drawing.Size(79, 40);
-            this.btnPecaAlterar.TabIndex = 6;
-            this.btnPecaAlterar.Text = "Alterar";
-            this.btnPecaAlterar.UseVisualStyleBackColor = true;
             // 
             // btnPecaSalvar
             // 
@@ -213,16 +204,26 @@
             this.lblPecaMarca.TabIndex = 49;
             this.lblPecaMarca.Text = "Marca:";
             // 
+            // btnPecaLimpar
+            // 
+            this.btnPecaLimpar.Location = new System.Drawing.Point(178, 64);
+            this.btnPecaLimpar.Name = "btnPecaLimpar";
+            this.btnPecaLimpar.Size = new System.Drawing.Size(79, 40);
+            this.btnPecaLimpar.TabIndex = 50;
+            this.btnPecaLimpar.Text = "Limpar";
+            this.btnPecaLimpar.UseVisualStyleBackColor = true;
+            this.btnPecaLimpar.Click += new System.EventHandler(this.btnPecaLimpar_Click);
+            // 
             // frmPecaCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 354);
+            this.Controls.Add(this.btnPecaLimpar);
             this.Controls.Add(this.txtPecaMarca);
             this.Controls.Add(this.lblPecaMarca);
             this.Controls.Add(this.grbPecaPesquisa);
             this.Controls.Add(this.btnPecaExcluir);
-            this.Controls.Add(this.btnPecaAlterar);
             this.Controls.Add(this.btnPecaSalvar);
             this.Controls.Add(this.txtPecaValor);
             this.Controls.Add(this.lblPecaValor);
@@ -254,7 +255,6 @@
         private System.Windows.Forms.TextBox txtPecaBusca;
         private System.Windows.Forms.DataGridView grvPecaPesquisa;
         private System.Windows.Forms.Button btnPecaExcluir;
-        private System.Windows.Forms.Button btnPecaAlterar;
         private System.Windows.Forms.Button btnPecaSalvar;
         private System.Windows.Forms.TextBox txtPecaValor;
         private System.Windows.Forms.Label lblPecaValor;
@@ -266,5 +266,6 @@
         private System.Windows.Forms.Label lblPecaNome;
         private System.Windows.Forms.TextBox txtPecaMarca;
         private System.Windows.Forms.Label lblPecaMarca;
+        private System.Windows.Forms.Button btnPecaLimpar;
     }
 }

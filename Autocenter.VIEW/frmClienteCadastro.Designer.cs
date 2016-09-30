@@ -43,6 +43,7 @@
             this.lblCliCPF = new System.Windows.Forms.Label();
             this.lblCliNome = new System.Windows.Forms.Label();
             this.txtCliCPF = new System.Windows.Forms.MaskedTextBox();
+            this.btnClienteLimpar = new System.Windows.Forms.Button();
             this.grbCliPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvCliPesquisa)).BeginInit();
             this.SuspendLayout();
@@ -186,11 +187,22 @@
             this.txtCliCPF.Size = new System.Drawing.Size(85, 20);
             this.txtCliCPF.TabIndex = 2;
             // 
+            // btnClienteLimpar
+            // 
+            this.btnClienteLimpar.Location = new System.Drawing.Point(173, 86);
+            this.btnClienteLimpar.Name = "btnClienteLimpar";
+            this.btnClienteLimpar.Size = new System.Drawing.Size(79, 40);
+            this.btnClienteLimpar.TabIndex = 7;
+            this.btnClienteLimpar.Text = "Limpar";
+            this.btnClienteLimpar.UseVisualStyleBackColor = true;
+            this.btnClienteLimpar.Click += new System.EventHandler(this.btnClienteLimpar_Click);
+            // 
             // frmClienteCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 371);
+            this.Controls.Add(this.btnClienteLimpar);
             this.Controls.Add(this.txtCliCPF);
             this.Controls.Add(this.grbCliPesquisa);
             this.Controls.Add(this.btnCliAlterar);
@@ -233,5 +245,6 @@
         private System.Windows.Forms.Label lblCliCPF;
         private System.Windows.Forms.Label lblCliNome;
         private System.Windows.Forms.MaskedTextBox txtCliCPF;
+        private System.Windows.Forms.Button btnClienteLimpar;
     }
 }

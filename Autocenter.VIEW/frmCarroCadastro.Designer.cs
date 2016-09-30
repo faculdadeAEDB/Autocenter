@@ -36,7 +36,6 @@
             this.grvCarroPesquisa = new System.Windows.Forms.DataGridView();
             this.cboCarroModelo = new System.Windows.Forms.ComboBox();
             this.btnCarroExcluir = new System.Windows.Forms.Button();
-            this.btnCarroAlterar = new System.Windows.Forms.Button();
             this.btnCarroSalvar = new System.Windows.Forms.Button();
             this.lblCarroPlaca = new System.Windows.Forms.Label();
             this.txtCarroCor = new System.Windows.Forms.TextBox();
@@ -44,6 +43,7 @@
             this.lblCarroModelo = new System.Windows.Forms.Label();
             this.lblCarroCliente = new System.Windows.Forms.Label();
             this.cboCarroCliente = new System.Windows.Forms.ComboBox();
+            this.btnCarroLimpar = new System.Windows.Forms.Button();
             this.grbCarroPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvCarroPesquisa)).BeginInit();
             this.SuspendLayout();
@@ -112,21 +112,12 @@
             // 
             // btnCarroExcluir
             // 
-            this.btnCarroExcluir.Location = new System.Drawing.Point(174, 69);
+            this.btnCarroExcluir.Location = new System.Drawing.Point(99, 69);
             this.btnCarroExcluir.Name = "btnCarroExcluir";
             this.btnCarroExcluir.Size = new System.Drawing.Size(81, 35);
             this.btnCarroExcluir.TabIndex = 34;
             this.btnCarroExcluir.Text = "Excluir";
             this.btnCarroExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnCarroAlterar
-            // 
-            this.btnCarroAlterar.Location = new System.Drawing.Point(93, 69);
-            this.btnCarroAlterar.Name = "btnCarroAlterar";
-            this.btnCarroAlterar.Size = new System.Drawing.Size(81, 35);
-            this.btnCarroAlterar.TabIndex = 33;
-            this.btnCarroAlterar.Text = "Alterar";
-            this.btnCarroAlterar.UseVisualStyleBackColor = true;
             // 
             // btnCarroSalvar
             // 
@@ -194,17 +185,27 @@
             this.cboCarroCliente.Size = new System.Drawing.Size(469, 21);
             this.cboCarroCliente.TabIndex = 38;
             // 
+            // btnCarroLimpar
+            // 
+            this.btnCarroLimpar.Location = new System.Drawing.Point(186, 69);
+            this.btnCarroLimpar.Name = "btnCarroLimpar";
+            this.btnCarroLimpar.Size = new System.Drawing.Size(81, 35);
+            this.btnCarroLimpar.TabIndex = 39;
+            this.btnCarroLimpar.Text = "Limpar";
+            this.btnCarroLimpar.UseVisualStyleBackColor = true;
+            this.btnCarroLimpar.Click += new System.EventHandler(this.btnCarroLimpar_Click);
+            // 
             // frmCarroCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 352);
+            this.Controls.Add(this.btnCarroLimpar);
             this.Controls.Add(this.cboCarroCliente);
             this.Controls.Add(this.txtCarroPlaca);
             this.Controls.Add(this.grbCarroPesquisa);
             this.Controls.Add(this.cboCarroModelo);
             this.Controls.Add(this.btnCarroExcluir);
-            this.Controls.Add(this.btnCarroAlterar);
             this.Controls.Add(this.btnCarroSalvar);
             this.Controls.Add(this.lblCarroPlaca);
             this.Controls.Add(this.txtCarroCor);
@@ -235,7 +236,6 @@
         private System.Windows.Forms.DataGridView grvCarroPesquisa;
         private System.Windows.Forms.ComboBox cboCarroModelo;
         private System.Windows.Forms.Button btnCarroExcluir;
-        private System.Windows.Forms.Button btnCarroAlterar;
         private System.Windows.Forms.Button btnCarroSalvar;
         private System.Windows.Forms.Label lblCarroPlaca;
         private System.Windows.Forms.TextBox txtCarroCor;
@@ -243,5 +243,6 @@
         private System.Windows.Forms.Label lblCarroModelo;
         private System.Windows.Forms.Label lblCarroCliente;
         private System.Windows.Forms.ComboBox cboCarroCliente;
+        private System.Windows.Forms.Button btnCarroLimpar;
     }
 }

@@ -92,5 +92,10 @@ namespace Autocenter.VIEW
             txtFuncCPF.Text = selectedFuncionario.CPF;
             txtFuncFuncao.Text = selectedFuncionario.Funcao;
         }
+
+        private void btnFuncLimpar_Click(object sender, EventArgs e)
+        {
+            limpandoCampos();
+        }
     }
 }

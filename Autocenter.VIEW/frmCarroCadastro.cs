@@ -71,5 +71,9 @@ namespace Autocenter.VIEW
         {
             atualizandoGrv();
         }
+
+        private void btnCarroLimpar_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

@@ -41,6 +41,7 @@
             this.lblServValor = new System.Windows.Forms.Label();
             this.txtServNome = new System.Windows.Forms.TextBox();
             this.lblServNome = new System.Windows.Forms.Label();
+            this.btnServLimpar = new System.Windows.Forms.Button();
             this.grbServPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvServPesquisa)).BeginInit();
             this.SuspendLayout();
@@ -165,11 +166,22 @@
             this.lblServNome.TabIndex = 5;
             this.lblServNome.Text = "Nome:";
             // 
+            // btnServLimpar
+            // 
+            this.btnServLimpar.Location = new System.Drawing.Point(171, 122);
+            this.btnServLimpar.Name = "btnServLimpar";
+            this.btnServLimpar.Size = new System.Drawing.Size(76, 38);
+            this.btnServLimpar.TabIndex = 52;
+            this.btnServLimpar.Text = "Limpar";
+            this.btnServLimpar.UseVisualStyleBackColor = true;
+            this.btnServLimpar.Click += new System.EventHandler(this.btnServLimpar_Click);
+            // 
             // frmServCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 407);
+            this.Controls.Add(this.btnServLimpar);
             this.Controls.Add(this.txtServDescricao);
             this.Controls.Add(this.lblServDescricao);
             this.Controls.Add(this.grbServPesquisa);
@@ -208,5 +220,6 @@
         private System.Windows.Forms.Label lblServValor;
         private System.Windows.Forms.TextBox txtServNome;
         private System.Windows.Forms.Label lblServNome;
+        private System.Windows.Forms.Button btnServLimpar;
     }
 }

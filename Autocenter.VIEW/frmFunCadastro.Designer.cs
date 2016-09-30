@@ -40,6 +40,7 @@
             this.txtFuncNome = new System.Windows.Forms.TextBox();
             this.lblFuncNome = new System.Windows.Forms.Label();
             this.txtFuncCPF = new System.Windows.Forms.MaskedTextBox();
+            this.btnFuncLimpar = new System.Windows.Forms.Button();
             this.grbFuncPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvFuncPesquisa)).BeginInit();
             this.SuspendLayout();
@@ -154,11 +155,22 @@
             this.txtFuncCPF.Size = new System.Drawing.Size(85, 20);
             this.txtFuncCPF.TabIndex = 2;
             // 
+            // btnFuncLimpar
+            // 
+            this.btnFuncLimpar.Location = new System.Drawing.Point(389, 36);
+            this.btnFuncLimpar.Name = "btnFuncLimpar";
+            this.btnFuncLimpar.Size = new System.Drawing.Size(79, 40);
+            this.btnFuncLimpar.TabIndex = 42;
+            this.btnFuncLimpar.Text = "Salvar";
+            this.btnFuncLimpar.UseVisualStyleBackColor = true;
+            this.btnFuncLimpar.Click += new System.EventHandler(this.btnFuncLimpar_Click);
+            // 
             // frmFunCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 318);
+            this.Controls.Add(this.btnFuncLimpar);
             this.Controls.Add(this.txtFuncCPF);
             this.Controls.Add(this.txtFuncFuncao);
             this.Controls.Add(this.lblFuncFuncao);
@@ -195,5 +207,6 @@
         private System.Windows.Forms.TextBox txtFuncNome;
         private System.Windows.Forms.Label lblFuncNome;
         private System.Windows.Forms.MaskedTextBox txtFuncCPF;
+        private System.Windows.Forms.Button btnFuncLimpar;
     }
 }

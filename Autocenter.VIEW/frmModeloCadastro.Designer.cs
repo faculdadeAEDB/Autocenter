@@ -39,6 +39,7 @@
             this.btnModeloBusca = new System.Windows.Forms.Button();
             this.txtModeloBusca = new System.Windows.Forms.TextBox();
             this.grvModeloPesquisa = new System.Windows.Forms.DataGridView();
+            this.btnModeloLimpar = new System.Windows.Forms.Button();
             this.grbModeloPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvModeloPesquisa)).BeginInit();
             this.SuspendLayout();
@@ -146,11 +147,22 @@
             this.grvModeloPesquisa.TabIndex = 3;
             this.grvModeloPesquisa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvModeloPesquisa_CellDoubleClick);
             // 
+            // btnModeloLimpar
+            // 
+            this.btnModeloLimpar.Location = new System.Drawing.Point(194, 34);
+            this.btnModeloLimpar.Name = "btnModeloLimpar";
+            this.btnModeloLimpar.Size = new System.Drawing.Size(79, 40);
+            this.btnModeloLimpar.TabIndex = 44;
+            this.btnModeloLimpar.Text = "Limpar";
+            this.btnModeloLimpar.UseVisualStyleBackColor = true;
+            this.btnModeloLimpar.Click += new System.EventHandler(this.btnModeloLimpar_Click);
+            // 
             // frmModeloCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 325);
+            this.Controls.Add(this.btnModeloLimpar);
             this.Controls.Add(this.lblModeloAno);
             this.Controls.Add(this.txtModeloAno);
             this.Controls.Add(this.lblModeloMarca);
@@ -185,5 +197,6 @@
         private System.Windows.Forms.Button btnModeloBusca;
         private System.Windows.Forms.TextBox txtModeloBusca;
         private System.Windows.Forms.DataGridView grvModeloPesquisa;
+        private System.Windows.Forms.Button btnModeloLimpar;
     }
 }

@@ -95,5 +95,10 @@ namespace Autocenter.VIEW
             txtCliEndereco.Text = selectedCliente.Endereco;
             txtCliTelefone.Text = selectedCliente.Telefone;
         }
+
+        private void btnClienteLimpar_Click(object sender, EventArgs e)
+        {
+            limpandoCampos();
+        }
     }
 }

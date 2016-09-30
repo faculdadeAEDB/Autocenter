@@ -96,5 +96,10 @@ namespace Autocenter.VIEW
                 
             }
         }
+
+        private void btnModeloLimpar_Click(object sender, EventArgs e)
+        {
+            limpandoCampos();
+        }
     }
 }
