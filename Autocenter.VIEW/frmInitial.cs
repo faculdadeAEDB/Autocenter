@@ -27,14 +27,14 @@ namespace Autocenter.VIEW
         private void btnInitialCliente_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            (new frmClienteCadastro()).ShowDialog();
+            (new frmCliCadastro()).ShowDialog();
             this.Visible = true;
         }
 
         private void btnInitialFuncionario_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            (new frmFunCadastro()).ShowDialog();
+            (new frmFuncCadastro()).ShowDialog();
             this.Visible = true;
         }
 

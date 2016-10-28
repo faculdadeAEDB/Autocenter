@@ -1,6 +1,6 @@
 ﻿namespace Autocenter.VIEW
 {
-    partial class frmClienteCadastro
+    partial class frmCliCadastro
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grbCliPesquisa = new System.Windows.Forms.GroupBox();
+            this.cboCliFiltro = new System.Windows.Forms.ComboBox();
             this.btnCliRelatorio = new System.Windows.Forms.Button();
             this.btnCliBusca = new System.Windows.Forms.Button();
             this.txtCliBusca = new System.Windows.Forms.TextBox();
@@ -43,13 +44,14 @@
             this.lblCliCPF = new System.Windows.Forms.Label();
             this.lblCliNome = new System.Windows.Forms.Label();
             this.txtCliCPF = new System.Windows.Forms.MaskedTextBox();
-            this.btnClienteLimpar = new System.Windows.Forms.Button();
+            this.btnCliLimpar = new System.Windows.Forms.Button();
             this.grbCliPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvCliPesquisa)).BeginInit();
             this.SuspendLayout();
             // 
             // grbCliPesquisa
             // 
+            this.grbCliPesquisa.Controls.Add(this.cboCliFiltro);
             this.grbCliPesquisa.Controls.Add(this.btnCliRelatorio);
             this.grbCliPesquisa.Controls.Add(this.btnCliBusca);
             this.grbCliPesquisa.Controls.Add(this.txtCliBusca);
@@ -61,9 +63,20 @@
             this.grbCliPesquisa.TabStop = false;
             this.grbCliPesquisa.Text = "Pesquisa";
             // 
+            // cboCliFiltro
+            // 
+            this.cboCliFiltro.FormattingEnabled = true;
+            this.cboCliFiltro.Items.AddRange(new object[] {
+            "ID",
+            "Nome"});
+            this.cboCliFiltro.Location = new System.Drawing.Point(7, 19);
+            this.cboCliFiltro.Name = "cboCliFiltro";
+            this.cboCliFiltro.Size = new System.Drawing.Size(134, 21);
+            this.cboCliFiltro.TabIndex = 4;
+            // 
             // btnCliRelatorio
             // 
-            this.btnCliRelatorio.Location = new System.Drawing.Point(434, 16);
+            this.btnCliRelatorio.Location = new System.Drawing.Point(434, 17);
             this.btnCliRelatorio.Name = "btnCliRelatorio";
             this.btnCliRelatorio.Size = new System.Drawing.Size(106, 23);
             this.btnCliRelatorio.TabIndex = 2;
@@ -72,7 +85,7 @@
             // 
             // btnCliBusca
             // 
-            this.btnCliBusca.Location = new System.Drawing.Point(177, 17);
+            this.btnCliBusca.Location = new System.Drawing.Point(317, 17);
             this.btnCliBusca.Name = "btnCliBusca";
             this.btnCliBusca.Size = new System.Drawing.Size(75, 23);
             this.btnCliBusca.TabIndex = 1;
@@ -81,7 +94,7 @@
             // 
             // txtCliBusca
             // 
-            this.txtCliBusca.Location = new System.Drawing.Point(7, 19);
+            this.txtCliBusca.Location = new System.Drawing.Point(147, 19);
             this.txtCliBusca.Name = "txtCliBusca";
             this.txtCliBusca.Size = new System.Drawing.Size(164, 20);
             this.txtCliBusca.TabIndex = 0;
@@ -187,22 +200,22 @@
             this.txtCliCPF.Size = new System.Drawing.Size(85, 20);
             this.txtCliCPF.TabIndex = 2;
             // 
-            // btnClienteLimpar
+            // btnCliLimpar
             // 
-            this.btnClienteLimpar.Location = new System.Drawing.Point(173, 86);
-            this.btnClienteLimpar.Name = "btnClienteLimpar";
-            this.btnClienteLimpar.Size = new System.Drawing.Size(79, 40);
-            this.btnClienteLimpar.TabIndex = 7;
-            this.btnClienteLimpar.Text = "Limpar";
-            this.btnClienteLimpar.UseVisualStyleBackColor = true;
-            this.btnClienteLimpar.Click += new System.EventHandler(this.btnClienteLimpar_Click);
+            this.btnCliLimpar.Location = new System.Drawing.Point(173, 86);
+            this.btnCliLimpar.Name = "btnCliLimpar";
+            this.btnCliLimpar.Size = new System.Drawing.Size(79, 40);
+            this.btnCliLimpar.TabIndex = 7;
+            this.btnCliLimpar.Text = "Limpar";
+            this.btnCliLimpar.UseVisualStyleBackColor = true;
+            this.btnCliLimpar.Click += new System.EventHandler(this.btnClienteLimpar_Click);
             // 
-            // frmClienteCadastro
+            // frmCliCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 371);
-            this.Controls.Add(this.btnClienteLimpar);
+            this.Controls.Add(this.btnCliLimpar);
             this.Controls.Add(this.txtCliCPF);
             this.Controls.Add(this.grbCliPesquisa);
             this.Controls.Add(this.btnCliAlterar);
@@ -217,7 +230,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmClienteCadastro";
+            this.Name = "frmCliCadastro";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClienteCadastro_Load);
             this.grbCliPesquisa.ResumeLayout(false);
@@ -245,6 +258,7 @@
         private System.Windows.Forms.Label lblCliCPF;
         private System.Windows.Forms.Label lblCliNome;
         private System.Windows.Forms.MaskedTextBox txtCliCPF;
-        private System.Windows.Forms.Button btnClienteLimpar;
+        private System.Windows.Forms.Button btnCliLimpar;
+        private System.Windows.Forms.ComboBox cboCliFiltro;
     }
 }

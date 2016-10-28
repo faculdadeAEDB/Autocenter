@@ -13,11 +13,11 @@ using Controllers;
 
 namespace Autocenter.VIEW
 {
-    public partial class frmFunCadastro : Form
+    public partial class frmFuncCadastro : Form
     {
         FuncionarioController controller = new FuncionarioController();
 
-        public frmFunCadastro()
+        public frmFuncCadastro()
         {
             InitializeComponent();
         } 

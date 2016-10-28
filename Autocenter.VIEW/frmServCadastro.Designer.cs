@@ -31,9 +31,10 @@
             this.txtServDescricao = new System.Windows.Forms.TextBox();
             this.lblServDescricao = new System.Windows.Forms.Label();
             this.grbServPesquisa = new System.Windows.Forms.GroupBox();
-            this.btnServRelatorio = new System.Windows.Forms.Button();
+            this.cboServFiltro = new System.Windows.Forms.ComboBox();
             this.btnServBusca = new System.Windows.Forms.Button();
             this.txtServBusca = new System.Windows.Forms.TextBox();
+            this.btnServRelatorio = new System.Windows.Forms.Button();
             this.grvServPesquisa = new System.Windows.Forms.DataGridView();
             this.btnServExcluir = new System.Windows.Forms.Button();
             this.btnServSalvar = new System.Windows.Forms.Button();
@@ -66,9 +67,10 @@
             // 
             // grbServPesquisa
             // 
-            this.grbServPesquisa.Controls.Add(this.btnServRelatorio);
+            this.grbServPesquisa.Controls.Add(this.cboServFiltro);
             this.grbServPesquisa.Controls.Add(this.btnServBusca);
             this.grbServPesquisa.Controls.Add(this.txtServBusca);
+            this.grbServPesquisa.Controls.Add(this.btnServRelatorio);
             this.grbServPesquisa.Controls.Add(this.grvServPesquisa);
             this.grbServPesquisa.Location = new System.Drawing.Point(7, 166);
             this.grbServPesquisa.Name = "grbServPesquisa";
@@ -76,6 +78,34 @@
             this.grbServPesquisa.TabIndex = 5;
             this.grbServPesquisa.TabStop = false;
             this.grbServPesquisa.Text = "Pesquisa";
+            // 
+            // cboServFiltro
+            // 
+            this.cboServFiltro.FormattingEnabled = true;
+            this.cboServFiltro.Items.AddRange(new object[] {
+            "ID",
+            "Valor",
+            "Nome"});
+            this.cboServFiltro.Location = new System.Drawing.Point(8, 18);
+            this.cboServFiltro.Name = "cboServFiltro";
+            this.cboServFiltro.Size = new System.Drawing.Size(134, 21);
+            this.cboServFiltro.TabIndex = 13;
+            // 
+            // btnServBusca
+            // 
+            this.btnServBusca.Location = new System.Drawing.Point(318, 16);
+            this.btnServBusca.Name = "btnServBusca";
+            this.btnServBusca.Size = new System.Drawing.Size(75, 23);
+            this.btnServBusca.TabIndex = 12;
+            this.btnServBusca.Text = "Busca";
+            this.btnServBusca.UseVisualStyleBackColor = true;
+            // 
+            // txtServBusca
+            // 
+            this.txtServBusca.Location = new System.Drawing.Point(148, 18);
+            this.txtServBusca.Name = "txtServBusca";
+            this.txtServBusca.Size = new System.Drawing.Size(164, 20);
+            this.txtServBusca.TabIndex = 11;
             // 
             // btnServRelatorio
             // 
@@ -85,22 +115,6 @@
             this.btnServRelatorio.TabIndex = 2;
             this.btnServRelatorio.Text = "Emitir Relatorio";
             this.btnServRelatorio.UseVisualStyleBackColor = true;
-            // 
-            // btnServBusca
-            // 
-            this.btnServBusca.Location = new System.Drawing.Point(177, 17);
-            this.btnServBusca.Name = "btnServBusca";
-            this.btnServBusca.Size = new System.Drawing.Size(75, 23);
-            this.btnServBusca.TabIndex = 1;
-            this.btnServBusca.Text = "Busca";
-            this.btnServBusca.UseVisualStyleBackColor = true;
-            // 
-            // txtServBusca
-            // 
-            this.txtServBusca.Location = new System.Drawing.Point(7, 19);
-            this.txtServBusca.Name = "txtServBusca";
-            this.txtServBusca.Size = new System.Drawing.Size(164, 20);
-            this.txtServBusca.TabIndex = 1;
             // 
             // grvServPesquisa
             // 
@@ -195,7 +209,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmServCadastro";
-            this.Text = " ";
+            this.Text = " Serviços";
             this.Load += new System.EventHandler(this.frmServCadastro_Load);
             this.grbServPesquisa.ResumeLayout(false);
             this.grbServPesquisa.PerformLayout();
@@ -211,8 +225,6 @@
         private System.Windows.Forms.Label lblServDescricao;
         private System.Windows.Forms.GroupBox grbServPesquisa;
         private System.Windows.Forms.Button btnServRelatorio;
-        private System.Windows.Forms.Button btnServBusca;
-        private System.Windows.Forms.TextBox txtServBusca;
         private System.Windows.Forms.DataGridView grvServPesquisa;
         private System.Windows.Forms.Button btnServExcluir;
         private System.Windows.Forms.Button btnServSalvar;
@@ -221,5 +233,8 @@
         private System.Windows.Forms.TextBox txtServNome;
         private System.Windows.Forms.Label lblServNome;
         private System.Windows.Forms.Button btnServLimpar;
+        private System.Windows.Forms.ComboBox cboServFiltro;
+        private System.Windows.Forms.Button btnServBusca;
+        private System.Windows.Forms.TextBox txtServBusca;
     }
 }

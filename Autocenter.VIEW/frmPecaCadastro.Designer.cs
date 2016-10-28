@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.grbPecaPesquisa = new System.Windows.Forms.GroupBox();
-            this.btnPecaRelatorio = new System.Windows.Forms.Button();
+            this.cboPecaFiltro = new System.Windows.Forms.ComboBox();
             this.btnPecaBusca = new System.Windows.Forms.Button();
             this.txtPecaBusca = new System.Windows.Forms.TextBox();
+            this.btnPecaRelatorio = new System.Windows.Forms.Button();
             this.grvPecaPesquisa = new System.Windows.Forms.DataGridView();
             this.btnPecaExcluir = new System.Windows.Forms.Button();
             this.btnPecaSalvar = new System.Windows.Forms.Button();
@@ -52,9 +53,10 @@
             // 
             // grbPecaPesquisa
             // 
-            this.grbPecaPesquisa.Controls.Add(this.btnPecaRelatorio);
+            this.grbPecaPesquisa.Controls.Add(this.cboPecaFiltro);
             this.grbPecaPesquisa.Controls.Add(this.btnPecaBusca);
             this.grbPecaPesquisa.Controls.Add(this.txtPecaBusca);
+            this.grbPecaPesquisa.Controls.Add(this.btnPecaRelatorio);
             this.grbPecaPesquisa.Controls.Add(this.grvPecaPesquisa);
             this.grbPecaPesquisa.Location = new System.Drawing.Point(5, 110);
             this.grbPecaPesquisa.Name = "grbPecaPesquisa";
@@ -62,6 +64,34 @@
             this.grbPecaPesquisa.TabIndex = 48;
             this.grbPecaPesquisa.TabStop = false;
             this.grbPecaPesquisa.Text = "Pesquisa";
+            // 
+            // cboPecaFiltro
+            // 
+            this.cboPecaFiltro.FormattingEnabled = true;
+            this.cboPecaFiltro.Items.AddRange(new object[] {
+            "ID",
+            "Nome",
+            "Marca"});
+            this.cboPecaFiltro.Location = new System.Drawing.Point(7, 19);
+            this.cboPecaFiltro.Name = "cboPecaFiltro";
+            this.cboPecaFiltro.Size = new System.Drawing.Size(134, 21);
+            this.cboPecaFiltro.TabIndex = 13;
+            // 
+            // btnPecaBusca
+            // 
+            this.btnPecaBusca.Location = new System.Drawing.Point(317, 17);
+            this.btnPecaBusca.Name = "btnPecaBusca";
+            this.btnPecaBusca.Size = new System.Drawing.Size(75, 23);
+            this.btnPecaBusca.TabIndex = 12;
+            this.btnPecaBusca.Text = "Busca";
+            this.btnPecaBusca.UseVisualStyleBackColor = true;
+            // 
+            // txtPecaBusca
+            // 
+            this.txtPecaBusca.Location = new System.Drawing.Point(147, 19);
+            this.txtPecaBusca.Name = "txtPecaBusca";
+            this.txtPecaBusca.Size = new System.Drawing.Size(164, 20);
+            this.txtPecaBusca.TabIndex = 11;
             // 
             // btnPecaRelatorio
             // 
@@ -71,22 +101,6 @@
             this.btnPecaRelatorio.TabIndex = 2;
             this.btnPecaRelatorio.Text = "Emitir Relatorio";
             this.btnPecaRelatorio.UseVisualStyleBackColor = true;
-            // 
-            // btnPecaBusca
-            // 
-            this.btnPecaBusca.Location = new System.Drawing.Point(177, 17);
-            this.btnPecaBusca.Name = "btnPecaBusca";
-            this.btnPecaBusca.Size = new System.Drawing.Size(75, 23);
-            this.btnPecaBusca.TabIndex = 1;
-            this.btnPecaBusca.Text = "Busca";
-            this.btnPecaBusca.UseVisualStyleBackColor = true;
-            // 
-            // txtPecaBusca
-            // 
-            this.txtPecaBusca.Location = new System.Drawing.Point(7, 19);
-            this.txtPecaBusca.Name = "txtPecaBusca";
-            this.txtPecaBusca.Size = new System.Drawing.Size(164, 20);
-            this.txtPecaBusca.TabIndex = 0;
             // 
             // grvPecaPesquisa
             // 
@@ -251,8 +265,6 @@
 
         private System.Windows.Forms.GroupBox grbPecaPesquisa;
         private System.Windows.Forms.Button btnPecaRelatorio;
-        private System.Windows.Forms.Button btnPecaBusca;
-        private System.Windows.Forms.TextBox txtPecaBusca;
         private System.Windows.Forms.DataGridView grvPecaPesquisa;
         private System.Windows.Forms.Button btnPecaExcluir;
         private System.Windows.Forms.Button btnPecaSalvar;
@@ -267,5 +279,8 @@
         private System.Windows.Forms.TextBox txtPecaMarca;
         private System.Windows.Forms.Label lblPecaMarca;
         private System.Windows.Forms.Button btnPecaLimpar;
+        private System.Windows.Forms.ComboBox cboPecaFiltro;
+        private System.Windows.Forms.Button btnPecaBusca;
+        private System.Windows.Forms.TextBox txtPecaBusca;
     }
 }

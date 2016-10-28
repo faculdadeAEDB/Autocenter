@@ -12,9 +12,9 @@ using Controllers;
 
 namespace Autocenter.VIEW
 {
-    public partial class frmClienteCadastro : Form
+    public partial class frmCliCadastro : Form
     {
-        public frmClienteCadastro()
+        public frmCliCadastro()
         {
             InitializeComponent();
         }

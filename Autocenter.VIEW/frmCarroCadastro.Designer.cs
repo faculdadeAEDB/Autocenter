@@ -30,9 +30,10 @@
         {
             this.txtCarroPlaca = new System.Windows.Forms.MaskedTextBox();
             this.grbCarroPesquisa = new System.Windows.Forms.GroupBox();
-            this.btnCarroRelatorio = new System.Windows.Forms.Button();
+            this.cboCarroFiltro = new System.Windows.Forms.ComboBox();
             this.btnCarroBusca = new System.Windows.Forms.Button();
             this.txtCarroBusca = new System.Windows.Forms.TextBox();
+            this.btnCarroRelatorio = new System.Windows.Forms.Button();
             this.grvCarroPesquisa = new System.Windows.Forms.DataGridView();
             this.cboCarroModelo = new System.Windows.Forms.ComboBox();
             this.btnCarroExcluir = new System.Windows.Forms.Button();
@@ -58,9 +59,10 @@
             // 
             // grbCarroPesquisa
             // 
-            this.grbCarroPesquisa.Controls.Add(this.btnCarroRelatorio);
+            this.grbCarroPesquisa.Controls.Add(this.cboCarroFiltro);
             this.grbCarroPesquisa.Controls.Add(this.btnCarroBusca);
             this.grbCarroPesquisa.Controls.Add(this.txtCarroBusca);
+            this.grbCarroPesquisa.Controls.Add(this.btnCarroRelatorio);
             this.grbCarroPesquisa.Controls.Add(this.grvCarroPesquisa);
             this.grbCarroPesquisa.Location = new System.Drawing.Point(5, 110);
             this.grbCarroPesquisa.Name = "grbCarroPesquisa";
@@ -69,30 +71,42 @@
             this.grbCarroPesquisa.TabStop = false;
             this.grbCarroPesquisa.Text = "Pesquisa";
             // 
-            // btnCarroRelatorio
+            // cboCarroFiltro
             // 
-            this.btnCarroRelatorio.Location = new System.Drawing.Point(434, 16);
-            this.btnCarroRelatorio.Name = "btnCarroRelatorio";
-            this.btnCarroRelatorio.Size = new System.Drawing.Size(106, 23);
-            this.btnCarroRelatorio.TabIndex = 22;
-            this.btnCarroRelatorio.Text = "Emitir Relatorio";
-            this.btnCarroRelatorio.UseVisualStyleBackColor = true;
+            this.cboCarroFiltro.FormattingEnabled = true;
+            this.cboCarroFiltro.Items.AddRange(new object[] {
+            "ID",
+            "Cor",
+            "Placa"});
+            this.cboCarroFiltro.Location = new System.Drawing.Point(7, 19);
+            this.cboCarroFiltro.Name = "cboCarroFiltro";
+            this.cboCarroFiltro.Size = new System.Drawing.Size(134, 21);
+            this.cboCarroFiltro.TabIndex = 43;
             // 
             // btnCarroBusca
             // 
-            this.btnCarroBusca.Location = new System.Drawing.Point(177, 17);
+            this.btnCarroBusca.Location = new System.Drawing.Point(317, 17);
             this.btnCarroBusca.Name = "btnCarroBusca";
             this.btnCarroBusca.Size = new System.Drawing.Size(75, 23);
-            this.btnCarroBusca.TabIndex = 21;
+            this.btnCarroBusca.TabIndex = 42;
             this.btnCarroBusca.Text = "Busca";
             this.btnCarroBusca.UseVisualStyleBackColor = true;
             // 
             // txtCarroBusca
             // 
-            this.txtCarroBusca.Location = new System.Drawing.Point(7, 19);
+            this.txtCarroBusca.Location = new System.Drawing.Point(147, 19);
             this.txtCarroBusca.Name = "txtCarroBusca";
             this.txtCarroBusca.Size = new System.Drawing.Size(164, 20);
-            this.txtCarroBusca.TabIndex = 6;
+            this.txtCarroBusca.TabIndex = 41;
+            // 
+            // btnCarroRelatorio
+            // 
+            this.btnCarroRelatorio.Location = new System.Drawing.Point(434, 19);
+            this.btnCarroRelatorio.Name = "btnCarroRelatorio";
+            this.btnCarroRelatorio.Size = new System.Drawing.Size(106, 23);
+            this.btnCarroRelatorio.TabIndex = 22;
+            this.btnCarroRelatorio.Text = "Emitir Relatorio";
+            this.btnCarroRelatorio.UseVisualStyleBackColor = true;
             // 
             // grvCarroPesquisa
             // 
@@ -231,8 +245,6 @@
         private System.Windows.Forms.MaskedTextBox txtCarroPlaca;
         private System.Windows.Forms.GroupBox grbCarroPesquisa;
         private System.Windows.Forms.Button btnCarroRelatorio;
-        private System.Windows.Forms.Button btnCarroBusca;
-        private System.Windows.Forms.TextBox txtCarroBusca;
         private System.Windows.Forms.DataGridView grvCarroPesquisa;
         private System.Windows.Forms.ComboBox cboCarroModelo;
         private System.Windows.Forms.Button btnCarroExcluir;
@@ -244,5 +256,8 @@
         private System.Windows.Forms.Label lblCarroCliente;
         private System.Windows.Forms.ComboBox cboCarroCliente;
         private System.Windows.Forms.Button btnCarroLimpar;
+        private System.Windows.Forms.ComboBox cboCarroFiltro;
+        private System.Windows.Forms.Button btnCarroBusca;
+        private System.Windows.Forms.TextBox txtCarroBusca;
     }
 }

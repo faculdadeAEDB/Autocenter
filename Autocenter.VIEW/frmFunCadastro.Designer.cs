@@ -1,6 +1,6 @@
 ﻿namespace Autocenter.VIEW
 {
-    partial class frmFunCadastro
+    partial class frmFuncCadastro
     {
         /// <summary>
         /// Required designer variable.
@@ -33,9 +33,10 @@
             this.lblFuncCPF = new System.Windows.Forms.Label();
             this.btnFuncSalvar = new System.Windows.Forms.Button();
             this.grbFuncPesquisa = new System.Windows.Forms.GroupBox();
-            this.btnFuncRelatorio = new System.Windows.Forms.Button();
+            this.cboFuncFiltro = new System.Windows.Forms.ComboBox();
             this.btnFuncBusca = new System.Windows.Forms.Button();
             this.txtFuncBusca = new System.Windows.Forms.TextBox();
+            this.btnFuncRelatorio = new System.Windows.Forms.Button();
             this.grvFuncPesquisa = new System.Windows.Forms.DataGridView();
             this.txtFuncNome = new System.Windows.Forms.TextBox();
             this.lblFuncNome = new System.Windows.Forms.Label();
@@ -84,9 +85,10 @@
             // 
             // grbFuncPesquisa
             // 
-            this.grbFuncPesquisa.Controls.Add(this.btnFuncRelatorio);
+            this.grbFuncPesquisa.Controls.Add(this.cboFuncFiltro);
             this.grbFuncPesquisa.Controls.Add(this.btnFuncBusca);
             this.grbFuncPesquisa.Controls.Add(this.txtFuncBusca);
+            this.grbFuncPesquisa.Controls.Add(this.btnFuncRelatorio);
             this.grbFuncPesquisa.Controls.Add(this.grvFuncPesquisa);
             this.grbFuncPesquisa.Location = new System.Drawing.Point(9, 78);
             this.grbFuncPesquisa.Name = "grbFuncPesquisa";
@@ -94,6 +96,34 @@
             this.grbFuncPesquisa.TabIndex = 35;
             this.grbFuncPesquisa.TabStop = false;
             this.grbFuncPesquisa.Text = "Pesquisa";
+            // 
+            // cboFuncFiltro
+            // 
+            this.cboFuncFiltro.FormattingEnabled = true;
+            this.cboFuncFiltro.Items.AddRange(new object[] {
+            "ID",
+            "Nome",
+            "Função"});
+            this.cboFuncFiltro.Location = new System.Drawing.Point(7, 19);
+            this.cboFuncFiltro.Name = "cboFuncFiltro";
+            this.cboFuncFiltro.Size = new System.Drawing.Size(134, 21);
+            this.cboFuncFiltro.TabIndex = 7;
+            // 
+            // btnFuncBusca
+            // 
+            this.btnFuncBusca.Location = new System.Drawing.Point(317, 17);
+            this.btnFuncBusca.Name = "btnFuncBusca";
+            this.btnFuncBusca.Size = new System.Drawing.Size(75, 23);
+            this.btnFuncBusca.TabIndex = 6;
+            this.btnFuncBusca.Text = "Busca";
+            this.btnFuncBusca.UseVisualStyleBackColor = true;
+            // 
+            // txtFuncBusca
+            // 
+            this.txtFuncBusca.Location = new System.Drawing.Point(147, 19);
+            this.txtFuncBusca.Name = "txtFuncBusca";
+            this.txtFuncBusca.Size = new System.Drawing.Size(164, 20);
+            this.txtFuncBusca.TabIndex = 5;
             // 
             // btnFuncRelatorio
             // 
@@ -103,22 +133,6 @@
             this.btnFuncRelatorio.TabIndex = 2;
             this.btnFuncRelatorio.Text = "Emitir Relatorio";
             this.btnFuncRelatorio.UseVisualStyleBackColor = true;
-            // 
-            // btnFuncBusca
-            // 
-            this.btnFuncBusca.Location = new System.Drawing.Point(177, 17);
-            this.btnFuncBusca.Name = "btnFuncBusca";
-            this.btnFuncBusca.Size = new System.Drawing.Size(75, 23);
-            this.btnFuncBusca.TabIndex = 1;
-            this.btnFuncBusca.Text = "Busca";
-            this.btnFuncBusca.UseVisualStyleBackColor = true;
-            // 
-            // txtFuncBusca
-            // 
-            this.txtFuncBusca.Location = new System.Drawing.Point(7, 19);
-            this.txtFuncBusca.Name = "txtFuncBusca";
-            this.txtFuncBusca.Size = new System.Drawing.Size(164, 20);
-            this.txtFuncBusca.TabIndex = 0;
             // 
             // grvFuncPesquisa
             // 
@@ -165,7 +179,7 @@
             this.btnFuncLimpar.UseVisualStyleBackColor = true;
             this.btnFuncLimpar.Click += new System.EventHandler(this.btnFuncLimpar_Click);
             // 
-            // frmFunCadastro
+            // frmFuncCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -182,7 +196,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmFunCadastro";
+            this.Name = "frmFuncCadastro";
             this.Text = "Funcionários";
             this.Load += new System.EventHandler(this.frmFunCadastro_Load);
             this.grbFuncPesquisa.ResumeLayout(false);
@@ -201,12 +215,13 @@
         private System.Windows.Forms.Button btnFuncSalvar;
         private System.Windows.Forms.GroupBox grbFuncPesquisa;
         private System.Windows.Forms.Button btnFuncRelatorio;
-        private System.Windows.Forms.Button btnFuncBusca;
-        private System.Windows.Forms.TextBox txtFuncBusca;
         private System.Windows.Forms.DataGridView grvFuncPesquisa;
         private System.Windows.Forms.TextBox txtFuncNome;
         private System.Windows.Forms.Label lblFuncNome;
         private System.Windows.Forms.MaskedTextBox txtFuncCPF;
         private System.Windows.Forms.Button btnFuncLimpar;
+        private System.Windows.Forms.ComboBox cboFuncFiltro;
+        private System.Windows.Forms.Button btnFuncBusca;
+        private System.Windows.Forms.TextBox txtFuncBusca;
     }
 }

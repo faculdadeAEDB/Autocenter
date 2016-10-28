@@ -35,9 +35,10 @@
             this.btnModeloExcluir = new System.Windows.Forms.Button();
             this.btnModeloSalvar = new System.Windows.Forms.Button();
             this.grbModeloPesquisa = new System.Windows.Forms.GroupBox();
-            this.btnModeloRelatorio = new System.Windows.Forms.Button();
+            this.cboModeloFiltro = new System.Windows.Forms.ComboBox();
             this.btnModeloBusca = new System.Windows.Forms.Button();
             this.txtModeloBusca = new System.Windows.Forms.TextBox();
+            this.btnModeloRelatorio = new System.Windows.Forms.Button();
             this.grvModeloPesquisa = new System.Windows.Forms.DataGridView();
             this.btnModeloLimpar = new System.Windows.Forms.Button();
             this.grbModeloPesquisa.SuspendLayout();
@@ -101,9 +102,10 @@
             // 
             // grbModeloPesquisa
             // 
-            this.grbModeloPesquisa.Controls.Add(this.btnModeloRelatorio);
+            this.grbModeloPesquisa.Controls.Add(this.cboModeloFiltro);
             this.grbModeloPesquisa.Controls.Add(this.btnModeloBusca);
             this.grbModeloPesquisa.Controls.Add(this.txtModeloBusca);
+            this.grbModeloPesquisa.Controls.Add(this.btnModeloRelatorio);
             this.grbModeloPesquisa.Controls.Add(this.grvModeloPesquisa);
             this.grbModeloPesquisa.Location = new System.Drawing.Point(5, 80);
             this.grbModeloPesquisa.Name = "grbModeloPesquisa";
@@ -111,6 +113,34 @@
             this.grbModeloPesquisa.TabIndex = 37;
             this.grbModeloPesquisa.TabStop = false;
             this.grbModeloPesquisa.Text = "Pesquisa";
+            // 
+            // cboModeloFiltro
+            // 
+            this.cboModeloFiltro.FormattingEnabled = true;
+            this.cboModeloFiltro.Items.AddRange(new object[] {
+            "ID",
+            "Nome",
+            "Ano"});
+            this.cboModeloFiltro.Location = new System.Drawing.Point(6, 19);
+            this.cboModeloFiltro.Name = "cboModeloFiltro";
+            this.cboModeloFiltro.Size = new System.Drawing.Size(134, 21);
+            this.cboModeloFiltro.TabIndex = 10;
+            // 
+            // btnModeloBusca
+            // 
+            this.btnModeloBusca.Location = new System.Drawing.Point(316, 17);
+            this.btnModeloBusca.Name = "btnModeloBusca";
+            this.btnModeloBusca.Size = new System.Drawing.Size(75, 23);
+            this.btnModeloBusca.TabIndex = 9;
+            this.btnModeloBusca.Text = "Busca";
+            this.btnModeloBusca.UseVisualStyleBackColor = true;
+            // 
+            // txtModeloBusca
+            // 
+            this.txtModeloBusca.Location = new System.Drawing.Point(146, 19);
+            this.txtModeloBusca.Name = "txtModeloBusca";
+            this.txtModeloBusca.Size = new System.Drawing.Size(164, 20);
+            this.txtModeloBusca.TabIndex = 8;
             // 
             // btnModeloRelatorio
             // 
@@ -120,22 +150,6 @@
             this.btnModeloRelatorio.TabIndex = 2;
             this.btnModeloRelatorio.Text = "Emitir Relatorio";
             this.btnModeloRelatorio.UseVisualStyleBackColor = true;
-            // 
-            // btnModeloBusca
-            // 
-            this.btnModeloBusca.Location = new System.Drawing.Point(177, 17);
-            this.btnModeloBusca.Name = "btnModeloBusca";
-            this.btnModeloBusca.Size = new System.Drawing.Size(75, 23);
-            this.btnModeloBusca.TabIndex = 1;
-            this.btnModeloBusca.Text = "Busca";
-            this.btnModeloBusca.UseVisualStyleBackColor = true;
-            // 
-            // txtModeloBusca
-            // 
-            this.txtModeloBusca.Location = new System.Drawing.Point(7, 19);
-            this.txtModeloBusca.Name = "txtModeloBusca";
-            this.txtModeloBusca.Size = new System.Drawing.Size(164, 20);
-            this.txtModeloBusca.TabIndex = 0;
             // 
             // grvModeloPesquisa
             // 
@@ -194,9 +208,10 @@
         private System.Windows.Forms.Button btnModeloSalvar;
         private System.Windows.Forms.GroupBox grbModeloPesquisa;
         private System.Windows.Forms.Button btnModeloRelatorio;
-        private System.Windows.Forms.Button btnModeloBusca;
-        private System.Windows.Forms.TextBox txtModeloBusca;
         private System.Windows.Forms.DataGridView grvModeloPesquisa;
         private System.Windows.Forms.Button btnModeloLimpar;
+        private System.Windows.Forms.ComboBox cboModeloFiltro;
+        private System.Windows.Forms.Button btnModeloBusca;
+        private System.Windows.Forms.TextBox txtModeloBusca;
     }
 }
