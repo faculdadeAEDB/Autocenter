@@ -82,10 +82,6 @@
             // cboServFiltro
             // 
             this.cboServFiltro.FormattingEnabled = true;
-            this.cboServFiltro.Items.AddRange(new object[] {
-            "ID",
-            "Valor",
-            "Nome"});
             this.cboServFiltro.Location = new System.Drawing.Point(8, 18);
             this.cboServFiltro.Name = "cboServFiltro";
             this.cboServFiltro.Size = new System.Drawing.Size(134, 21);
@@ -99,6 +95,7 @@
             this.btnServBusca.TabIndex = 12;
             this.btnServBusca.Text = "Busca";
             this.btnServBusca.UseVisualStyleBackColor = true;
+            this.btnServBusca.Click += new System.EventHandler(this.btnServBusca_Click);
             // 
             // txtServBusca
             // 

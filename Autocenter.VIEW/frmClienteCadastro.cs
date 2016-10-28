@@ -45,6 +45,7 @@ namespace Autocenter.VIEW
             grvCliPesquisa.Columns["Telefone"].DisplayIndex = 4;
             grvCliPesquisa.Columns["Carros"].Visible = false;
             grvCliPesquisa.Columns["OrdemServicos"].Visible = false;
+            cboCliFiltro.DisplayMember = "ID";
         }
 
         ClienteController controller = new ClienteController();
@@ -99,6 +100,25 @@ namespace Autocenter.VIEW
         private void btnClienteLimpar_Click(object sender, EventArgs e)
         {
             limpandoCampos();
+        }
+
+        private void btnCliBusca_Click(object sender, EventArgs e)
+        {
+            DataTable DT = new DataTable();
+            DT.Columns.Add("ID", typeof(int));
+            DT.Columns.Add("Nome", typeof(string));
+            DT.Columns.Add("Telefone", typeof(string));
+            DT.Columns.Add("CPF", typeof(string));
+            DT.Columns.Add("Endereço", typeof(string));
+            Cliente clienteBuscado = controller.Obter(Convert.ToInt32(txtCliBusca.Text));
+            DataRow novatupla = DT.NewRow();
+            novatupla["ID"] = clienteBuscado.ClienteId;
+            novatupla["Nome"] = clienteBuscado.Nome;
+            novatupla["Telefone"] = clienteBuscado.Telefone;
+            novatupla["CPF"] = clienteBuscado.CPF;
+            novatupla["Endereço"] = clienteBuscado.Endereco;
+            DT.Rows.Add(novatupla);
+            grvCliPesquisa.DataSource = DT;
         }
     }
 }

@@ -39,7 +39,9 @@ namespace Autocenter.VIEW
 
             List<Cliente> oCliente = controllerCliente.Obter().ToList();
             cboCarroCliente.DataSource = oCliente;
-            cboCarroCliente.DisplayMember = "Nome";      
+            cboCarroCliente.DisplayMember = "Nome";
+
+            cboCarroFiltro.DisplayMember = "ID";
         }
 
         private void btnCarroSalvar_Click(object sender, EventArgs e)

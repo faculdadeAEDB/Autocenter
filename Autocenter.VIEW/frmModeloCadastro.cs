@@ -43,6 +43,7 @@ namespace Autocenter.VIEW
             grvModeloPesquisa.Columns["Ano"].DisplayIndex = 2;
             grvModeloPesquisa.Columns["Carros"].Visible = false;
             grvModeloPesquisa.Columns["Pecas"].Visible = false;
+            cboModeloFiltro.DisplayMember = "ID";
         }
 
         private void btnModeloSalvar_Click(object sender, EventArgs e)
@@ -100,6 +101,21 @@ namespace Autocenter.VIEW
         private void btnModeloLimpar_Click(object sender, EventArgs e)
         {
             limpandoCampos();
+        }
+
+        private void btnModeloBusca_Click(object sender, EventArgs e)
+        {
+            DataTable DT = new DataTable();
+            DT.Columns.Add("ID", typeof(int));
+            DT.Columns.Add("Marca", typeof(string));
+            DT.Columns.Add("Ano", typeof(string));
+            Modelo modeloBuscado = controller.Obter(Convert.ToInt32(txtModeloBusca.Text));
+            DataRow novatupla = DT.NewRow();
+            novatupla["ID"] = modeloBuscado.ModeloId;
+            novatupla["Marca"] = modeloBuscado.Nome;
+            novatupla["Ano"] = modeloBuscado.Ano;
+            DT.Rows.Add(novatupla);
+            grvModeloPesquisa.DataSource = DT;
         }
     }
 }

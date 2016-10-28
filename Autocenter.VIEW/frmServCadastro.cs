@@ -38,6 +38,7 @@ namespace Autocenter.VIEW
             grvServPesquisa.Columns["Descricao"].DisplayIndex = 1;
             grvServPesquisa.Columns["Valor"].DisplayIndex = 2;
             grvServPesquisa.Columns["OrdemServicos"].Visible = false;
+            cboServFiltro.DisplayMember = "ID";
         }
 
 
@@ -104,6 +105,23 @@ namespace Autocenter.VIEW
         private void btnServLimpar_Click(object sender, EventArgs e)
         {
             limpandoCampos();
+        }
+
+        private void btnServBusca_Click(object sender, EventArgs e)
+        {
+            DataTable DT = new DataTable();
+            DT.Columns.Add("ID", typeof(int));
+         //   DT.Columns.Add("Nome", typeof(string));
+            DT.Columns.Add("Valor", typeof(string));
+            DT.Columns.Add("Descrição", typeof(string));
+            Servico servicoBuscado = controller.Obter(Convert.ToInt32(txtServBusca.Text));
+            DataRow novatupla = DT.NewRow();
+            novatupla["ID"] = servicoBuscado.ServicoId;
+           // novatupla["Nome"] = servicoBuscado.Nome;
+            novatupla["Valor"] = servicoBuscado.Valor;
+            novatupla["Descrição"] = servicoBuscado.Descricao;
+            DT.Rows.Add(novatupla);
+            grvServPesquisa.DataSource = DT;
         }
     }
 }

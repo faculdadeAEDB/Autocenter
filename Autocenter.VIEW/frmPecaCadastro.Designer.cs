@@ -85,6 +85,7 @@
             this.btnPecaBusca.TabIndex = 12;
             this.btnPecaBusca.Text = "Busca";
             this.btnPecaBusca.UseVisualStyleBackColor = true;
+            this.btnPecaBusca.Click += new System.EventHandler(this.btnPecaBusca_Click);
             // 
             // txtPecaBusca
             // 

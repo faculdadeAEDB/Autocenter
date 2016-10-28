@@ -134,6 +134,7 @@
             this.btnModeloBusca.TabIndex = 9;
             this.btnModeloBusca.Text = "Busca";
             this.btnModeloBusca.UseVisualStyleBackColor = true;
+            this.btnModeloBusca.Click += new System.EventHandler(this.btnModeloBusca_Click);
             // 
             // txtModeloBusca
             // 

@@ -97,5 +97,22 @@ namespace Autocenter.VIEW
         {
             limpandoCampos();
         }
+
+        private void btnFuncBusca_Click(object sender, EventArgs e)
+        {
+            DataTable DT = new DataTable();
+            DT.Columns.Add("ID", typeof(int));
+            DT.Columns.Add("Nome", typeof(string));
+            DT.Columns.Add("Função", typeof(string));
+            DT.Columns.Add("CPF", typeof(string));
+            Funcionario funcionarioBuscado = controller.Obter(Convert.ToInt32(txtFuncBusca.Text));
+            DataRow novatupla = DT.NewRow();
+            novatupla["ID"] = funcionarioBuscado.FuncionarioId;
+            novatupla["Nome"] = funcionarioBuscado.Nome;
+            novatupla["Função"] = funcionarioBuscado.Funcao;
+            novatupla["CPF"] = funcionarioBuscado.CPF;
+            DT.Rows.Add(novatupla);
+            grvFuncPesquisa.DataSource = DT;
+        }
     }
 }

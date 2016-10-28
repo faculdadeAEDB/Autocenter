@@ -65,6 +65,7 @@
             // 
             // cboCliFiltro
             // 
+            this.cboCliFiltro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cboCliFiltro.FormattingEnabled = true;
             this.cboCliFiltro.Items.AddRange(new object[] {
             "ID",
@@ -91,6 +92,7 @@
             this.btnCliBusca.TabIndex = 1;
             this.btnCliBusca.Text = "Busca";
             this.btnCliBusca.UseVisualStyleBackColor = true;
+            this.btnCliBusca.Click += new System.EventHandler(this.btnCliBusca_Click);
             // 
             // txtCliBusca
             // 

@@ -117,6 +117,7 @@
             this.btnFuncBusca.TabIndex = 6;
             this.btnFuncBusca.Text = "Busca";
             this.btnFuncBusca.UseVisualStyleBackColor = true;
+            this.btnFuncBusca.Click += new System.EventHandler(this.btnFuncBusca_Click);
             // 
             // txtFuncBusca
             // 
@@ -175,7 +176,7 @@
             this.btnFuncLimpar.Name = "btnFuncLimpar";
             this.btnFuncLimpar.Size = new System.Drawing.Size(79, 40);
             this.btnFuncLimpar.TabIndex = 42;
-            this.btnFuncLimpar.Text = "Salvar";
+            this.btnFuncLimpar.Text = "Limpar";
             this.btnFuncLimpar.UseVisualStyleBackColor = true;
             this.btnFuncLimpar.Click += new System.EventHandler(this.btnFuncLimpar_Click);
             // 
