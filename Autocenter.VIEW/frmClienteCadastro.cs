@@ -20,7 +20,7 @@ namespace Autocenter.VIEW
         }
 
         Cliente selectedCliente = null;
-       
+
 
         void limpandoCampos()
         {
@@ -30,6 +30,8 @@ namespace Autocenter.VIEW
             txtCliEndereco.Clear();
             txtCliNome.Clear();
             txtCliTelefone.Clear();
+            cboCliFiltro.Text = "";
+
         }
 
         void atualizandoGrv()
@@ -57,7 +59,7 @@ namespace Autocenter.VIEW
 
         private void btnCliSalvar_Click(object sender, EventArgs e)
         {
-            
+
             string nome = txtCliNome.Text;
             string telefone = txtCliTelefone.Text;
             string cpf = txtCliCPF.Text;
@@ -68,7 +70,8 @@ namespace Autocenter.VIEW
             cliente.CPF = cpf;
             cliente.Endereco = endereco;
 
-            if (selectedCliente == null){
+            if (selectedCliente == null)
+            {
                 Cliente novoCliente = controller.Salvar(cliente);
             }
             else
@@ -104,21 +107,34 @@ namespace Autocenter.VIEW
 
         private void btnCliBusca_Click(object sender, EventArgs e)
         {
-            DataTable DT = new DataTable();
-            DT.Columns.Add("ID", typeof(int));
-            DT.Columns.Add("Nome", typeof(string));
-            DT.Columns.Add("Telefone", typeof(string));
-            DT.Columns.Add("CPF", typeof(string));
-            DT.Columns.Add("Endereço", typeof(string));
-            Cliente clienteBuscado = controller.Obter(Convert.ToInt32(txtCliBusca.Text));
-            DataRow novatupla = DT.NewRow();
-            novatupla["ID"] = clienteBuscado.ClienteId;
-            novatupla["Nome"] = clienteBuscado.Nome;
-            novatupla["Telefone"] = clienteBuscado.Telefone;
-            novatupla["CPF"] = clienteBuscado.CPF;
-            novatupla["Endereço"] = clienteBuscado.Endereco;
-            DT.Rows.Add(novatupla);
-            grvCliPesquisa.DataSource = DT;
+            try
+            {
+                if (cboCliFiltro.Text == "ID")
+                {
+
+                    DataTable DT = new DataTable();
+                    DT.Columns.Add("ID", typeof(int));
+                    DT.Columns.Add("Nome", typeof(string));
+                    DT.Columns.Add("Telefone", typeof(string));
+                    DT.Columns.Add("CPF", typeof(string));
+                    DT.Columns.Add("Endereço", typeof(string));
+                    Cliente clienteBuscado = controller.Obter(Convert.ToInt32(txtCliBusca.Text));
+                    DataRow novatupla = DT.NewRow();
+                    novatupla["ID"] = clienteBuscado.ClienteId;
+                    novatupla["Nome"] = clienteBuscado.Nome;
+                    novatupla["Telefone"] = clienteBuscado.Telefone;
+                    novatupla["CPF"] = clienteBuscado.CPF;
+                    novatupla["Endereço"] = clienteBuscado.Endereco;
+                    DT.Rows.Add(novatupla);
+                    grvCliPesquisa.DataSource = DT;
+                }
+                else
+                    atualizandoGrv();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ID não encontrada","Erro");
+            }
         }
     }
 }

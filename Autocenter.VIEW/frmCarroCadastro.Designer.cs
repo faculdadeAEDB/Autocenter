@@ -73,6 +73,7 @@
             // 
             // cboCarroFiltro
             // 
+            this.cboCarroFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCarroFiltro.FormattingEnabled = true;
             this.cboCarroFiltro.Items.AddRange(new object[] {
             "ID",
@@ -118,6 +119,7 @@
             // 
             // cboCarroModelo
             // 
+            this.cboCarroModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCarroModelo.FormattingEnabled = true;
             this.cboCarroModelo.Location = new System.Drawing.Point(76, 42);
             this.cboCarroModelo.Name = "cboCarroModelo";
@@ -192,7 +194,7 @@
             // 
             // cboCarroCliente
             // 
-            this.cboCarroCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cboCarroCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCarroCliente.FormattingEnabled = true;
             this.cboCarroCliente.Location = new System.Drawing.Point(76, 14);
             this.cboCarroCliente.Name = "cboCarroCliente";

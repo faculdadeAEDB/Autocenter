@@ -158,6 +158,7 @@
             // 
             // cboOrdemCliente
             // 
+            this.cboOrdemCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboOrdemCliente.FormattingEnabled = true;
             this.cboOrdemCliente.Location = new System.Drawing.Point(75, 11);
             this.cboOrdemCliente.Name = "cboOrdemCliente";
@@ -166,6 +167,7 @@
             // 
             // cboOrdemFunc
             // 
+            this.cboOrdemFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboOrdemFunc.FormattingEnabled = true;
             this.cboOrdemFunc.Location = new System.Drawing.Point(109, 41);
             this.cboOrdemFunc.Name = "cboOrdemFunc";

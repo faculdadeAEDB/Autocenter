@@ -105,17 +105,31 @@ namespace Autocenter.VIEW
 
         private void btnModeloBusca_Click(object sender, EventArgs e)
         {
-            DataTable DT = new DataTable();
-            DT.Columns.Add("ID", typeof(int));
-            DT.Columns.Add("Marca", typeof(string));
-            DT.Columns.Add("Ano", typeof(string));
-            Modelo modeloBuscado = controller.Obter(Convert.ToInt32(txtModeloBusca.Text));
-            DataRow novatupla = DT.NewRow();
-            novatupla["ID"] = modeloBuscado.ModeloId;
-            novatupla["Marca"] = modeloBuscado.Nome;
-            novatupla["Ano"] = modeloBuscado.Ano;
-            DT.Rows.Add(novatupla);
-            grvModeloPesquisa.DataSource = DT;
+            try
+            {
+                if (cboModeloFiltro.Text == "ID")
+                {
+                    DataTable DT = new DataTable();
+                    DT.Columns.Add("ID", typeof(int));
+                    DT.Columns.Add("Marca", typeof(string));
+                    DT.Columns.Add("Ano", typeof(string));
+                    Modelo modeloBuscado = controller.Obter(Convert.ToInt32(txtModeloBusca.Text));
+                    DataRow novatupla = DT.NewRow();
+                    novatupla["ID"] = modeloBuscado.ModeloId;
+                    novatupla["Marca"] = modeloBuscado.Nome;
+                    novatupla["Ano"] = modeloBuscado.Ano;
+                    DT.Rows.Add(novatupla);
+                    grvModeloPesquisa.DataSource = DT;
+                }
+                else
+                {
+                    atualizandoGrv();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ID não encontrada", "Erro");
+            }
         }
     }
 }

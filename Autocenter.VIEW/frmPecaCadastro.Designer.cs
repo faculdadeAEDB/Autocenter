@@ -67,6 +67,7 @@
             // 
             // cboPecaFiltro
             // 
+            this.cboPecaFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPecaFiltro.FormattingEnabled = true;
             this.cboPecaFiltro.Items.AddRange(new object[] {
             "ID",
@@ -152,6 +153,7 @@
             // 
             // cboPecaModelo
             // 
+            this.cboPecaModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPecaModelo.FormattingEnabled = true;
             this.cboPecaModelo.Location = new System.Drawing.Point(64, 35);
             this.cboPecaModelo.Name = "cboPecaModelo";

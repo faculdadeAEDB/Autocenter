@@ -65,11 +65,16 @@
             // 
             // cboCliFiltro
             // 
-            this.cboCliFiltro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cboCliFiltro.AutoCompleteCustomSource.AddRange(new string[] {
+            "ID",
+            "Nome",
+            "CPF"});
+            this.cboCliFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCliFiltro.FormattingEnabled = true;
             this.cboCliFiltro.Items.AddRange(new object[] {
             "ID",
-            "Nome"});
+            "Nome",
+            "CPF"});
             this.cboCliFiltro.Location = new System.Drawing.Point(7, 19);
             this.cboCliFiltro.Name = "cboCliFiltro";
             this.cboCliFiltro.Size = new System.Drawing.Size(134, 21);

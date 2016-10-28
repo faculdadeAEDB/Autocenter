@@ -81,6 +81,7 @@
             // 
             // cboServFiltro
             // 
+            this.cboServFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboServFiltro.FormattingEnabled = true;
             this.cboServFiltro.Location = new System.Drawing.Point(8, 18);
             this.cboServFiltro.Name = "cboServFiltro";

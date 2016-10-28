@@ -99,6 +99,7 @@
             // 
             // cboFuncFiltro
             // 
+            this.cboFuncFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFuncFiltro.FormattingEnabled = true;
             this.cboFuncFiltro.Items.AddRange(new object[] {
             "ID",

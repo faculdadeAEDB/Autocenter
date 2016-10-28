@@ -123,21 +123,35 @@ namespace Autocenter.VIEW
 
         private void btnPecaBusca_Click(object sender, EventArgs e)
         {
-            DataTable DT = new DataTable();
-            DT.Columns.Add("ID", typeof(int));
-            DT.Columns.Add("Nome", typeof(string));
-            DT.Columns.Add("Quantidade", typeof(string));
-           // DT.Columns.Add("Valor", typeof(string));
-            DT.Columns.Add("Marca", typeof(string));
-            Peca pecaBuscado = controller.Obter(Convert.ToInt32(txtPecaBusca.Text));
-            DataRow novatupla = DT.NewRow();
-            novatupla["ID"] = pecaBuscado.PecaId;
-            novatupla["Nome"] = pecaBuscado.Nome;
-            novatupla["Quantidade"] = pecaBuscado.Quantidade;
-           // novatupla["Valor"] = pecaBuscado.Valor;
-            novatupla["Marca"] = pecaBuscado.Marca;
-            DT.Rows.Add(novatupla);
-            grvPecaPesquisa.DataSource = DT;
+            try
+            {
+                if (cboPecaFiltro.Text == "ID")
+                {
+                    DataTable DT = new DataTable();
+                    DT.Columns.Add("ID", typeof(int));
+                    DT.Columns.Add("Nome", typeof(string));
+                    DT.Columns.Add("Quantidade", typeof(string));
+                    // DT.Columns.Add("Valor", typeof(string));
+                    DT.Columns.Add("Marca", typeof(string));
+                    Peca pecaBuscado = controller.Obter(Convert.ToInt32(txtPecaBusca.Text));
+                    DataRow novatupla = DT.NewRow();
+                    novatupla["ID"] = pecaBuscado.PecaId;
+                    novatupla["Nome"] = pecaBuscado.Nome;
+                    novatupla["Quantidade"] = pecaBuscado.Quantidade;
+                    // novatupla["Valor"] = pecaBuscado.Valor;
+                    novatupla["Marca"] = pecaBuscado.Marca;
+                    DT.Rows.Add(novatupla);
+                    grvPecaPesquisa.DataSource = DT;
+                }
+                else
+                {
+                    atualizandoGrv();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ID não encontrada", "Erro");
+            }
         }
     }
 }

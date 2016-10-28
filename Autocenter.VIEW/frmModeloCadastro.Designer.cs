@@ -116,6 +116,7 @@
             // 
             // cboModeloFiltro
             // 
+            this.cboModeloFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboModeloFiltro.FormattingEnabled = true;
             this.cboModeloFiltro.Items.AddRange(new object[] {
             "ID",
