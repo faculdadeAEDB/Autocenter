@@ -147,7 +147,7 @@ namespace Autocenter.VIEW
         {
             ReportDocument oReport = new ReportDocument();
             oReport.Load(Application.StartupPath + "\\CrystalReportCli.rpt");
-            oReport.VerifyDatabase();
+            //oReport.VerifyDatabase();
             oReport.SetDataSource(grvCliPesquisa.DataSource as DataTable);
             oReport.Refresh();
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
