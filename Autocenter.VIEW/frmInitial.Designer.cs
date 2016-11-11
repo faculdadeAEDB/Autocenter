@@ -117,6 +117,7 @@
             // 
             // btnInitialCarro
             // 
+            this.btnInitialCarro.Enabled = false;
             this.btnInitialCarro.Location = new System.Drawing.Point(7, 20);
             this.btnInitialCarro.Name = "btnInitialCarro";
             this.btnInitialCarro.Size = new System.Drawing.Size(100, 50);
@@ -135,7 +136,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmInitial";
-            this.Text = "frmInitial";
+            this.Text = "Auto Center";
             this.grbInitial.ResumeLayout(false);
             this.ResumeLayout(false);
 

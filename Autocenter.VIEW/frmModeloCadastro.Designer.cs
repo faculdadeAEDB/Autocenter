@@ -32,7 +32,6 @@
             this.txtModeloAno = new System.Windows.Forms.TextBox();
             this.lblModeloMarca = new System.Windows.Forms.Label();
             this.txtModeloMarca = new System.Windows.Forms.TextBox();
-            this.btnModeloExcluir = new System.Windows.Forms.Button();
             this.btnModeloSalvar = new System.Windows.Forms.Button();
             this.grbModeloPesquisa = new System.Windows.Forms.GroupBox();
             this.cboModeloFiltro = new System.Windows.Forms.ComboBox();
@@ -79,16 +78,6 @@
             this.txtModeloMarca.Name = "txtModeloMarca";
             this.txtModeloMarca.Size = new System.Drawing.Size(164, 20);
             this.txtModeloMarca.TabIndex = 0;
-            // 
-            // btnModeloExcluir
-            // 
-            this.btnModeloExcluir.Location = new System.Drawing.Point(97, 34);
-            this.btnModeloExcluir.Name = "btnModeloExcluir";
-            this.btnModeloExcluir.Size = new System.Drawing.Size(79, 40);
-            this.btnModeloExcluir.TabIndex = 3;
-            this.btnModeloExcluir.Text = "Excluir";
-            this.btnModeloExcluir.UseVisualStyleBackColor = true;
-            this.btnModeloExcluir.Click += new System.EventHandler(this.btnModeloExcluir_Click);
             // 
             // btnModeloSalvar
             // 
@@ -166,7 +155,7 @@
             // 
             // btnModeloLimpar
             // 
-            this.btnModeloLimpar.Location = new System.Drawing.Point(194, 34);
+            this.btnModeloLimpar.Location = new System.Drawing.Point(93, 34);
             this.btnModeloLimpar.Name = "btnModeloLimpar";
             this.btnModeloLimpar.Size = new System.Drawing.Size(79, 40);
             this.btnModeloLimpar.TabIndex = 44;
@@ -184,7 +173,6 @@
             this.Controls.Add(this.txtModeloAno);
             this.Controls.Add(this.lblModeloMarca);
             this.Controls.Add(this.txtModeloMarca);
-            this.Controls.Add(this.btnModeloExcluir);
             this.Controls.Add(this.btnModeloSalvar);
             this.Controls.Add(this.grbModeloPesquisa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -207,7 +195,6 @@
         private System.Windows.Forms.TextBox txtModeloAno;
         private System.Windows.Forms.Label lblModeloMarca;
         private System.Windows.Forms.TextBox txtModeloMarca;
-        private System.Windows.Forms.Button btnModeloExcluir;
         private System.Windows.Forms.Button btnModeloSalvar;
         private System.Windows.Forms.GroupBox grbModeloPesquisa;
         private System.Windows.Forms.Button btnModeloRelatorio;

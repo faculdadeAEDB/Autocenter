@@ -86,24 +86,6 @@ namespace Autocenter.VIEW
             txtModeloAno.Text = selectedModelo.Ano;
         }
 
-        private void btnModeloExcluir_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Deseja realmente Excluir?", "Cadastro de Modelo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-            {
-              try
-                {
-                    controller.Excluir(selectedModelo);
-                    atualizandoGrv();
-                    limpandoCampos();
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Não possível excluir sem selecionar um modelo");
-                }
-                
-            }
-        }
-
         private void btnModeloLimpar_Click(object sender, EventArgs e)
         {
             limpandoCampos();

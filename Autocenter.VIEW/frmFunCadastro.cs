@@ -127,6 +127,7 @@ namespace Autocenter.VIEW
             catch (Exception)
             {
                 MessageBox.Show("ID não encontrada", "Erro");
+                atualizandoGrv();
             }
         }
 
