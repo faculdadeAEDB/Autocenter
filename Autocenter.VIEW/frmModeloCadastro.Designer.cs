@@ -152,6 +152,7 @@
             this.btnModeloRelatorio.TabIndex = 2;
             this.btnModeloRelatorio.Text = "Emitir Relatorio";
             this.btnModeloRelatorio.UseVisualStyleBackColor = true;
+            this.btnModeloRelatorio.Click += new System.EventHandler(this.btnModeloRelatorio_Click);
             // 
             // grvModeloPesquisa
             // 

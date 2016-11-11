@@ -103,6 +103,7 @@
             this.btnPecaRelatorio.TabIndex = 2;
             this.btnPecaRelatorio.Text = "Emitir Relatorio";
             this.btnPecaRelatorio.UseVisualStyleBackColor = true;
+            this.btnPecaRelatorio.Click += new System.EventHandler(this.btnPecaRelatorio_Click);
             // 
             // grvPecaPesquisa
             // 

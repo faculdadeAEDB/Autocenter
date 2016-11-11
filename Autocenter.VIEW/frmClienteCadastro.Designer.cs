@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grbCliPesquisa = new System.Windows.Forms.GroupBox();
-            this.cboCliFiltro = new System.Windows.Forms.ComboBox();
-            this.btnCliRelatorio = new System.Windows.Forms.Button();
-            this.btnCliBusca = new System.Windows.Forms.Button();
-            this.txtCliBusca = new System.Windows.Forms.TextBox();
-            this.grvCliPesquisa = new System.Windows.Forms.DataGridView();
             this.btnCliAlterar = new System.Windows.Forms.Button();
             this.btnCliSalvar = new System.Windows.Forms.Button();
             this.txtCliTelefone = new System.Windows.Forms.MaskedTextBox();
@@ -45,79 +39,15 @@
             this.lblCliNome = new System.Windows.Forms.Label();
             this.txtCliCPF = new System.Windows.Forms.MaskedTextBox();
             this.btnCliLimpar = new System.Windows.Forms.Button();
-            this.grbCliPesquisa.SuspendLayout();
+            this.grvCliPesquisa = new System.Windows.Forms.DataGridView();
+            this.grbCliPesquisa = new System.Windows.Forms.GroupBox();
+            this.cboCliFiltro = new System.Windows.Forms.ComboBox();
+            this.btnCliRelatorio = new System.Windows.Forms.Button();
+            this.btnCliBusca = new System.Windows.Forms.Button();
+            this.txtCliBusca = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grvCliPesquisa)).BeginInit();
+            this.grbCliPesquisa.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grbCliPesquisa
-            // 
-            this.grbCliPesquisa.Controls.Add(this.cboCliFiltro);
-            this.grbCliPesquisa.Controls.Add(this.btnCliRelatorio);
-            this.grbCliPesquisa.Controls.Add(this.btnCliBusca);
-            this.grbCliPesquisa.Controls.Add(this.txtCliBusca);
-            this.grbCliPesquisa.Controls.Add(this.grvCliPesquisa);
-            this.grbCliPesquisa.Location = new System.Drawing.Point(5, 132);
-            this.grbCliPesquisa.Name = "grbCliPesquisa";
-            this.grbCliPesquisa.Size = new System.Drawing.Size(546, 233);
-            this.grbCliPesquisa.TabIndex = 6;
-            this.grbCliPesquisa.TabStop = false;
-            this.grbCliPesquisa.Text = "Pesquisa";
-            // 
-            // cboCliFiltro
-            // 
-            this.cboCliFiltro.AutoCompleteCustomSource.AddRange(new string[] {
-            "ID",
-            "Nome",
-            "CPF"});
-            this.cboCliFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCliFiltro.FormattingEnabled = true;
-            this.cboCliFiltro.Items.AddRange(new object[] {
-            "ID",
-            "Nome",
-            "CPF"});
-            this.cboCliFiltro.Location = new System.Drawing.Point(7, 19);
-            this.cboCliFiltro.Name = "cboCliFiltro";
-            this.cboCliFiltro.Size = new System.Drawing.Size(134, 21);
-            this.cboCliFiltro.TabIndex = 4;
-            // 
-            // btnCliRelatorio
-            // 
-            this.btnCliRelatorio.Location = new System.Drawing.Point(434, 17);
-            this.btnCliRelatorio.Name = "btnCliRelatorio";
-            this.btnCliRelatorio.Size = new System.Drawing.Size(106, 23);
-            this.btnCliRelatorio.TabIndex = 2;
-            this.btnCliRelatorio.Text = "Emitir Relatorio";
-            this.btnCliRelatorio.UseVisualStyleBackColor = true;
-            // 
-            // btnCliBusca
-            // 
-            this.btnCliBusca.Location = new System.Drawing.Point(317, 17);
-            this.btnCliBusca.Name = "btnCliBusca";
-            this.btnCliBusca.Size = new System.Drawing.Size(75, 23);
-            this.btnCliBusca.TabIndex = 1;
-            this.btnCliBusca.Text = "Busca";
-            this.btnCliBusca.UseVisualStyleBackColor = true;
-            this.btnCliBusca.Click += new System.EventHandler(this.btnCliBusca_Click);
-            // 
-            // txtCliBusca
-            // 
-            this.txtCliBusca.Location = new System.Drawing.Point(147, 19);
-            this.txtCliBusca.Name = "txtCliBusca";
-            this.txtCliBusca.Size = new System.Drawing.Size(164, 20);
-            this.txtCliBusca.TabIndex = 0;
-            // 
-            // grvCliPesquisa
-            // 
-            this.grvCliPesquisa.AllowUserToAddRows = false;
-            this.grvCliPesquisa.AllowUserToDeleteRows = false;
-            this.grvCliPesquisa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvCliPesquisa.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.grvCliPesquisa.Location = new System.Drawing.Point(7, 49);
-            this.grvCliPesquisa.Name = "grvCliPesquisa";
-            this.grvCliPesquisa.ReadOnly = true;
-            this.grvCliPesquisa.Size = new System.Drawing.Size(533, 178);
-            this.grvCliPesquisa.TabIndex = 3;
-            this.grvCliPesquisa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvCliPesquisa_CellDoubleClick);
             // 
             // btnCliAlterar
             // 
@@ -217,11 +147,82 @@
             this.btnCliLimpar.UseVisualStyleBackColor = true;
             this.btnCliLimpar.Click += new System.EventHandler(this.btnClienteLimpar_Click);
             // 
+            // grvCliPesquisa
+            // 
+            this.grvCliPesquisa.AllowUserToAddRows = false;
+            this.grvCliPesquisa.AllowUserToDeleteRows = false;
+            this.grvCliPesquisa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvCliPesquisa.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.grvCliPesquisa.Location = new System.Drawing.Point(7, 49);
+            this.grvCliPesquisa.Name = "grvCliPesquisa";
+            this.grvCliPesquisa.ReadOnly = true;
+            this.grvCliPesquisa.Size = new System.Drawing.Size(533, 178);
+            this.grvCliPesquisa.TabIndex = 3;
+            this.grvCliPesquisa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvCliPesquisa_CellDoubleClick);
+            // 
+            // grbCliPesquisa
+            // 
+            this.grbCliPesquisa.Controls.Add(this.cboCliFiltro);
+            this.grbCliPesquisa.Controls.Add(this.btnCliRelatorio);
+            this.grbCliPesquisa.Controls.Add(this.btnCliBusca);
+            this.grbCliPesquisa.Controls.Add(this.txtCliBusca);
+            this.grbCliPesquisa.Controls.Add(this.grvCliPesquisa);
+            this.grbCliPesquisa.Location = new System.Drawing.Point(5, 132);
+            this.grbCliPesquisa.Name = "grbCliPesquisa";
+            this.grbCliPesquisa.Size = new System.Drawing.Size(546, 233);
+            this.grbCliPesquisa.TabIndex = 6;
+            this.grbCliPesquisa.TabStop = false;
+            this.grbCliPesquisa.Text = "Pesquisa";
+            // 
+            // cboCliFiltro
+            // 
+            this.cboCliFiltro.AutoCompleteCustomSource.AddRange(new string[] {
+            "ID",
+            "Nome",
+            "CPF"});
+            this.cboCliFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCliFiltro.FormattingEnabled = true;
+            this.cboCliFiltro.Items.AddRange(new object[] {
+            "ID",
+            "Nome",
+            "CPF"});
+            this.cboCliFiltro.Location = new System.Drawing.Point(7, 19);
+            this.cboCliFiltro.Name = "cboCliFiltro";
+            this.cboCliFiltro.Size = new System.Drawing.Size(134, 21);
+            this.cboCliFiltro.TabIndex = 4;
+            // 
+            // btnCliRelatorio
+            // 
+            this.btnCliRelatorio.Location = new System.Drawing.Point(434, 17);
+            this.btnCliRelatorio.Name = "btnCliRelatorio";
+            this.btnCliRelatorio.Size = new System.Drawing.Size(106, 23);
+            this.btnCliRelatorio.TabIndex = 2;
+            this.btnCliRelatorio.Text = "Emitir Relatorio";
+            this.btnCliRelatorio.UseVisualStyleBackColor = true;
+            this.btnCliRelatorio.Click += new System.EventHandler(this.btnCliRelatorio_Click);
+            // 
+            // btnCliBusca
+            // 
+            this.btnCliBusca.Location = new System.Drawing.Point(317, 17);
+            this.btnCliBusca.Name = "btnCliBusca";
+            this.btnCliBusca.Size = new System.Drawing.Size(75, 23);
+            this.btnCliBusca.TabIndex = 1;
+            this.btnCliBusca.Text = "Busca";
+            this.btnCliBusca.UseVisualStyleBackColor = true;
+            this.btnCliBusca.Click += new System.EventHandler(this.btnCliBusca_Click);
+            // 
+            // txtCliBusca
+            // 
+            this.txtCliBusca.Location = new System.Drawing.Point(147, 19);
+            this.txtCliBusca.Name = "txtCliBusca";
+            this.txtCliBusca.Size = new System.Drawing.Size(164, 20);
+            this.txtCliBusca.TabIndex = 0;
+            // 
             // frmCliCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 371);
+            this.ClientSize = new System.Drawing.Size(559, 374);
             this.Controls.Add(this.btnCliLimpar);
             this.Controls.Add(this.txtCliCPF);
             this.Controls.Add(this.grbCliPesquisa);
@@ -240,21 +241,15 @@
             this.Name = "frmCliCadastro";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmClienteCadastro_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grvCliPesquisa)).EndInit();
             this.grbCliPesquisa.ResumeLayout(false);
             this.grbCliPesquisa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grvCliPesquisa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox grbCliPesquisa;
-        private System.Windows.Forms.Button btnCliRelatorio;
-        private System.Windows.Forms.Button btnCliBusca;
-        private System.Windows.Forms.TextBox txtCliBusca;
-        private System.Windows.Forms.DataGridView grvCliPesquisa;
         private System.Windows.Forms.Button btnCliAlterar;
         private System.Windows.Forms.Button btnCliSalvar;
         private System.Windows.Forms.MaskedTextBox txtCliTelefone;
@@ -266,6 +261,11 @@
         private System.Windows.Forms.Label lblCliNome;
         private System.Windows.Forms.MaskedTextBox txtCliCPF;
         private System.Windows.Forms.Button btnCliLimpar;
+        private System.Windows.Forms.DataGridView grvCliPesquisa;
+        private System.Windows.Forms.GroupBox grbCliPesquisa;
         private System.Windows.Forms.ComboBox cboCliFiltro;
+        private System.Windows.Forms.Button btnCliRelatorio;
+        private System.Windows.Forms.Button btnCliBusca;
+        private System.Windows.Forms.TextBox txtCliBusca;
     }
 }

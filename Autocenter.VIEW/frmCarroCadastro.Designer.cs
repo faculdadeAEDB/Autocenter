@@ -108,6 +108,7 @@
             this.btnCarroRelatorio.TabIndex = 22;
             this.btnCarroRelatorio.Text = "Emitir Relatorio";
             this.btnCarroRelatorio.UseVisualStyleBackColor = true;
+            this.btnCarroRelatorio.Click += new System.EventHandler(this.btnCarroRelatorio_Click);
             // 
             // grvCarroPesquisa
             // 

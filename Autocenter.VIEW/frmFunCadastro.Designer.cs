@@ -135,6 +135,7 @@
             this.btnFuncRelatorio.TabIndex = 2;
             this.btnFuncRelatorio.Text = "Emitir Relatorio";
             this.btnFuncRelatorio.UseVisualStyleBackColor = true;
+            this.btnFuncRelatorio.Click += new System.EventHandler(this.btnFuncRelatorio_Click);
             // 
             // grvFuncPesquisa
             // 

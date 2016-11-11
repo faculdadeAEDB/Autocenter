@@ -9,7 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain.Entities;
 using Controllers;
-
+using ReportGenerator;
+using CrystalDecisions.Shared;
+using CrystalDecisions.CrystalReports.Engine;
+using System.Diagnostics;
 
 namespace Autocenter.VIEW
 {
@@ -20,7 +23,7 @@ namespace Autocenter.VIEW
         public frmFuncCadastro()
         {
             InitializeComponent();
-        } 
+        }
         Funcionario selectedFuncionario = null;
 
         private void frmClienteCadastro_Load(object sender, EventArgs e)
@@ -123,7 +126,22 @@ namespace Autocenter.VIEW
             }
             catch (Exception)
             {
-                MessageBox.Show("ID não encontrada","Erro");
+                MessageBox.Show("ID não encontrada", "Erro");
+            }
+        }
+
+        private void btnFuncRelatorio_Click(object sender, EventArgs e)
+        {
+            ReportDocument oReport = new ReportDocument();
+            oReport.Load(Application.StartupPath + "\\CrystalReportFunc.rpt");
+            oReport.VerifyDatabase();
+            oReport.SetDataSource(grvFuncPesquisa.DataSource as DataTable);
+            oReport.Refresh();
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            oReport.ExportToDisk(ExportFormatType.PortableDocFormat, path + "\\Relatório Funcionário.pdf");
+            MessageBox.Show("Relatório Emitido com sucesso", "OK");
+            {
+                Process.Start(path + "\\Relatório Funcionário.pdf");
             }
         }
     }

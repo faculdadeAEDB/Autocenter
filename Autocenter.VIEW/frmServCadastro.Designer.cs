@@ -113,6 +113,7 @@
             this.btnServRelatorio.TabIndex = 2;
             this.btnServRelatorio.Text = "Emitir Relatorio";
             this.btnServRelatorio.UseVisualStyleBackColor = true;
+            this.btnServRelatorio.Click += new System.EventHandler(this.btnServRelatorio_Click);
             // 
             // grvServPesquisa
             // 

@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain.Entities;
 using Controllers;
+using System.Data.SqlClient;
+using ReportGenerator;
+using CrystalDecisions.Shared;
+using CrystalDecisions.CrystalReports.Engine;
+using System.Diagnostics;
 
 namespace Autocenter.VIEW
 {
@@ -76,6 +81,20 @@ namespace Autocenter.VIEW
 
         private void btnCarroLimpar_Click(object sender, EventArgs e)
         {
+        }
+
+        private void btnCarroRelatorio_Click(object sender, EventArgs e)
+        {
+            ReportDocument oReport = new ReportDocument();
+            oReport.Load(Application.StartupPath + "\\CrystalReportCarro.rpt");
+            oReport.VerifyDatabase();
+            oReport.SetDataSource(grvCarroPesquisa.DataSource as DataTable);
+            oReport.Refresh();
+            oReport.ExportToDisk(ExportFormatType.PortableDocFormat, @"c:\\users\\gusta\\desktop\\Relatório Carro.pdf");
+            MessageBox.Show("Relatório Emitido com sucesso", "OK");
+            {
+                Process.Start(@"c:\\users\\gusta\\desktop\\Relatório Carro.pdf");
+            }
         }
     }
 }
